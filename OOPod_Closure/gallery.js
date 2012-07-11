@@ -1,10 +1,15 @@
 /**
  * A gallery module that uses existing module pattern
  *     It means all children have the same namespace as parent, aka APP_COUPONSINC.gallery.
- *     They are "vertically" extendable.
+ *     They are "vertically" extendable. functions are merged.
+ *     If we use this machanism, functions for CPC must have a different name than the functions for Printable pod.
+ *     We don't want this.
+ *
  * In this inheritance pattern
  *     Each child has its own namespace, aka APP_COUPONSINC.PodPrintableClass etc. It's actually a class name.
  *     Parent class is "horizontally" extendable to mutliple children classes within the same theme.
+ *     They can contain the same function name while having different implementation.
+ *     A child class can have a function of its own that doesn't exsist in otehr classes too.
  *
  *     You need to use "new" operator to instanciate an instance.
  *     Base class APP_COUPONSINC.PodClass is an abstraction of all types of pod.

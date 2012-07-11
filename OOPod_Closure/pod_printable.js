@@ -1,5 +1,6 @@
 /**
  * Base class of printable pod on all themes
+ * Its parent is the themeless PodClass
  */
 APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodClass.extend(function(podDom, podData) {
     // call the constructor of our base class
@@ -27,7 +28,7 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodClass.extend(function(podDo
     }
 
     return {
-        // overwriting the name method of APP_COUPONSINC_PodClass
+        // overwriting the named method of APP_COUPONSINC_PodClass
         populate: populate,
         handleClick : handleClick
     };

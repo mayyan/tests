@@ -1,5 +1,6 @@
 /**
  * Base class of CPC pod on all themes
+ * Its parent is the themeless PodClass
  */
 APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, podData) {
     // call the constructor of our base class
@@ -27,7 +28,7 @@ APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, pod
     }
 
     return {
-      // overwriting the name method of APP_COUPONSINC_PodClass
+      // overwriting the named method of APP_COUPONSINC_PodClass
       populate: populate,
       handleClick : handleClick
     };
