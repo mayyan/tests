@@ -1,5 +1,5 @@
 /**
- * Base class of all pod types
+ * Base class of all pod types on all themes
  */
 APP_COUPONSINC.PodClass = CClass.create(function(podDom, podData) {
     // local reference to the global jQuery
@@ -36,7 +36,6 @@ APP_COUPONSINC.PodClass = CClass.create(function(podDom, podData) {
 
     function handleClick(e) {
         this.clickCount += 1;
-        alert("clicked a PodClass. Clicked " + this.clickCount + " times");
     }
 
     // If you have helper functions that used by child class

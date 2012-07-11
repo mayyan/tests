@@ -4,10 +4,25 @@
  *     They are "vertically" extendable.
  * In this inheritance pattern
  *     Each child has its own namespace, aka APP_COUPONSINC.PodPrintableClass etc. It's actually a class name.
- *     They are "horizontally" extendable.
+ *     Parent class is "horizontally" extendable to mutliple children classes within the same theme.
+ *
  *     You need to use "new" operator to instanciate an instance.
  *     Base class APP_COUPONSINC.PodClass is an abstraction of all types of pod.
  *     Base class should not be used to create any pod instance.
+ *
+ *                         themeless
+ *                         PodClass
+ *                            |
+ *             --------------------------------
+ *             |                              |
+ *           themeless                    themless
+ *          PodCPCClass               PodPrintableClass
+ *             |                              |
+ *    -----------------             ---------------------
+ *    |               |             |                   |
+ * bigblue's      walmart's     bigblue's            walmart's
+ * PodCPCClass    PodCPCClass   PodPrintableClass    PodPrintableClass
+ *
  */
 APP_COUPONSINC.gallery = (function ($) {
     function init() {

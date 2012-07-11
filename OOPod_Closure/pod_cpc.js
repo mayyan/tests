@@ -1,3 +1,6 @@
+/**
+ * Base class of CPC pod on all themes
+ */
 APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, podData) {
     // call the constructor of our base class
     this._super(podDom, podData);
@@ -21,9 +24,6 @@ APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, pod
     function handleClick(e) {
         // re-use parent class function of the same name
         this._super();
-
-        // do something more
-        alert("clicked a PodCPCClass, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
     }
 
     return {

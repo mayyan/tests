@@ -1,3 +1,6 @@
+/**
+ * Base class of printable pod on all themes
+ */
 APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodClass.extend(function(podDom, podData) {
     // call the constructor of our base class
     this._super(podDom, podData);
@@ -21,9 +24,6 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodClass.extend(function(podDo
     function handleClick(e) {
         // re-use parent class function of the same name
         this._super();
-
-        // do something more
-        alert("clicked a PodPrintableClass, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
     }
 
     return {
