@@ -1,0 +1,59 @@
+#header {background-color:  #dddddd;}
+#rail {background-color: #FDF9EE;}
+#footer {background-color:  #dddddd;}
+
+.clearfix {
+    clear: both;
+}
+.fixed {
+    position: fixed;
+}
+#header.fixed {
+    width: 970px;
+}
+.mod-couponcarrier.fixed,
+.mod-gallery.fixed {
+    width: 805px;
+}
+.mod-couponcarrier {
+    background: #EFEBDE;
+    position: fixed;
+    width: 805px;
+    top: 32px; /* need to calculate */
+}
+.mod-categories {
+    background: #BADA55;
+    position: fixed;
+    width: 805px;
+
+    top: 16px; /* need to calculate */
+}
+
+.promo-module {
+    height: 200px;
+    background: #b1d2e4;
+    margin-bottom: 10px;
+}
+
+
+.mod-gallery {
+    /*position: fixed;
+    top: 80px;
+    width: 805px;*/
+}
+.mod-gallery .pod {
+    height: 138px;
+    width: 250px;
+    background-color: #7ABA4C;
+    float: left;
+    margin: 5px;
+}
+.mod-gallery .more {
+    clear: both;
+    display: block;
+}
+.mod-gallery .goto-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

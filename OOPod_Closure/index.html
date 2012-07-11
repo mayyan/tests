@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<style>
+    .pod {
+        border: 1px solid #000;
+        width: 100px;
+    }
+    .coupon {
+        background-color: #76C4F5;
+    }
+    .cpc {
+        background-color: #B52C07;
+    }
+    .video {
+        background-color: #9FA41D;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="mod-gallery">
+        <div class="pods">
+            <div class="pod coupon" data-podid="100">
+                <p>Type: <span class="pod-type">0</span></p>
+                <p>ID: <span class="pod-id">100</span></p>
+            </div>
+
+            <div class="pod cpc" data-podid="101">
+                <p>Type: <span class="pod-type">15</span></p>
+                <p>ID: <span class="pod-id">101</span></p>
+            </div>
+        </div>
+    </div>
+
+    <button>Update</button>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+    jQuery.noConflict();
+    var APP_COUPONSINC = {};
+</script>
+<script src="classHelper.js"></script>
+<script src="pod.js"></script>
+<script src="pod_printable.js"></script>
+<script src="pod_cpc.js"></script>
+<script src="gallery.js"></script>
+
+<script>
+    APP_COUPONSINC.contextData = {
+        "100" : {
+            type : 0,
+            id : "100",
+            printLimit: 2
+        },
+        "101" : {
+            type : 15,
+            id : "101",
+            clickLimit: 3
+        },
+        "1001" : {
+            type : 0,
+            id : "1001",
+            printLimit: 4
+        },
+        "1002": {
+            type : 15,
+            id : "1002",
+            clickLimit: 5
+        }
+    };
+</script>
+</body>
+</html>

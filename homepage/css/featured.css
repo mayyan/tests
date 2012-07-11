@@ -1,0 +1,24 @@
+.mod-featured {
+    margin-bottom: 8px;
+    overflow:hidden;
+}
+.mod-featured .feature {
+    border-width: 5px;
+    border-style: solid;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 8px 8px 0;
+    width: 187px;
+    float: left;
+}
+.mod-featured .feature.last {
+    margin-right: 0;
+}
+.mod-featured .feature .brand {
+    font-weight: bold;
+}
+
+.mod-featured .mod-gallery {
+    margin-bottom: 20px;
+}
+

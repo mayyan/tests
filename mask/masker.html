@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form>
+            <input type="text" id="mystring"/>
+            <button type="button" id="unmask">Unmask</button>
+            <button type="button" id="mask">Mask</button>
+        </form>
+        <p>
+            <span>Result:</span>
+            <span id="result"></span>
+        </p>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script>
+            //HARISEMBUK
+            //0123456789
+            var maskMap = {
+                "0" : "H",
+                "1" : "A",
+                "2" : "R",
+                "3" : "I",
+                "4" : "S",
+                "5" : "E",
+                "6" : "M",
+                "7" : "B",
+                "8" : "U",
+                "9" : "K"
+            };
+            function creatUnmaskMap() {
+                var unmaskMap = {};
+                $.each(maskMap, function (d, c) {
+                    unmaskMap[c] = d;
+                })
+                return unmaskMap;
+            }
+            function mask_unmask(s, map) {
+                var i,
+                    length = s.length,
+                    c,
+                    ret = "";
+                for (i = 0; i < length; i++) {
+                    ret = ret + map[s.charAt(i)];
+                }
+                $("#result").text(ret);
+            }
+            $(document).ready(function () {
+                var unmaskMap = creatUnmaskMap();
+                $("#unmask").click(function () {
+                    mask_unmask($("#mystring").val(), unmaskMap);
+                });
+                $("#mask").click(function () {
+                    mask_unmask($("#mystring").val(), maskMap);
+                });
+            });
+        </script>
+    </body>
+</html>

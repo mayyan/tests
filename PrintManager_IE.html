@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language="javascript">
+function getDeviceID()
+{
+   var ctrl = document.getElementById("PrintControl");
+   var id = ctrl.PerformAction("cpnprt2", "GetDeviceID", "Y|", "|", false);
+   alert(id);
+}
+</script>
+</head>
+<body>
+ 
+<form>
+<OBJECT ID="PrintControl" CLASSID="CLSID:9522B3FB-7A2B-4646-8AF6-36E7F593073C" >
+
+   <param name="_StockProps" value="0"/>
+</OBJECT>
+<p>
+<input type="button" value="Get ID" onClick="getDeviceID();" />
+</p>
+</form>
+</body>
+</html>

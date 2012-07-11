@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+</head>
+
+<body>
+    <div class="block">
+        defer attribute does NOT help. default.js is not loaded after loader.js.
+    </div>
+
+<script src="jquery.min.js"></script>
+<script src="jquery.browser.min.js"></script>
+<script>
+jQuery.noConflict();
+var APP = {};
+</script>
+<script type="text/javascript" defer src="default.js"></script>
+<!--[if IE 8]>
+<script type="text/javascript" defer src="ie8.js"></script>
+<![endif]-->
+
+<script src="loader.js"></script>
+<script>
+APP.contextData = {
+
+    deferred: {
+        css: {
+            "default": "default.css",
+            "IE 8": "ie8.css"
+        }
+    }
+};
+</script>
+</body>
+</html>

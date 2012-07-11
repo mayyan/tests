@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.4.1/build/cssreset/cssreset-min.css">
+
+    <title>home</title>
+
+<style type="text/css">
+/* layout.css */
+html {
+    background: #fff url("paper.jpg") repeat 0 0 scroll;
+}
+body {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+}
+div {
+    /*border: 1px dotted red;*/
+}
+a {
+    text-decoration: none;
+}
+.horizontal-list li {
+    display: inline;
+}
+.main {
+    min-width: 600px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.header {
+}
+.container {
+}
+.nav {
+    display: table-cell;
+    width: 150px;
+    min-width: 150px;
+}
+.content {
+    display: table-cell;
+    width: 700px;
+}
+.ads {
+    display: table-cell;
+    width: 150px;
+    min-width: 150px;
+}
+.footer {
+}
+/* newslet.css */
+.newslet {margin:10px;}
+.newslet, .newslet .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.newslet .img {float:left; margin-right: 10px;}
+.newslet .img img{display:block;}
+.newslet .imgExt{float:right; margin-left: 10px;}
+
+.newslet .bd {
+    border-bottom: 1px dashed #000000;
+    padding-bottom: 1em;
+}
+.newslet .img {
+    text-align: center;
+}
+.newslet .img-source {
+    color: #788B97;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100px;
+}
+.newslet .title a{
+    font-size: 115.4%;
+    font-weight: bold;
+    color: #0071a5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.newslet .article {
+    text-align: justify;
+}
+.newslet .extra {
+}
+.newslet .info-list {
+    display: table-cell;
+    white-space: nowrap;
+}
+.newslet .share-list {
+    display: table-cell;
+    text-align: right;
+    white-space: nowrap;
+    width: 100%;
+}
+.newslet .article-source,
+.newslet .date {
+    font-size: 76.9%;
+    color: #788B97;
+}
+.newslet .article-source:after {
+    content: ": ";
+}
+/* nav.css */
+.nav .item a{
+    color:#B52C07;
+}
+.nav .item.selected a,
+.nav .item.selected a:hover {
+    color: #0482BC;
+}
+.nav .item a:hover {
+    color: #00FF00;
+}
+/* tabs.css */
+.tabs {
+    border-bottom: 1px solid #000;
+}
+.tabs .tab {
+    border:1px solid #000;
+}
+.tabs .tab a{
+    color:#B52C07;
+}
+.tabs .tab.selected a,
+.tabs .tab.selected a:hover {
+    color: #0482BC;
+}
+.tabs .tab a:hover {
+    color: #00FF00;
+}
+</style>
+
+</head>
+
+<body>
+<div class="main" id="main">
+    <div class="header" id="header">header header header </div>
+    <div class="container" id="container">
+        <div class="nav" id="nav">
+            <ul>
+              <li class="item selected"><a href="#">Top News</a></li>
+              <li class="item"><a href="#">Business</a></li>
+              <li class="item"><a href="#">Technology</a></li>
+              <li class="item"><a href="#">Science</a></li>
+            </ul>
+        </div>
+
+        <div class="content" id="content">
+            <div class="tab-container">
+                <ul class="tabs horizontal-list">
+                    <li class="tab selected"><a href="#">tab1</a></li>
+                    <li class="tab"><a href="#">tab2</a></li>
+                    <li class="tab"><a href="#">tab3</a></li>
+                </ul>
+            </div>
+            <div class="newslets" id="newslets">
+                <div class="newslet">
+                    <div class="img">
+                        <a href="#">
+                            <img width="100" height="100" src="sw.png">
+                        </a>
+                        <a class="img-source" href="http://www.cnn.com">LA Times</a>
+                    </div>
+
+                    <div class="bd">
+                        <h3 class="title"><a href="#">Rupert Murdoch begins tweeting</a></h3>
+                        <p class="article">The News Corp. chief executive opines on politics, movies and his vacation in his first Twitter feeds. One would imagine that preeminent among Rupert Murdoch's New Year's resolutions would be moving his News Corp. beyond the hacking and bribery scandal that blackened the media conglomerate in 2011.</p>
+                        <div class="extra">
+                            <ul class="horizontal-list info-list">
+                                <li class="article-source">LA Times</li>
+                                <li class="date">1 hour 33 minutes ago</li>
+                            </ul>
+                            <ul class="horizontal-list share-list">
+                                <li class="facebook">Facebook: 0</li>
+                                <li class="twitter">Twitter: 0</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- newslet -->
+                
+            </div>
+        </div>
+
+        <div class="ads" id="ads">ads</div>
+
+    </div>
+    <div class="footer" id="footer">footer footer footer </div>
+</div>
+</body>
+</html>

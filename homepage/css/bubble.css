@@ -1,0 +1,79 @@
+.triangle-border {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 5px solid #5A8F00;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px;
+    position: relative;
+}
+.triangle-border.left {
+    margin-left: 30px;
+}
+.triangle-border.right {
+    margin-right: 30px;
+}
+.triangle-border:before {
+    border-color: #5A8F00 transparent;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    bottom: -20px;
+    content: "";
+    display: block;
+    left: 40px;
+    position: absolute;
+    width: 0;
+}
+.triangle-border:after {
+    border-color: #FFFFFF transparent;
+    border-style: solid;
+    border-width: 13px 13px 0;
+    bottom: -13px;
+    content: "";
+    display: block;
+    left: 47px;
+    position: absolute;
+    width: 0;
+}
+.triangle-border.top:before {
+    border-width: 0 20px 20px;
+    bottom: auto;
+    left: auto;
+    right: 40px;
+    top: -20px;
+}
+.triangle-border.top:after {
+    border-width: 0 13px 13px;
+    bottom: auto;
+    left: auto;
+    right: 47px;
+    top: -13px;
+}
+.triangle-border.left:before {
+    border-color: transparent #5A8F00;
+    border-width: 15px 30px 15px 0;
+    bottom: auto;
+    left: -30px;
+    top: 10px;
+}
+.triangle-border.left:after {
+    border-color: transparent #FFFFFF;
+    border-width: 9px 21px 9px 0;
+    bottom: auto;
+    left: -21px;
+    top: 16px;
+}
+.triangle-border.right:before {
+    border-color: transparent #5A8F00;
+    border-width: 15px 0 15px 30px;
+    bottom: auto;
+    left: auto;
+    right: -30px;
+    top: 10px;
+}
+.triangle-border.right:after {
+    border-color: transparent #FFFFFF;
+    border-width: 9px 0 9px 21px;
+    bottom: auto;
+    left: auto;
+    right: -21px;
+    top: 16px;
+}

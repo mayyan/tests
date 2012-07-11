@@ -1,0 +1,104 @@
+/* stubbornella media object */
+.media {margin:10px; }
+.media {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img {display:block;}
+.media .imgExt {float:right; margin-left: 10px;}
+/* end stubbornella */
+
+/* this rule and the next define the much-repeated horizontal UL pattern */
+.horizontal-list {
+    margin: 0 auto;
+    padding: 0;
+}
+.horizontal-list li {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+}
+.txt-offscreen {
+    text-indent: -999em;
+}
+.hidden {
+    display: none;
+}
+
+.sprite-pod {
+    background-image: url("http://cdn.cpnscdn.com/static.coupons.com/img/bigblue/sprite_pod_20111006.png");
+    background-repeat: no-repeat;
+}
+
+.mod-gallery .pod {
+    float: left;
+    margin: 10px 7px 4px 9px;
+    width: 264px;
+}
+
+.magnifier-outer {
+    border: 2px solid #009DE6;
+    /*border-radius: 300px;*/
+    position: absolute;
+}
+.magnifier-outer .ui-dialog-titlebar {
+    background-color: rgba(0, 157, 230, 0.8);
+    border-bottom: 2px solid #009DE6;
+    color: #FFFFFF;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 2px 5px;
+    /*text-align: center;*/
+}
+.magnifier-outer .ui-dialog-titlebar-close {
+    color: #FFFFFF;
+    /*padding-left: 5em;*/
+    float: right;
+}
+.magnifier {
+    background-color: rgba(211, 241, 255, 0.5);
+    padding: 2em;
+}
+
+.magnifier .pod {
+    font-size: 150%;
+    float: none;
+}
+
+.magnifier .pod .pod-image-container {
+    width: 160px;
+    height: 200px;
+}
+.magnifier .pod .bd {
+    height: 214px;
+    min-height: 214px;
+}
+.magnifier .pod .ft {
+    height: 36px;
+}
+.magnifier .pod .scissors {
+    background-position: 0 -479px;
+}
+
+.effects-transfer {
+    background: -moz-linear-gradient(left, #FFFFFF 0%, #FFFFFF 40%, #FEECAE 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#FFFFFF), color-stop(40%,#FFFFFF), color-stop(100%,#FEECAE));
+    background: -webkit-linear-gradient(left, #FFFFFF 0%, #FFFFFF 40%, #FEECAE 100%);
+    background: -o-linear-gradient(left, #FFFFFF 0%, #FFFFFF 40%, #FEECAE 100%);
+    background: -ms-linear-gradient(left, #FFFFFF 0%, #FFFFFF 40%, #FEECAE 100%);
+    background: linear-gradient(left, #FFFFFF 0%, #FFFFFF 40%, #FEECAE 100%);
+    border: 1px solid #B8E0F3;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(136, 136, 136, 0.4);
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+#effect-dest {
+    height: 339px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -170px;
+    position: absolute;
+    top: 50%;
+    width: 600px;
+}

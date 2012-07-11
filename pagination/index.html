@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css" media="screen" rel="stylesheet" type="text/css" >
+<style>
+.pods {
+    width: 220px;
+    height: 220px;
+    float: left;
+}
+.pod {
+    height: 100px;
+    width: 100px;
+    background-color: #7ABA4C;
+    float: left;
+    margin: 5px;
+}
+.viewport {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.strip {
+    width: 10000px;
+    position: relative;
+}
+</style>
+</head>
+<body>
+
+<div class="mod-gallery">
+
+    <div>
+        <input id="goto" value="5"><button type="button" class="gotoBtn">Go</button>
+        <a class="prev" href="#">Prev</a>
+        <a class="next" href="#">Next</a>
+    </div>
+
+    <div class="viewport">
+        <div class="strip">
+            <div class="pods" id="page-curr">
+                <div class="pod">Page 0 Item 0</div>
+                <div class="pod">Page 0 Item 1</div>
+                <div class="pod">Page 0 Item 2</div>
+                <div class="pod">Page 0 Item 3</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+<script>
+var currentPage = 0;
+function gotoPage(pageNum) {
+    var newPage,
+        left,
+        onComplete;
+
+    if (pageNum === currentPage || pageNum < 0) {
+        return;
+    }
+
+    if (pageNum > currentPage) {
+        newPage = $('<div class="pods" id="page-next"></div>');
+        newPage.insertAfter('#page-curr');
+        $(".strip").css("left", 0);
+        populatePods(pageNum, newPage);
+        left = -220;
+        onComplete = function () {
+            currentPage = pageNum;
+            $("#page-curr").remove();
+            $("#page-next").attr("id", "page-curr");
+            $(".strip").css("left", 0);
+        };
+    } else {
+        newPage = $('<div class="pods" id="page-prev"></div>');
+        newPage.insertBefore('#page-curr');
+        $(".strip").css("left", -220);
+        populatePods(pageNum, newPage);
+        left = 0;
+        onComplete = function () {
+            currentPage = pageNum;
+            $("#page-curr").remove();
+            $("#page-prev").attr("id", "page-curr");
+            $(".strip").css("left", 0);
+        };
+    }
+
+    $(".strip").animate({"left": left}, 1000, onComplete);
+
+}
+function populatePods(pageNum, newPage) {
+    //var data = podCache.slice(4 * pageNum, 4 * pageNum + 4);
+    newPage.html("");
+    $("#page-curr .pod").each( function (index, pod) {
+        $(pod).clone().html("Page " + pageNum + " Item " + index).appendTo(newPage);
+    });
+}
+$(document).ready(function () {
+    $(".prev").click(function (e) {
+        e.preventDefault();
+        gotoPage(currentPage - 1);
+    });
+    $(".next").click(function (e) {
+        e.preventDefault();
+        gotoPage(currentPage + 1);
+    });
+    $(".gotoBtn").click(function (e) {
+        var pageNum = parseInt($("#goto").val(), 10);
+        gotoPage(pageNum);
+    });
+});
+</script>
+</body>
+</html>

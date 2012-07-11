@@ -1,0 +1,19 @@
+.mod-couponcarrier {
+    background-color: #A4D7F9;
+}
+.mod-couponcarrier .titlebar {
+    display: block;
+}
+.mod-couponcarrier .categories {
+    display: none;
+}
+
+.mod-couponcarrier.mini {
+    position: fixed;
+}
+.mod-couponcarrier.mini .titlebar {
+    display: none;
+}
+.mod-couponcarrier.mini .categories {
+    display: block;
+}

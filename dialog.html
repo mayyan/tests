@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>jQuery UI Transfer Effect Demo - jsFiddle demo</title>
+
+
+  <link rel="stylesheet" type="text/css" href="http://jsfiddle.net/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="http://jsfiddle.net/css/result-light.css">
+
+
+      <!--script type='text/javascript' src='http://code.jquery.com/jquery-1.4.4.min.js'></script>
+      <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.12/jquery-ui.js"></script-->
+
+      <script type="text/javascript" src="http://vdevusvr06.corp.coupons.com/layouts/js/jquery.min.js"></script>
+      <!--script type="text/javascript" src="http://vdevusvr06.corp.coupons.com/layouts/js/jquery-ui.min.js"></script-->
+      <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.16/jquery-ui.js"></script>
+
+
+
+
+      <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.12/themes/redmond/jquery-ui.css">
+
+
+
+  <style type='text/css'>
+    .ui-effects-transfer { border: 2px dotted #FF0000; }
+    #smpb_info_btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .ui-widget-overlay {
+        opacity: 0.8;
+    }
+    .content {
+        height: 200px;
+        width: 300px;
+        border: 1px solid green;
+    }
+  </style>
+
+<script type='text/javascript'>
+$(document).ready(function() {
+
+    $("#close_btn").click(function() {
+        $("#flyout-inner").dialog("close");
+    });
+
+    $("#flyout-inner").dialog({
+        dialogClass: 'flyout-outer',
+
+        minHeight: 0,
+        autoOpen: true,
+        height: "auto", //250,
+        width: "auto", //600,
+        modal: true, //false,
+        draggable: false,
+        resizable: false,
+        beforeClose: function() {
+
+            var $this = $(this);
+
+            $this
+                .dialog("widget")
+                .effect("transfer", {
+
+                    to: "#smpb_info_btn",
+                    className: "ui-effects-transfer"
+
+                }, 5000);
+        },
+        close: function(e, ui) {
+             $("#flyout-inner").dialog("destroy");
+        }
+    });
+
+});
+
+  </script>
+
+</head>
+<body>
+  <div id="flyout-inner">
+    <div class="content">Hello</div>
+    <button id="close_btn">Close</button>
+
+</div>
+
+<button id="smpb_info_btn">Info</button>
+
+</body>
+
+
+</html>
+

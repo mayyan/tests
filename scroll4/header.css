@@ -1,0 +1,21 @@
+.mod-header {
+    background-color: #54B1EA;
+}
+
+.mod-header .tabs li {
+    border-left: 1px solid #000;
+    padding-left: 1em;
+}
+.mod-header .tabs li:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.mod-header.fixed {
+    width: 970px;
+    position: fixed;
+    top: 0;
+}
+.mod-header.mini .tabs {
+    display: none;
+}

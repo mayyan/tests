@@ -1,0 +1,58 @@
+/* sets defaults for the page */
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    background: #e8f6f5;
+    background: url("http://cdn.cpnscdn.com/print.coupons.com/CouponWeb/Themes/CM_BigBlue/_images/body_bg.gif") repeat-y 50% 0;
+    margin: 0;
+}
+.wrapper {
+    background-color: #FFF;
+    padding: 0 5px;
+    margin: 0 auto;
+    width: 970px; /* main(805) + rail(160) + gutter(5) */
+}
+
+#header {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+#main {
+    width: 805px;
+    float: left;
+}
+
+#rail {
+    width: 160px;
+    float: left;
+    margin-left: 5px;
+}
+
+
+#footer {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#no-print {
+    display: none;
+}
+
+@font-face {
+    font-family: 'MuseoSans';
+    src: url('http://cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.eot');
+    src: url('http://cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.svg#webfontkQkWxTED') format('svg'),
+         url('http://cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.woff') format('woff'),
+         url('http://cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

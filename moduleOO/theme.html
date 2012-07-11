@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="app.js"></script>
+        <script src="GalleryBase.js"></script>
+        <script src="GalleryTheme.js"></script>
+        <script>
+console.log("Running theme Module...");
+APP.gallery = new GalleryTheme();
+APP.gallery.pubBaseFunc(); // access func only defined in base
+APP.gallery.pubThemeFuncNew();
+APP.gallery.pubSharedFunc();
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

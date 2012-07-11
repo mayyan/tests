@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clipped Corner</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css" media="all" rel="stylesheet" type="text/css" >
+
+<style>
+.pod {
+    height: 150px;
+    width: 250px;
+}
+/* Shared styles */
+
+.drop-shadow {
+    position:relative;
+    float:left;
+    /*width:40%;*/
+    padding:1em;
+    margin:2em 10px 4em;
+    background:#fff;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+    content:"";
+    position:absolute;
+    z-index:-2;
+}
+
+.drop-shadow p {
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* Curled corners */
+
+.curled {
+    /*border:1px solid #efefef;*/
+    -moz-border-radius:0 0 120px 120px / 0 0 6px 6px;
+         border-radius:0 0 120px 120px / 0 0 6px 6px;
+}
+
+.curled:before,
+.curled:after {
+    bottom:12px;
+    left:10px;
+    width:50%;
+    height:55%;
+    max-width:200px;
+    -webkit-box-shadow:0 8px 12px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow:0 8px 12px rgba(0, 0, 0, 0.5);
+            box-shadow:0 8px 12px rgba(0, 0, 0, 0.5);
+    -webkit-transform:skew(-8deg) rotate(-3deg);
+       -moz-transform:skew(-8deg) rotate(-3deg);
+        -ms-transform:skew(-8deg) rotate(-3deg);
+         -o-transform:skew(-8deg) rotate(-3deg);
+            transform:skew(-8deg) rotate(-3deg);
+}
+
+.curled:after {
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+</style>
+</head>
+<body>
+
+    <div class="pod drop-shadow">
+        <p>Curled corners 1</p>
+    </div>
+    <div class="pod drop-shadow">
+        <p>Curled corners 2</p>
+    </div>
+    <div style="clear:both"></div>
+    <div class="pod drop-shadow">
+        <p>Curled corners 3</p>
+    </div>
+    <div class="pod drop-shadow">
+        <p>Curled corners 4</p>
+    </div>
+
+    <script src="http://www.coupons.com/layouts/js/jquery.min.js"></script>
+    <script>
+        $(".pod").click(function() {
+            $(this).toggleClass("curled");
+        });
+    </script>
+
+</body>
+</html>

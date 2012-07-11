@@ -1,0 +1,84 @@
+.mod-footer {
+    text-align: center;
+    background-color: white;
+    font-size: 93%;
+    padding-top: 1em;
+
+    border-top: 3px solid white;
+}
+.mod-footer .footer-banner-container {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.mod-footer .footer-banner-container iframe {
+    height: 90px;
+    width: 729px;
+}
+
+.mod-footer .footer-nav {
+    margin-bottom: 0.7em;
+}
+.mod-footer .foot-nav a {
+    text-decoration: none;
+    padding-right: 0.5em;
+    border-right: 1px solid #0f94d2;
+    margin-right: 0.25em;
+    color: #5A8F00;
+}
+.mod-footer .foot-nav a.last {
+    border-right: 0 none;
+}
+
+.mod-footer .foot-nav a:hover {
+    text-decoration: underline;
+}
+.mod-footer .copyright {
+    display: inline;
+    padding-right: 1em;
+}
+.mod-footer .feeds-heading,
+.mod-footer .feeds-list {
+    display: inline;
+}
+.mod-footer .feed-item,
+.mod-footer .endorse {
+    display: block;
+    margin-left: 0.5em;
+}
+.mod-footer .feed-myyahoo {
+    background-position: 0 -57px;
+    width: 86px;
+    height: 14px;
+}
+.mod-footer .feed-google {
+    background-position: 0 -14px;
+    width: 61px;
+    height: 14px;
+}
+.mod-footer .feed-aol {
+    background-position: 0 0;
+    width: 63px;
+    height: 14px;
+}
+.mod-footer .feed-msn {
+    background-position: 0 -28px;
+    width: 71px;
+    height: 14px;
+}
+.mod-footer .feed-rss {
+    background-position: 0 -42px;
+    width: 80px;
+    height: 15px;
+}
+.mod-footer .truste {
+    background-position: 0 -105px;
+    width: 120px;
+    height: 37px;
+}
+.mod-footer .bbb {
+    background-position: 0 -71px;
+    width: 90px;
+    height: 34px;
+}

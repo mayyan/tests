@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- include flashembed -->
+    <!--script src="http://static.flowplayer.org/tools/download/1.2.5/toolbox/toolbox.flashembed.min.js"></script-->
+    <script src="http://cdn.cpnscdn.com/static.coupons.com/img/bigblue/flowplayer-3.2.6.min.js"></script>
+    <script src="http://static.flowplayer.org/js/flowplayer.ipad-3.2.2.min.js"></script>
+</head>
+
+<body>
+
+<!-- setup container for the player -->
+<div id="player" style="width:500px;height:320px;display:block"></div>
+
+<!-- third argument is flowplayer configuration. you cannot use events -->
+<script language="JavaScript">
+flowplayer("player",
+    {
+        src: "http://cdn.cpnscdn.com/static.coupons.com/img/bigblue/flowplayer.commercial-3.2.7.swf",
+        //src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.6.swf',
+        // older versions will see a custom message
+        version: [9, 115]/*,
+        onFail: function ()  {
+            var html = '<h3>Oops...</h3>' +
+                '<h4>The Flash browser plugin is required to watch this video.</h4>' +
+                '<p><a href="http://www.adobe.com/go/getflashplayer">Get the plugin here &raquo;</a></p>';
+            document.getElementById("player").innerHTML = html;
+            return html;
+        }*/
+    }, {
+        key: '#@c7f82239d74458fee08',
+        plugins : {
+            controls: null //disable all controls
+        },
+        clip: {
+            baseUrl: 'http://vdevusvr06.corp.coupons.com/demo/video/',
+            // covert FLV to MP4: http://video.online-convert.com/convert-to-mp4
+            url: flashembed.isSupported([9, 115]) ? 'movie.flv' : 'movie.mp4',
+            scaling: "orig",
+            autoBuffering: true,
+            autoPlay: true
+        }/*,
+        onFinish: function (clip) {
+            alert("finished");
+        }*/
+    }
+).ipad();
+</script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>

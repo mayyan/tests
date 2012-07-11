@@ -1,0 +1,62 @@
+.sprite-icons {
+    background-image: url("http://cdn.cpnscdn.com/web.coupons.com/layouts/bigblue/images/sprite_icons.png");
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.media {overflow:hidden; _overflow:visible; zoom:1;}
+.media .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img {display:block;}
+.media .imgExt {/*float:right; margin-left: 10px;*/}
+
+.horizontal-list > li {
+    display: inline-block;
+}
+
+.border-color {
+    border-color: #5A8F00;
+}
+.txt-size-large {
+    font-size: large;
+}
+.txt-size-small {
+    font-size: smaller;
+}
+
+.section {
+    overflow: hidden;
+    width: 940px;
+
+}
+.section-heading {
+    background-color: #999;
+    float: left;
+    width: 30px;
+    height: 264px;
+    margin-right: 8px;
+    background: #636363; /* Old browsers */
+    background: -moz-linear-gradient(top, #636363 0%, #FFFFFF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#636363), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #636363 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #636363 0%,#FFFFFF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #636363 0%,#FFFFFF 100%); /* IE10+ */
+    background: linear-gradient(top, #636363 0%,#FFFFFF 100%); /* W3C */
+}
+.section-heading span {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    display: block;
+    position: relative;
+    bottom: -50px;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 30px;
+
+}

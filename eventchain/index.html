@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+div {
+    border: 1px solid #000;
+    background: #00A8E3;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+    <div class="mod-category">Category</div>
+
+    <div class="mod-gallery">Gallery</div>
+
+    <div class="mod-ads">Ads</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+
+APP = {
+    // Call this function to save the event for every user action:
+    // click, hover, scroll
+    setUserEvent: function(event) {
+        if (APP.contextData.analytics) {
+            APP.contextData.analytics.userEvent = event;
+        } else {
+            APP.contextData.analytics = {userEvent: event};
+        }
+    },
+
+    // Due to event chain, call this function to get the original user action
+    // click, hover, scroll
+    // Used for analytics purpose only so far.
+    getUserEvent: function() {
+        if (APP.contextData.analytics)  {
+            return APP.contextData.analytics.userEvent;
+        } else {
+            return null;
+        }
+    }
+};
+
+// category module
+$(document).ready(function () {
+    $(".mod-category").click(function(event) {
+        // save the event for every user action
+        APP.setUserEvent(event);
+
+        $(".mod-category").html("Event Origin");
+        $(".mod-category").trigger("couponsinc:sort", {
+            message: event.type + ":" + $(this).html()
+        });
+    });
+});
+
+// gallery module
+$(document).ready(function () {
+    $(".mod-gallery").click (function (event) {
+        // save the event for every user action
+        APP.setUserEvent(event);
+
+        $(".mod-gallery").html("Event Origin");
+        $(".mod-gallery").trigger("couponsinc:changePage", {
+            pageNum: "N"
+        });
+    });
+
+    $(document).bind("couponsinc:sort", function (event, params) {
+        // DO NOT save this as user event, since it is not a direct user action on the page
+        $(".mod-gallery").html("passing message: " + params.message);
+        $(".mod-gallery").trigger("couponsinc:changePage", {
+            pageNum: "0"
+        });
+    });
+});
+
+// ads module
+$(document).ready(function () {
+    $(document).bind("couponsinc:changePage", function (event, params) {
+        // DO NOT save this as user event, since it is not a direct user action on the page
+        $(".mod-ads").html("Rotate Ads along with page " + params.pageNum);
+    });
+});
+
+// BrightTag
+$(document).ready(function () {
+    $(document).bind("couponsinc:changePage", function (event, params) {
+        // Find the original user event for tracking purpose
+        var userEvent = APP.getUserEvent();
+        if (userEvent) {
+            console.log(userEvent.target);
+        }
+        console.log("Logging event " + event.type + " " + params.pageNum);
+    });
+});
+</script>
+</body>
+</html>

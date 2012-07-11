@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+
+<a id="player" style="width:160px;height:120px;display:block"><a>
+
+<script src="http://static.flowplayer.org/js/flowplayer-3.2.6.min.js"></script>
+<script language="JavaScript">
+flowplayer("player",
+    {
+        src: "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf",
+        version: [9, 115]
+    }, {
+        plugins : {
+            controls: null //disable all controls
+        },
+        clip: {
+            url: "http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv",
+            scaling: "orig",
+            autoBuffering: true,
+            autoPlay: true
+        }
+    }
+);
+
+/**
+ * The following line caused the initial buffering animation not showing.
+ * You can comment it out since I already have autoPlay:true.
+ * If autoPlay is false, using the following line to progamatically start playing,
+ * you won't see the buffering animation.
+ *
+ * In all cases, I don't see the subsequent buffering animation during video playing, if I'm on a slow network.
+ */
+//flowplayer("player").play();
+
+</script>
+</body>
+
+</html>
+

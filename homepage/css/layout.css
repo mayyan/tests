@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    padding: 0 39px;
+}
+.wrapper {
+    background-color: #FFF;
+    margin: 0 auto;
+}
+.region {
+    /*border: 1px solid red;*/
+}
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: white;
+}
+#content {
+    position: relative;
+    top: 110px;
+}
+#footer {
+    position: relative;
+    top: 110px;
+    clear: both;
+    margin: 0 auto;
+}

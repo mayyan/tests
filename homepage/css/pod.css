@@ -1,0 +1,22 @@
+.pod {
+    float: left;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.pod:after {
+    content: '\2704';
+    display: block;
+    position: absolute;
+    bottom: -13px;
+    font-size: 153.8%;
+    color: #5A8F00;
+}
+.pod .value {
+    color: #5A8F00;
+    font-weight: bold;
+}
+.pod .brand {
+    font-weight: bold;
+}

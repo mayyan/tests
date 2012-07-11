@@ -1,0 +1,18 @@
+.mod-gallery {
+    /*position: relative;*/ /* needed for absoluted positioned .goto-top */
+}
+.mod-gallery .pod {
+    height: 138px;
+    width: 250px;
+    background-color: #7ABA4C;
+    float: left;
+    margin: 5px;
+}
+.mod-gallery .more {
+    clear: both;
+    display: block;
+}
+.mod-gallery .goto-top {
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,43 @@
+#header {background-color:  #dddddd;}
+#rail {background-color: #FDF9EE;}
+#footer {background-color:  #dddddd;}
+
+.clearfix {
+    clear: both;
+}
+.fixed {
+    position: fixed;
+}
+#header.fixed {
+    width: 970px;
+}
+.mod-couponcarrier.fixed,
+.mod-gallery.fixed {
+    width: 805px;
+}
+.mod-couponcarrier {
+    background: #EFEBDE;
+}
+.promo-module {
+    height: 200px;
+    background: #b1d2e4;
+    margin-bottom: 10px;
+}
+.pods {
+}
+.pod {
+    height: 138px;
+    width: 250px;
+    background-color: #7ABA4C;
+    float: left;
+    margin: 5px;
+}
+.more {
+    clear: both;
+    display: block;
+}
+.goto-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
