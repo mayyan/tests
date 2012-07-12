@@ -30,6 +30,11 @@ APP_COUPONSINC.Pod = CClass.create(function(podNode, podData) {
         this.$(".pod-type", this.pod).html(this.data.type);
         this.$(".pod-id", this.pod).html(this.data.id);
 
+        var html = "<img src=\"{url}\" height=\"100\" width=\"80\" />"
+                .replace("{url}", this.data.image.url);
+
+        this.$(html).appendTo(this.pod);
+
         // attach new event handlers to the updated DOM
         this.bindEventHandlers();
     }
@@ -41,7 +46,7 @@ APP_COUPONSINC.Pod = CClass.create(function(podNode, podData) {
     // If you have utility functions that child class has no intention to override/extend,
     // You can define them here, and expose them in the return hash.
     function utility() {
-        console.log("utility");
+        //console.log("utility");
     }
 
     // The hash object which the constructor returns automatically becomes the public interface of the class/instance.

@@ -9586,7 +9586,7 @@
                 },
                 "17210397": {
                     "podId": "17210397",
-                    "type": "13",
+                    "type": "15",
                     "cclass": null,
                     "value": "0",
                     "category": null,

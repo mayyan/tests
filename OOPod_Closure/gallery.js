@@ -11,9 +11,10 @@
  *     They can contain the same function name while having different implementation.
  *     A child class can have a function of its own that doesn't exsist in otehr classes too.
  *
- *     You need to use "new" operator to instanciate an instance.
- *     Base class APP_COUPONSINC.Pod is an abstraction of all types of pod.
- *     Base class should not be used to create any pod instance.
+ *     1. You need to use "new" operator to instanciate an instance.
+ *     2. Base class APP_COUPONSINC.Pod is an abstraction of all types of pod.
+ *     3. Base class should not be used to create any pod instance.
+ *     4. obj instanceof APP_COUPONSINC.PodPrintable works too.
  *
  *                         themeless
  *                           Pod

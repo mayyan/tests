@@ -19,14 +19,8 @@ APP_COUPONSINC.PodPrintable = APP_COUPONSINC.Pod.extend(function(podNode, podDat
         this.$(html).appendTo(podNode);
     }
 
-    function handleClick(e) {
-        // re-use parent class function of the same name
-        this._super();
-    }
-
     return {
         // overwriting the named method of APP_COUPONSINC_PodClass
-        populate: populate,
-        handleClick : handleClick
+        populate: populate
     };
 });
