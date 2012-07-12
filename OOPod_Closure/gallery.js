@@ -6,27 +6,27 @@
  *     We don't want this.
  *
  * In this inheritance pattern
- *     Each child has its own namespace, aka APP_COUPONSINC.PodPrintableClass etc. It's actually a class name.
+ *     Each child has its own namespace, aka APP_COUPONSINC.PodPrintable etc. It's actually a class name.
  *     Parent class is "horizontally" extendable to mutliple children classes within the same theme.
  *     They can contain the same function name while having different implementation.
  *     A child class can have a function of its own that doesn't exsist in otehr classes too.
  *
  *     You need to use "new" operator to instanciate an instance.
- *     Base class APP_COUPONSINC.PodClass is an abstraction of all types of pod.
+ *     Base class APP_COUPONSINC.Pod is an abstraction of all types of pod.
  *     Base class should not be used to create any pod instance.
  *
  *                         themeless
- *                         PodClass
+ *                           Pod
  *                            |
  *             --------------------------------
  *             |                              |
- *           themeless                    themless
- *          PodCPCClass               PodPrintableClass
+ *          themeless                     themless
+ *           PodCPC                     PodPrintable
  *             |                              |
  *    -----------------             ---------------------
  *    |               |             |                   |
  * bigblue's      walmart's     bigblue's            walmart's
- * PodCPCClass    PodCPCClass   PodPrintableClass    PodPrintableClass
+ * PodCPC         PodCPC        PodPrintable         PodPrintable
  *
  */
 APP_COUPONSINC.gallery = (function ($) {
@@ -45,10 +45,10 @@ APP_COUPONSINC.gallery = (function ($) {
 
             switch (podData.type) {
                 case 0:
-                    podObj = new APP_COUPONSINC.PodPrintableClass(pod, podData);
+                    podObj = new APP_COUPONSINC.PodPrintable(pod, podData);
                     break;
                 case 15:
-                    podObj = new APP_COUPONSINC.PodCPCClass(pod, podData);
+                    podObj = new APP_COUPONSINC.PodCPC(pod, podData);
                     break;
             }
             podObj.bindEventHandlers();
@@ -70,10 +70,10 @@ APP_COUPONSINC.gallery = (function ($) {
 
             switch (podData.type) {
                 case 0:
-                    podObj = new APP_COUPONSINC.PodPrintableClass(pod, podData);
+                    podObj = new APP_COUPONSINC.PodPrintable(pod, podData);
                     break;
                 case 15:
-                    podObj = new APP_COUPONSINC.PodCPCClass(pod, podData);
+                    podObj = new APP_COUPONSINC.PodCPC(pod, podData);
                     break;
             }
             podObj.populate();

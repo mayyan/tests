@@ -1,8 +1,8 @@
 /**
  * Class of printable pod on bigblue themes
- * Its parent is the themeless PodPrintableClass
+ * Its parent is the themeless PodPrintable class
  */
-APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodPrintableClass.extend(function(podDom, podData) {
+APP_COUPONSINC.PodPrintable = APP_COUPONSINC.PodPrintable.extend(function(podDom, podData) {
     // call the constructor of our base class
     this._super(podDom, podData);
 
@@ -12,7 +12,7 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodPrintableClass.extend(funct
         this._super();
 
         // do something more
-        alert("clicked a Bigbue PodPrintableClass, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
+        alert("clicked a Bigbue PodPrintable, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
     }
 
     return {

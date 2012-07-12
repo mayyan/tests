@@ -1,10 +1,10 @@
 /**
  * Class of CPC pod on walmart themes
- * Its parent is the themeless PodCPCClass
+ * Its parent is the themeless PodCPC class
  */
-APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodCPCClass.extend(function(podDom, podData) {
+APP_COUPONSINC.PodCPC = APP_COUPONSINC.PodCPC.extend(function(podNode, podData) {
     // call the constructor of our base class
-    this._super(podDom, podData);
+    this._super(podNode, podData);
 
     function handleClick(e) {
         // re-use parent class function of the same name
@@ -12,7 +12,7 @@ APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodCPCClass.extend(function(podDom, 
         this._super();
 
         // do something more
-        alert("clicked a Walmart PodCPCClass, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
+        alert("clicked a Walmart PodCPC, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
     }
 
     return {

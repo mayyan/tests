@@ -1,10 +1,10 @@
 /**
  * Class of printable pod on walmart themes
- * Its parent is the themeless PodPrintableClass
+ * Its parent is the themeless PodPrintable class
  */
-APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodPrintableClass.extend(function(podDom, podData) {
+APP_COUPONSINC.PodPrintable = APP_COUPONSINC.PodPrintable.extend(function(podNode, podData) {
     // call the constructor of our base class
-    this._super(podDom, podData);
+    this._super(podNode, podData);
 
     function handleClick(e) {
         // re-use parent class function of the same name
@@ -12,7 +12,7 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodPrintableClass.extend(funct
         this._super();
 
         // do something more
-        alert("clicked a Walmart PodPrintableClass, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
+        alert("clicked a Walmart PodPrintable, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
     }
 
     return {

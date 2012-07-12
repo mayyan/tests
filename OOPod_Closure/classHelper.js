@@ -4,6 +4,10 @@
  * you can use this._super(...); to call the base class implementation of a function.
  *
  * http://www.ruzee.com/blog/2008/12/javascript-inheritance-via-prototypes-and-closures
+ * On that page, two machanisms were introduced: prototype-based and closure-based.
+ * "The advantages of using the prototype approach is speed and a low memory usage.
+ * The disadvantage is that private variables and functions cannot be shared between public methods since there's no way to create a common closure."
+ * The disadvantage is bad enough for us not to choose prototype-based machanism.
  */
 (function(){
   CClass = function(){};

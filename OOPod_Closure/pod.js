@@ -1,16 +1,14 @@
 /**
  * Base class of all pod types on all themes
  */
-APP_COUPONSINC.PodClass = CClass.create(function(podDom, podData) {
-    /****
-     * private variables, accessible by child class
-     ****/
-    // local reference to the global jQuery
-    this.$ = jQuery;
-    this.pod = podDom;
+APP_COUPONSINC.Pod = CClass.create(function(podNode, podData) {
+    //
+    // private variables, accessible by child class
+    //
+    this.$ = jQuery; // local reference to the global jQuery
+    this.pod = podNode;
     this.data = podData;
-    // demo purpose
-    this.clickCount = 0;
+    this.clickCount = 0; // demo purpose
 
     function unbindEventHandlers() {
         this.pod.unbind("click");
@@ -40,7 +38,7 @@ APP_COUPONSINC.PodClass = CClass.create(function(podDom, podData) {
         this.clickCount += 1;
     }
 
-    // If you have helper functions that used by child class
+    // If you have utility functions that child class has no intention to override/extend,
     // You can define them here, and expose them in the return hash.
     function utility() {
         console.log("utility");

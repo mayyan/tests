@@ -1,10 +1,10 @@
 /**
  * Base class of CPC pod on all themes
- * Its parent is the themeless PodClass
+ * Its parent is the themeless Pod class
  */
-APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, podData) {
+APP_COUPONSINC.PodCPC = APP_COUPONSINC.Pod.extend(function(podNode, podData) {
     // call the constructor of our base class
-    this._super(podDom, podData);
+    this._super(podNode, podData);
 
     // Testing re-use function from parent class if child does not extend it.
     this.utility();
@@ -16,7 +16,7 @@ APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, pod
         var html = "<p>Click Limit: <span class=\"click-limit\">{clickLimit}</span></p>"
                 .replace("{clickLimit}", this.data.clickLimit);
 
-        this.$(html).appendTo(podDom);
+        this.$(html).appendTo(podNode);
     }
 
     function handleClick(e) {
