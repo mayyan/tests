@@ -6,9 +6,6 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodClass.extend(function(podDo
     // call the constructor of our base class
     this._super(podDom, podData);
 
-    // local reference to the global jQuery
-    var $ = jQuery;
-
     // Testing re-use function from parent class if child does not extend it.
     this.utility();
 
@@ -19,7 +16,7 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodClass.extend(function(podDo
         var html = "<p>Print Limit: <span class=\"print-limit\">{printLimit}</span></p>"
                 .replace("{printLimit}", this.data.printLimit);
 
-        $(html).appendTo(podDom);
+        this.$(html).appendTo(podDom);
     }
 
     function handleClick(e) {

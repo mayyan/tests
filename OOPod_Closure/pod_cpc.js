@@ -6,9 +6,6 @@ APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, pod
     // call the constructor of our base class
     this._super(podDom, podData);
 
-    // local reference to the global jQuery
-    var $ = jQuery;
-
     // Testing re-use function from parent class if child does not extend it.
     this.utility();
 
@@ -19,7 +16,7 @@ APP_COUPONSINC.PodCPCClass = APP_COUPONSINC.PodClass.extend(function(podDom, pod
         var html = "<p>Click Limit: <span class=\"click-limit\">{clickLimit}</span></p>"
                 .replace("{clickLimit}", this.data.clickLimit);
 
-        $(html).appendTo(podDom);
+        this.$(html).appendTo(podDom);
     }
 
     function handleClick(e) {

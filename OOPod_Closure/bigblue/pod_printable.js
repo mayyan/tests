@@ -6,9 +6,6 @@ APP_COUPONSINC.PodPrintableClass = APP_COUPONSINC.PodPrintableClass.extend(funct
     // call the constructor of our base class
     this._super(podDom, podData);
 
-    // local reference to the global jQuery
-    var $ = jQuery;
-
     function handleClick(e) {
         // re-use parent class function of the same name
         // you don't have to call _super() if you don't want to re-use.

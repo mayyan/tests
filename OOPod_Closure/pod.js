@@ -2,12 +2,14 @@
  * Base class of all pod types on all themes
  */
 APP_COUPONSINC.PodClass = CClass.create(function(podDom, podData) {
+    /****
+     * private variables, accessible by child class
+     ****/
     // local reference to the global jQuery
-    var $ = jQuery;
-
-    // private variables, accessible by child class
+    this.$ = jQuery;
     this.pod = podDom;
     this.data = podData;
+    // demo purpose
     this.clickCount = 0;
 
     function unbindEventHandlers() {
@@ -27,8 +29,8 @@ APP_COUPONSINC.PodClass = CClass.create(function(podDom, podData) {
         this.unbindEventHandlers();
 
         // DOM manipulation
-        $(".pod-type", this.pod).html(this.data.type);
-        $(".pod-id", this.pod).html(this.data.id);
+        this.$(".pod-type", this.pod).html(this.data.type);
+        this.$(".pod-id", this.pod).html(this.data.id);
 
         // attach new event handlers to the updated DOM
         this.bindEventHandlers();
