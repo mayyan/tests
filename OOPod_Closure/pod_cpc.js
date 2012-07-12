@@ -13,8 +13,9 @@ APP_COUPONSINC.PodCPC = APP_COUPONSINC.Pod.extend(function(podNode, podData) {
         // re-use the parent class method of the same name in our context (this)
         this._super();
 
-        var html = "<p>Click Limit: <span class=\"click-limit\">{clickLimit}</span></p>"
-                .replace("{clickLimit}", this.data.clickLimit);
+        var html = "<a href=\"{link_url}\">{link_text}</a>"
+                .replace("{link_url}", this.data.link_url || "#")
+                .replace("{link_text}", this.data.link_text || "blank");
 
         this.$(html).appendTo(podNode);
     }

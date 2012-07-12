@@ -12,7 +12,7 @@ APP_COUPONSINC.PodCPC = APP_COUPONSINC.PodCPC.extend(function(podNode, podData) 
         this._super();
 
         // do something more
-        alert("clicked a BigBlue PodCPC, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
+        alert("clicked a BigBlue PodCPC, Clicked " + this.clickCount + " times. Id = " + this.data.podId + this.pod.html());
     }
 
     return {

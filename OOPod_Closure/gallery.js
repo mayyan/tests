@@ -32,7 +32,7 @@
 APP_COUPONSINC.gallery = (function ($) {
     function init() {
         var pods = $(".pod"),
-            contextData = APP_COUPONSINC.contextData;
+            podCache = APP_COUPONSINC.contextData.gallery.podCache;
 
         // Create object on existing pod DOM element.
         // Since HTML is already present, all it left to do
@@ -40,25 +40,29 @@ APP_COUPONSINC.gallery = (function ($) {
         $.each(pods, function (index, podDom) {
             var pod = $(podDom),
                 podId = pod.data("podid"),
-                podData = contextData[podId],
+                podData = podCache[podId],
                 podObj;
 
             switch (podData.type) {
-                case 0:
+                case "0":
                     podObj = new APP_COUPONSINC.PodPrintable(pod, podData);
+                    pod.removeClass("cpc").addClass("coupon");
                     break;
-                case 15:
+                case "15":
+                default:
                     podObj = new APP_COUPONSINC.PodCPC(pod, podData);
+                    pod.removeClass("coupon").addClass("cpc");
                     break;
             }
+            $(".pod-type", pod).html(podData.type);
             podObj.bindEventHandlers();
         });
     }
 
     function populatePods() {
         var page = $(".pods"),
-            podIds = ["1001", "1002"],
-            contextData = APP_COUPONSINC.contextData,
+            podIds = APP_COUPONSINC.contextData.gallery.allPodsIDs,
+            podCache = APP_COUPONSINC.contextData.gallery.podCache,
             podIndex = 0;
 
         // Using existing pod DOM as template, populate the DOM using pod data.
@@ -66,13 +70,14 @@ APP_COUPONSINC.gallery = (function ($) {
         $.each(podIds, function (index, podId) {
             var podObj,
                 pod = $($(".pod", page)[podIndex]),
-                podData = contextData[podId];
+                podData = podCache[podId];
 
             switch (podData.type) {
-                case 0:
+                case "0":
                     podObj = new APP_COUPONSINC.PodPrintable(pod, podData);
                     break;
-                case 15:
+                case "15":
+                default:
                     podObj = new APP_COUPONSINC.PodCPC(pod, podData);
                     break;
             }

@@ -13,8 +13,8 @@ APP_COUPONSINC.PodPrintable = APP_COUPONSINC.Pod.extend(function(podNode, podDat
         // re-use the parent class method of the same name in our context (this)
         this._super();
 
-        var html = "<p>Print Limit: <span class=\"print-limit\">{printLimit}</span></p>"
-                .replace("{printLimit}", this.data.printLimit);
+        var html = "<p>{summary}</p>"
+                .replace("{summary}", this.data.summary);
 
         this.$(html).appendTo(podNode);
     }

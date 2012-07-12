@@ -12,7 +12,7 @@ APP_COUPONSINC.PodPrintable = APP_COUPONSINC.PodPrintable.extend(function(podDom
         this._super();
 
         // do something more
-        alert("clicked a Bigbue PodPrintable, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
+        alert("clicked a Bigbue PodPrintable, Clicked " + this.clickCount + " times. Id = " + this.data.podId + this.pod.html());
     }
 
     return {

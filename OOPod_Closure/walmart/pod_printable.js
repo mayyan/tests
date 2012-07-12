@@ -12,7 +12,7 @@ APP_COUPONSINC.PodPrintable = APP_COUPONSINC.PodPrintable.extend(function(podNod
         this._super();
 
         // do something more
-        alert("clicked a Walmart PodPrintable, Clicked " + this.clickCount + " times. Id = " + this.data.id + this.pod.html());
+        alert("clicked a Walmart PodPrintable, Clicked " + this.clickCount + " times. Id = " + this.data.podId + this.pod.html());
     }
 
     return {
