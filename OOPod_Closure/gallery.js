@@ -62,7 +62,7 @@ APP_COUPONSINC.gallery = (function ($) {
 
     function populatePods() {
         var page = $(".pods"),
-            podIds = APP_COUPONSINC.contextData.gallery.allPodsIDs,
+            podIds = APP_COUPONSINC.contextData.gallery.allPodsIDs.slice(0, count),
             podCache = APP_COUPONSINC.contextData.gallery.podCache,
             podIndex = 0;
 
