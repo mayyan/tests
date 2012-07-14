@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+
+
+<script src="classHelper.js"></script>
+
+<script>
+var Person = PClass.create(function () {
+    function init(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    function setAge(age) {
+        this.age = age;
+    }
+
+    function getAge() {
+        return this.age;
+    }
+
+    function name() {
+        return [this.lastName, this.firstName].join(", ");
+    }
+    return {
+        init: init,
+        name: name,
+        setAge: setAge,
+        getAge: getAge
+    };
+}());
+
+var Smith = Person.extend(function() {
+    var address = "Sunnyvale";
+
+    function init(firstName) {
+        this._super(firstName, "Smith");
+    }
+
+    function getAddress() {
+        return address;
+    }
+
+    return {
+        init: init,
+        getAddress: getAddress
+    };
+}());
+
+var perterSchmit = new Person("Peter", "Schmidt");
+var johnSmith = new Smith("John");
+
+perterSchmit.setAge("25");
+alert(perterSchmit.name() + " whose age is " + perterSchmit.getAge());  // => "Schmidt, Perter"
+
+johnSmith.setAge("35");
+alert(johnSmith.name() + " whose age is " + johnSmith.getAge() + ", whose address is " + johnSmith.getAddress());  // => "Yan, May"
+</script>
+</body>
+</html>
