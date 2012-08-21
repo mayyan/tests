@@ -1,0 +1,13 @@
+.ui-widget-overlay {
+    background-color: #000;
+    left: 0;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: absolute;
+    top: 0;
+}
+
+.dlg-outer {
+    background: #fff;
+    border: 1px soild #000;
+}

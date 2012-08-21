@@ -49,17 +49,14 @@ include ("util.php");
 .coupon {
     height: 100px
 }
-.ad1x1 {
+.ad1x1,
+.ad2x1,
+.ad3x1 {
     height: 100px;
 }
-.ad1x2 {
-    height: 200px;
-}
+.ad1x2,
 .ad2x2 {
     height: 200px;
-}
-.ad3x1 {
-    height: 150px;
 }
 .ad1x3,
 .ad2x3 {
@@ -74,8 +71,8 @@ Using 1kbgrid system.
 <?php
 $rows = cutRows($adsConfig);
 foreach($rows as $rowIndex => $row) {
-    selectTemplate($row, $rowIndex);
-    //selectTemplate1($row);
+    //selectTemplate($row, $rowIndex);
+    selectTemplate1($row);
 }
 
 ?>

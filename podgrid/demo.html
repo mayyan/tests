@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssreset/cssreset-min.css">
+<style>
+/* ================ */
+/* = The 1Kb Grid = */     /* 9 columns, 60 pixels each, with 10 pixel gutter */
+/* ================ */
+.grid_1 { width:60px; }
+.grid_2 { width:130px; }
+.grid_3 { width:200px; }
+.grid_4 { width:270px; }
+.grid_5 { width:340px; }
+.grid_6 { width:410px; }
+.grid_7 { width:480px; }
+.grid_8 { width:550px; }
+.grid_9 { width:620px; }
+
+.column {
+	margin: 0 5px;
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+.row {
+	width: 630px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.row .row {
+	margin: 0 -5px;
+	width: auto;
+	display: inline-block;
+}
+</style>
+
+<style>
+.mod-gallery {
+    border: 1px solid #990000;
+}
+.pod {
+    border: 1px solid #000;
+}
+.coupon {
+    height: 100px
+}
+.ad1x1,
+.ad2x1,
+.ad3x1 {
+    height: 100px;
+}
+.ad1x2,
+.ad2x2 {
+    height: 200px;
+}
+.ad1x3,
+.ad2x3 {
+    height: 300px;
+}
+</style>
+
+</head>
+<body>
+Using 1kbgrid system.
+    <div class="mod-gallery">
+Array
+(
+    [0] => Array
+        (
+            [0] => 2
+            [1] => 1
+            [2] => 0
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 2
+                    [width] => 1
+                    [height] => 2
+                )
+
+        )
+
+    [1] => Array
+        (
+            [0] => 3
+            [1] => 0
+            [2] => 0
+            [3] =>
+        )
+
+    [2] => Array
+        (
+            [0] => 1
+            [1] => 1
+            [2] => 1
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 10
+                    [width] => 1
+                    [height] => 2
+                )
+
+        )
+
+    [3] => Array
+        (
+            [0] => 0
+            [1] => 1
+            [2] => 2
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 15
+                    [width] => 1
+                    [height] => 2
+                )
+
+        )
+
+    [4] => Array
+        (
+            [0] => 0
+            [1] => 2
+            [2] => 1
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 21
+                    [width] => 2
+                    [height] => 2
+                )
+
+        )
+
+    [5] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 0
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 28
+                    [width] => 2
+                    [height] => 2
+                )
+
+        )
+
+    [6] => Array
+        (
+            [0] => 0
+            [1] => 3
+            [2] => 0
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 33
+                    [width] => 3
+                    [height] => 1
+                )
+
+        )
+
+    [7] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 0
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 37
+                    [width] => 2
+                    [height] => 1
+                )
+
+        )
+
+    [8] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 0
+            [3] => Array
+                (
+                    [type] => adblob
+                    [start] => 40
+                    [width] => 2
+                    [height] => 3
+                )
+
+        )
+
+)
+<div class="row">    <div class="column grid_6">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div>    <div class="column grid_3">
+            <div class="pod ad1x2">ad</div>
+    </div></div><div class="row">    <div class="column grid_9">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>            <div class="column grid_3"><div class="pod coupon">coupon</div></div>            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div></div><div class="row">    <div class="column grid_3">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div>    <div class="column grid_3">
+            <div class="pod ad1x2">ad</div>
+    </div>    <div class="column grid_3">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div></div><div class="row">    <div class="column grid_3">
+            <div class="pod ad1x2">ad</div>
+    </div>    <div class="column grid_6">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div></div><div class="row">    <div class="column grid_6">
+            <div class="pod ad2x2">ad</div>
+    </div>    <div class="column grid_3">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div></div><div class="row">    <div class="column grid_3">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div>    <div class="column grid_6">
+            <div class="pod ad2x2">ad</div>
+    </div></div>
+
+    <div class="row">
+        <div class="column grid_9">
+            <div class="row">
+                <div class="column grid_9">
+                    <div class="pod ad3x1">ad</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">    <div class="column grid_3">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div>    <div class="column grid_6">
+            <div class="pod ad2x1">ad</div>
+    </div></div><div class="row">    <div class="column grid_3">        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>        <div class="row">            <div class="column grid_3"><div class="pod coupon">coupon</div></div>        </div>    </div>    <div class="column grid_6">
+            <div class="pod ad2x3">ad</div>
+    </div></div>    </div>
+Other content
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+
+</body>
+</html>

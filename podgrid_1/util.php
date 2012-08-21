@@ -1,4 +1,6 @@
 <?php
+$gridWidth = 3;
+
 $adsConfig = array(
     array(type=>"adblob", start => 2, width => 1, height => 2),
     array(type=>"adblob", start => 10, width => 1, height => 2),
@@ -6,8 +8,8 @@ $adsConfig = array(
     array(type=>"adblob", start => 21, width => 2, height => 2),
     array(type=>"adblob", start => 28, width => 2, height => 2),
     array(type=>"adblob", start => 33, width => 3, height => 1),
-    array(type=>"adblob", start => 36, width => 1, height => 1),
-    array(type=>"adblob", start => 39, width => 2, height => 3),
+    array(type=>"adblob", start => 37, width => 2, height => 1),
+    array(type=>"adblob", start => 40, width => 2, height => 3),
 );
 //$adsConfig = array(
 //    array(type=>"adblob", start => 2, width => 1, height => 2),
@@ -58,7 +60,7 @@ function cutRows($adsConfig) {
 
     }
 
-    //print_r($rows);
+    print_r($rows);
     /*$rows = array(
         array(2,1,0),
         array(3,0,0),
@@ -70,15 +72,15 @@ function cutRows($adsConfig) {
     return $rows;
 }
 
-function getColumnCount($colspan) {
-    switch ($colspan) {
-    case 1:
-        return 3;
-    case 2:
-        return 2;
-    case 3:
-        return 1;
+function getColumnCount($row) {
+    global $gridWidth;
+    $count = 0;
+    for($i = 0; $i < $gridWidth; $i++) {
+        if ($row[$i] > 0) {
+            $count++;
+        }
     }
+    return $count;
 }
 
 function getColSpanClass($colspan) {
@@ -113,14 +115,12 @@ function selectTemplate1($row) {
 <div class="row">
 HTML;
 
-    $colCount = getColumnCount($row[0]);
-    for($w = 0; $w < $colCount; $w++) {
-
+    if ($row[0] > 0) {
         $colSpan = getColSpanClass($row[0]);
         echo<<<HTML
     <div class="column {$colSpan}">
 HTML;
-        for ($h = 0; $h < $adHeight; $h++) {
+        for ($h = 0; $h < max(1, $adHeight); $h++) {
             echo<<<HTML
         <div class="row">
 HTML;
@@ -129,7 +129,7 @@ HTML;
             <div class="column grid_3"><div class="pod coupon">coupon</div></div>
 HTML;
             }
-        echo<<<HTML
+            echo<<<HTML
         </div>
 HTML;
         }
@@ -138,27 +138,44 @@ HTML;
 HTML;
     }
 
-    $colSpan = getColSpanClass($row[1]);
-    //echo ("row[1] = $row[1], colSpan=$colSpan\n");
     if ($row[1] > 0) {
-        echo<<<HTML
+        $colSpan = getColSpanClass($row[1]);
+
+        if ( $row[1] == $gridWidth) {
+
+            echo<<<HTML
+    <div class="column {$colSpan}">
+        <div class="row">
+            <div class="column grid_9">
+                <div class="pod ad{$adWidth}x{$adHeight}">ad</div>
+            </div>
+        </div>
+    </div>
+HTML;
+        } else {
+            echo<<<HTML
     <div class="column {$colSpan}">
         <div class="pod ad{$adWidth}x{$adHeight}">ad</div>
     </div>
 HTML;
+        }
     }
 
-
-    $colSpan = getColSpanClass($row[2]);
-    //echo ("row[2] = $row[2], colSpan=$colSpan\n");
-    for($w = 0; $w < $row[2]; $w++) {
+    if ($row[2] > 0) {
+        $colSpan = getColSpanClass($row[2]);
         echo<<<HTML
     <div class="column {$colSpan}">
 HTML;
-        for ($h = 0; $h < $adHeight; $h++) {
+        for ($h = 0; $h < max(1, $adHeight); $h++) {
             echo<<<HTML
         <div class="row">
+HTML;
+            for ($j = 0; $j < $row[2]; $j++) {
+                echo<<<HTML
             <div class="column grid_3"><div class="pod coupon">coupon</div></div>
+HTML;
+            }
+            echo<<<HTML
         </div>
 HTML;
         }
