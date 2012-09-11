@@ -14,7 +14,12 @@
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/pod.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/offeroftheweek.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/supersaver.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/gallery.css" >
+
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/ads/ads.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/footer/footer.css" >
 </head>
 <body>
     <div class="wrapper">
@@ -44,18 +49,26 @@
         </div> <!-- #content -->
 
         <div id="footer">
-            Footer
+            <?php include("modules/ads/leaderboard.php"); ?>
+
+            <?php include("modules/footer/footer.php"); ?>
         </div>
     </div> <!--wrapper -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
-
 <script>
     var APP_COUPONSINC = {};
+    APP_COUPONSINC.contextData = {
+        "gallery" : {
+            "podsPerPage": 21,
+            "totalPods": 298
+        }
+    };
 </script>
 <script src="layout.js"></script>
 <script src="modules/categories/categories.js"></script>
+<script src="modules/gallery/gallery.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

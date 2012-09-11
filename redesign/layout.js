@@ -72,6 +72,8 @@ APP_COUPONSINC.layout = (function ($) {
             changeStalker("static");
         }
 
+        doc.trigger("couponsinc:windowScrolled");
+        
         // Remember last scroll position, so later I'll know scroll direction
         lastScrollTop = windowScrollTop;
     }

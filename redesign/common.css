@@ -1,3 +1,7 @@
+.sprite-icons {
+    background-image: url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/bigblue/sprite_icons_3.png");
+}
+
 button::-moz-focus-inner {
     border: 0 none;
 }

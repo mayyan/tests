@@ -1,6 +1,7 @@
 .pod-shadow {
     border: 1px solid #CDCDCD;
     position: relative;
+    margin: 12px 6px 6px 12px;
 
     -webkit-border-radius: 6px;
        -moz-border-radius: 6px;

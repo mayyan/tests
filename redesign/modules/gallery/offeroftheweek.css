@@ -1,0 +1,6 @@
+.mod-gallery .mod-offeroftheweek .pod-shadow {
+    min-height: 250px;
+}
+.mod-gallery .mod-offeroftheweek .pod {
+    box-shadow: none;
+}
