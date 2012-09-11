@@ -1,0 +1,83 @@
+button::-moz-focus-inner {
+    border: 0 none;
+}
+.txt-offscreen {
+    text-indent: -999em;
+}
+.clearfix {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.horizontal-list {
+    margin: 0 auto;
+    padding: 0;
+}
+.horizontal-list>li {
+    display: inline-block;
+    list-style: none outside none;
+    text-align: center;
+}
+.triangle { /* default, pointing to right */
+    border-color: transparent transparent transparent #FFFFFF;
+    border-style: solid;
+    border-width: 5px;
+    font-size: 0;
+    height: 0;
+    width: 0;
+    position: relative;
+    bottom: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+.hidden {
+    display: none;
+}
+
+.media {
+    overflow: hidden;
+}
+.media .bd {
+    overflow: hidden;
+}
+.media .img {
+    float: left;
+    margin-right: 10px;
+}
+.media .img img {
+    display: block;
+}
+.media .imgExt {
+    float: right;
+    margin-left: 10px;
+}
+
+/* ================ */
+/* = The 1Kb Grid = */     /* 9 columns, 60 pixels each, with 10 pixel gutter */
+/* ================ */
+
+.grid_1 { width:60px; }
+.grid_2 { width:130px; }
+.grid_3 { width:200px; }
+.grid_4 { width:270px; }
+.grid_5 { width:340px; }
+.grid_6 { width:410px; }
+.grid_7 { width:480px; }
+.grid_8 { width:550px; }
+.grid_9 { width:620px; }
+
+.column {
+	/*margin: 0 5px;*/
+	overflow: hidden;
+	float: left;
+	display: inline;
+}
+.row {
+	margin: 0 auto;
+	overflow: hidden;
+}
+.row .row {
+	/*margin: 0 -5px;*/
+	width: auto;
+	display: inline-block;
+}

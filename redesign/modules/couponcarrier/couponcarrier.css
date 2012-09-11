@@ -1,0 +1,83 @@
+.mod-couponcarrier {
+    border-bottom: 1px solid #DFD9B7;
+    border-radius: 0 0 3px 3px;
+    padding: 14px 0;
+}
+.mod-couponcarrier .available,
+.mod-couponcarrier .cart,
+.mod-couponcarrier .print-button {
+    display: inline-block;
+    margin-left: 22px
+}
+.mod-couponcarrier .available span {
+    color: #535353;
+}
+.mod-couponcarrier .available em {
+    font-size: 138.5%;
+    color: #555;
+    text-shadow: 0 -1px 0 rgba(102, 102, 102, 0.5);
+}
+
+.mod-couponcarrier .print-button {
+    cursor: pointer;
+    min-width: 145px;
+    padding: 7px 12px;
+}
+.mod-couponcarrier .print-button {
+    background: -moz-linear-gradient(center top , #F03D25 0%, #D52524 100%) repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px #666666;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 31px;
+    min-width: 145px;
+    text-shadow: 0 1px 1px #888888;
+}
+.mod-couponcarrier .print-button.disabled {
+    background: -moz-linear-gradient(center top , #FFFFFF 0%, #D9D9D9 100%) repeat scroll 0 0 transparent;
+    color: #999999;
+    cursor: default;
+    text-shadow: none;
+}
+.mod-couponcarrier .print-button .title {
+    border-right: 1px solid #B90700;
+    padding-right: 18px;
+}
+.mod-couponcarrier .print-button .number {
+    border-left: 1px solid #E87B7B;
+    padding-left: 18px;
+    padding-right: 6px;
+}
+.couponcarrier-transfer-clipped {
+    z-index: 1;
+}
+.mod-couponcarrier .progress {
+    /*display: inline-block;
+    position: relative;*/
+}
+.mod-couponcarrier .bar {
+    background-color: #EAE5C8;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 1px 3px rgba(0, 80, 118, 0.5) inset;
+    height: 25px;
+    padding: 2px 0 0 2px;
+    width: 300px;
+}
+.mod-couponcarrier .savings-bar {
+    background: -moz-linear-gradient(center top , #FFFFFF 0%, #8AC680 2%, #63B352 100%) repeat scroll 0 0 transparent;
+    border-radius: 13px 13px 13px 13px;
+    color: #FFFFFF;
+    max-width: 298px;
+    min-width: 15px;
+    padding: 3px 6px 4px 7px;
+    width: 0;
+}
+.mod-couponcarrier .selectall {
+    cursor: pointer;
+    display: inline;
+}
+.mod-couponcarrier .selectall label {
+    color: #4D4D4D;
+}

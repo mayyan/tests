@@ -2,14 +2,14 @@
 $gridWidth = 3;
 
 $adsConfig = array(
-    array(type=>"adblob", start => 2, width => 1, height => 2),
-    array(type=>"adblob", start => 10, width => 1, height => 2),
-    array(type=>"adblob", start => 15, width => 1, height => 2),
-    array(type=>"adblob", start => 21, width => 2, height => 2),
-    array(type=>"adblob", start => 28, width => 2, height => 2),
-    array(type=>"adblob", start => 33, width => 3, height => 1),
-    array(type=>"adblob", start => 37, width => 2, height => 1),
-    array(type=>"adblob", start => 40, width => 2, height => 3),
+    array(start => 2, width => 1, height => 2),
+    //array(start => 10, width => 1, height => 2),
+    //array(start => 15, width => 1, height => 2),
+    //array(start => 21, width => 2, height => 2),
+    //array(start => 28, width => 2, height => 2),
+    //array(start => 33, width => 3, height => 1),
+    //array(start => 37, width => 2, height => 1),
+    //array(start => 40, width => 2, height => 3),
 );
 //$adsConfig = array(
 //    array(type=>"adblob", start => 2, width => 1, height => 2),

@@ -1,0 +1,33 @@
+.wrapper {
+    width: 970px;
+}
+.mod-couponcarrier {
+    width: 650px;
+    float: left;
+}
+.mrec {
+    background: #FDF7D7;
+    float: right;
+    height: 368px;
+    padding: 10px;
+    width: 300px;
+}
+.fixed-header .mod-stalker {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+.spacer {
+    float: right;
+    height: 315px;
+    margin-bottom: 5px;
+    margin-right: 13px;
+    width: 300px;
+    display: none;
+}
+.fixed-header .spacer {
+    display: block;
+}
+.fixed-header .mod-gallery {
+    margin-top: 83px; /*$(".mod-discoverybar").outerHeight(true) + $(".mod-couponcarrier").outerHeight(true) */
+}

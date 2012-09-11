@@ -1,0 +1,38 @@
+.mod-header {
+    background: -moz-linear-gradient(center top , #4FAEE9 0%, #70C1F4 100%) repeat scroll 0 0 transparent;
+    height: 70px;
+    overflow: visible;
+}
+.mod-header .company-logo {
+    height: 55px;
+    left: 50px;
+    top: 8px;
+    width: 105px;
+}
+.mod-header .navbar {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.mod-header .tab-container,
+.mod-header .tablist,
+.mod-header .fblike {
+    display: inline-block;
+}
+.mod-header .navbar .tab {
+    margin-right: 20px;
+}
+.mod-header .navbar .tab a {
+    color: #FFFFFF;
+    font-family: 'MuseoSans',sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #0076C5;
+    text-transform: uppercase;
+}
+.mod-header .navbar .tab.selected a {
+    border-bottom: 2px solid #FFF;
+}
