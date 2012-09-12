@@ -1,4 +1,4 @@
-.mod-gallery .mod-savingsclub .shadow {
+.mod-offeroftheweek {
     min-height: 250px;
     border: 1px solid #CDCDCD;
     position: relative;
@@ -12,54 +12,41 @@
        -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-.mod-gallery .mod-savingsclub .inner {
+.mod-offeroftheweek .inner {
     background: none repeat scroll 0 0 #FFFFFF;
     cursor: pointer;
     min-height: 150px;
+    padding: 8px 10px 12px 8px;
 
     -webkit-border-radius: 6px;
        -moz-border-radius: 6px;
             border-radius: 6px;
 }
-.mod-gallery .mod-savingsclub .image {
-    border-radius: 6px 6px 0 0;
-    height: 148px;
-}
-.mod-gallery .mod-savingsclub .bd {
-    padding: 0 10px 12px 8px;
-}
-
 /* inside */
-.mod-gallery .mod-savingsclub .summary {
+.mod-offeroftheweek .summary {
     color: #8FC73D;
     font-size: 123.1%;
     font-weight: 700;
     margin: 8px 0 6px 0;
     text-transform: uppercase;
 }
-.mod-gallery .mod-savingsclub .brand {
+.mod-offeroftheweek .brand {
     color: #555555;
     font-size: 123.1%;
     font-weight: 500;
     margin: 0 0 4px 0;
 }
-.mod-gallery .mod-savingsclub .details {
+.mod-offeroftheweek .details {
     color: #999999;
     line-height: 1.3;
 }
-
-
-.mod-gallery .toprow-type-3 .mod-savingsclub .shadow {
+/* size-3: ModuleSize_Long */
+.mod-offeroftheweek.size-3 {
     min-height: 112px;
 }
-.mod-gallery .toprow-type-3 .mod-savingsclub .inner {
+.mod-offeroftheweek.size-3 .inner {
     min-height: 90px;
 }
-.mod-gallery .toprow-type-3 .mod-savingsclub .img {
+.mod-offeroftheweek.size-3 .img {
     float: left;
-}
-.mod-gallery .toprow-type-3 .mod-savingsclub .image {
-    border-radius: 6px 0 0 6px;
-    height: 112px;
-    margin-top: -8px;
 }

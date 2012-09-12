@@ -1,20 +1,25 @@
 <?php
 const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
-const GridWidth = 3;
-const POSITION_SuperSaver = 0;
-const POSITION_FeaturedToday = 0;
+require_once(APPLICATION_PATH . "constants.php");
+require_once(APPLICATION_PATH . "library.php");
+require_once(APPLICATION_PATH . "modules/gallery/toprow.php");
+require_once(APPLICATION_PATH . "modules/supersaver/supersaver.php");
+require_once(APPLICATION_PATH . "modules/featuredtoday/featuredtoday.php");
+require_once(APPLICATION_PATH . "modules/offeroftheweek/offeroftheweek.php");
+require_once(APPLICATION_PATH . "modules/savingsclub/savingsclub.php");
 
-$pageSize = empty($_GET["size"]) ? 21 : $_GET["size"];
 $offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
 $action = empty($_GET["action"]) ? "" : $_GET["action"];
-$topRowType = empty($_GET["toprow"]) ? 1 : $_GET["toprow"];
 
 // Preparing all data
 $podJSON = file_get_contents(APPLICATION_PATH . "podCache.json");
 $podCache = json_decode($podJSON, true);
 $podIdList = array_keys($podCache);
 
-$podIdListOnPage = array_slice($podIdList, $offset, $pageSize);
+$podIdList = injectItemIntoArray($podIdList, $Config["Gallery"]);
+//print_r($podIdList);
+
+$podIdListOnPage = array_slice($podIdList, $offset, GridSize);
 
 $POD_TYPE_MAP = array(
     "0" => "coupon",
@@ -62,33 +67,18 @@ function getPodCTAString($podData) {
     return $POD_CTA_MAP[$podData["type"]];
 }
 
-function renderSuperSaver() {
-    echo "supersaver";
-}
+function renderPod($gridPosition) {
+    global $podIdList;
+    global $podCache;
+    global $podTemplate;
 
-function renderFeaturedToday() {
-    echo "featuredToday";
-}
-
-function renderPod($gridIndex) {
-    //echo "grid=". $gridIndex;
-
-    if ($gridIndex == POSITION_SuperSaver - 1) {
-        renderSuperSaver();
-    } else if ($gridIndex == POSITION_FeaturedToday - 1) {
-        renderFeaturedToday();
-    } else {
-        global $podIdList;
-        global $podCache;
-        global $podTemplate;
-
-        $podIndex = $gridIndex;
-        //echo ";pod=".$podIndex;
+    if (is_numeric($podIdList[$gridPosition])) {
+        // is a pod id
+        $podIndex = $gridPosition;
 
         if ($podIndex < count($podIdList)) {
             $podId = $podIdList[$podIndex];
             $podData = $podCache[$podId];
-            //echo ";podId=".$podId;
 
             $podTypeCSSClass = getPodTypeCSSClass($podData);
             $podCTAString = getPodCTAString($podData);
@@ -103,8 +93,28 @@ function renderPod($gridIndex) {
                 $podData["summary"],
                 $podData["brand"],
                 $podData["details"]);
-            //var_dump($replace);
+
             echo preg_replace($search, $replace, $podTemplate);
+        }
+    } else {
+        // is a module name
+        $moduleName = $podIdList[$gridPosition];
+        switch ($moduleName) {
+        case "supersaver":
+            renderSuperSaver(ModuleSize_Grid);
+            break;
+        case "featuredtoday":
+            renderFeaturedToday(ModuleSize_Grid);
+            break;
+        case "savingsclub":
+            renderSavingsClub(ModuleSize_Grid);
+            break;
+        case "offeroftheweek":
+            renderOfferOfTheWeek(ModuleSize_Grid);
+            break;
+        default:
+            echo "Unknow module ($moduleName) injection to gallery.";
+            break;
         }
     }
 }
@@ -132,16 +142,15 @@ HTML;
 }
 
 function renderPage() {
-    global $pageSize;
-    global $topRowType;
+    global $Config;
 
-    $totalRowsOnPage = $pageSize / GridWidth;
+    $totalRowsOnPage = GridSize / GridWidth;
 
     echo <<<HTML
 <div class="page">
 HTML;
 
-    include ("toprow.php");
+    renderTopRow($Config["TopRow"]);
 
     echo <<<HTML
     <div class="pods">

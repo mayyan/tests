@@ -319,7 +319,7 @@ APP_COUPONSINC.gallery = (function ($) {
      * Event handler when Load More button is clicked.
      */
     function handleMoreClick() {
-        var offset = getPodCount(body),
+        var offset = $(".pods .grid_1", body).length,
             size   = contextData.gallery.podsPerPage;
         module.load(offset, size, module.handleLoadSuccess);
     }

@@ -1,0 +1,10 @@
+/* size-3: ModuleSize_Long */
+.mod-featuredtoday.size-3 .image {
+    width: 250px;
+    height: 120px;
+}
+/* size-4: ModuleSize_Grid */
+.mod-featuredtoday.size-4 .image {
+    width: 250px;
+    height: 120px;
+}

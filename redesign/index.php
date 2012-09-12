@@ -1,5 +1,5 @@
 <?php
-$topRowType = empty($_GET["toprow"]) ? 1 : $_GET["toprow"];
+require_once("constants.php");
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#">
@@ -17,8 +17,10 @@ $topRowType = empty($_GET["toprow"]) ? 1 : $_GET["toprow"];
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/pod.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/offeroftheweek.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/savingsclub.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/offeroftheweek/offeroftheweek.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/savingsclub/savingsclub.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/supersaver/supersaver.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/featuredtoday/featuredtoday.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/gallery.css" >
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/ads/ads.css" >
@@ -65,8 +67,7 @@ $topRowType = empty($_GET["toprow"]) ? 1 : $_GET["toprow"];
     APP_COUPONSINC.contextData = {
         "gallery" : {
             "podsPerPage": 21,
-            "totalPods": 298,
-            "toprow" : <?php echo $topRowType ?>
+            "totalPods": 298
         }
     };
 </script>
