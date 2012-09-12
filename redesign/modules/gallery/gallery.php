@@ -1,11 +1,13 @@
 <?php
 const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
-
 const GridWidth = 3;
+const POSITION_SuperSaver = 0;
+const POSITION_FeaturedToday = 0;
 
 $pageSize = empty($_GET["size"]) ? 21 : $_GET["size"];
 $offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
 $action = empty($_GET["action"]) ? "" : $_GET["action"];
+$topRowType = empty($_GET["toprow"]) ? 1 : $_GET["toprow"];
 
 // Preparing all data
 $podJSON = file_get_contents(APPLICATION_PATH . "podCache.json");
@@ -60,30 +62,51 @@ function getPodCTAString($podData) {
     return $POD_CTA_MAP[$podData["type"]];
 }
 
-function renderPod($podIndex) {
-    global $podIdList;
-    global $podCache;
-    global $podTemplate;
+function renderSuperSaver() {
+    echo "supersaver";
+}
 
-    $podId = $podIdList[$podIndex];
-    $podData = $podCache[$podId];
+function renderFeaturedToday() {
+    echo "featuredToday";
+}
 
-    $podTypeCSSClass = getPodTypeCSSClass($podData);
-    $podCTAString = getPodCTAString($podData);
-    $podImageUrl = $podData["image"]["url"];
+function renderPod($gridIndex) {
+    //echo "grid=". $gridIndex;
 
-    $search = array('/{type}/', '/{cta}/', '/{imageUrl}/', '/{imageAlt}/', '/{summary}/', '/{brand}/', '/{details}/');
-    $replace = array(
-        $podTypeCSSClass,
-        $podCTAString,
-        $podImageUrl,
-        $podData["brand"],
-        $podData["summary"],
-        $podData["brand"],
-        $podData["details"]);
-    //var_dump($replace);
-    echo preg_replace($search, $replace, $podTemplate);
+    if ($gridIndex == POSITION_SuperSaver - 1) {
+        renderSuperSaver();
+    } else if ($gridIndex == POSITION_FeaturedToday - 1) {
+        renderFeaturedToday();
+    } else {
+        global $podIdList;
+        global $podCache;
+        global $podTemplate;
 
+        $podIndex = $gridIndex;
+        //echo ";pod=".$podIndex;
+
+        if ($podIndex < count($podIdList)) {
+            $podId = $podIdList[$podIndex];
+            $podData = $podCache[$podId];
+            //echo ";podId=".$podId;
+
+            $podTypeCSSClass = getPodTypeCSSClass($podData);
+            $podCTAString = getPodCTAString($podData);
+            $podImageUrl = $podData["image"]["url"];
+
+            $search = array('/{type}/', '/{cta}/', '/{imageUrl}/', '/{imageAlt}/', '/{summary}/', '/{brand}/', '/{details}/');
+            $replace = array(
+                $podTypeCSSClass,
+                $podCTAString,
+                $podImageUrl,
+                $podData["brand"],
+                $podData["summary"],
+                $podData["brand"],
+                $podData["details"]);
+            //var_dump($replace);
+            echo preg_replace($search, $replace, $podTemplate);
+        }
+    }
 }
 
 function renderPodRow($row) {
@@ -110,31 +133,17 @@ HTML;
 
 function renderPage() {
     global $pageSize;
+    global $topRowType;
 
     $totalRowsOnPage = $pageSize / GridWidth;
 
     echo <<<HTML
 <div class="page">
-    <div class="row">
-        <div class="column grid_1">
 HTML;
-        include("offeroftheweek.php");
-        echo <<<HTML
-        </div>
 
-        <div class="column grid_1">
-HTML;
-        include("supersaver.php");
-        echo <<<HTML
-        </div>
-            
-        <div class="column grid_1">
-            <div class="mrec">
-                <iframe scrolling="no" frameborder="0" width="300" height="250" src="http://couponbar.coupons.com/adblob.asp?AdSize=300x250&pzn=13306iq3710&req=1347339507201&zip=&did=AMUAAREKS&spage=.com/&npage=1"></iframe>
-            </div>
-        </div>
-    </div>
+    include ("toprow.php");
 
+    echo <<<HTML
     <div class="pods">
 HTML;
 

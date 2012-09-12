@@ -239,7 +239,8 @@ APP_COUPONSINC.gallery = (function ($) {
             data: $.extend({
                 action: 'loadPage',
                 offset: offset,
-                size : size
+                size : size,
+                toprow: contextData.gallery.toprow
             }, data),
             success: callback,
             fail: handleLoadFailed

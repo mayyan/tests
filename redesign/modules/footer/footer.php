@@ -34,7 +34,7 @@
                 <p>Get alerts and exclusive offers right in your inbox each week.</p>
                 <form>
                     <input placeholder="Email Address" />
-                    <button>Sign up</bitton>
+                    <button>Sign up</button>
                 </form>
             </li>
 
@@ -43,7 +43,7 @@
                 <h3>Coupon Finder</h3>
                 <p>Unlock this Savings Club feature and let the Coupon Finder help you find the best printable coupons on the web.</p>
                 <form>
-                    <button>Let me in</bitton>
+                    <button>Let me in</button>
                 </form>
             </li>
 
@@ -52,7 +52,7 @@
                 <h3>Get CouponBar</h3>
                 <p>Get access to 100's of Coupons organized by category always one click away. It's free!</p>
                 <form>
-                    <button>Learn More</bitton>
+                    <button>Learn More</button>
                 </form>
             </li>
 
@@ -61,7 +61,7 @@
                 <h3>Delicious Family Recipes</h3>
                 <p>We have a collection of yummy, easy-to-make family recipes to keep everyone's tummy happy.</p>
                 <form>
-                    <button>Get Cooking</bitton>
+                    <button>Get Cooking</button>
                 </form>
             </li>
         </ul>

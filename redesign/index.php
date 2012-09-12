@@ -1,3 +1,6 @@
+<?php
+$topRowType = empty($_GET["toprow"]) ? 1 : $_GET["toprow"];
+?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
@@ -15,7 +18,7 @@
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/pod.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/offeroftheweek.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/supersaver.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/savingsclub.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/gallery.css" >
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/ads/ads.css" >
@@ -62,7 +65,8 @@
     APP_COUPONSINC.contextData = {
         "gallery" : {
             "podsPerPage": 21,
-            "totalPods": 298
+            "totalPods": 298,
+            "toprow" : <?php echo $topRowType ?>
         }
     };
 </script>

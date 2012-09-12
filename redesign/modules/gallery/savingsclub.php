@@ -1,8 +1,8 @@
-<div class="mod-supersaver">
-    <div class="pod-shadow">
-        <div class="pod">
+<div class="mod-savingsclub">
+    <div class="shadow">
+        <div class="inner">
             <div class="img">
-                <a href="#"><img width="100%" height="140" src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club" class="pod-image"></a>
+                <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club" class="image"></a>
             </div>
             <div class="bd">
                 <h4 class="summary">GET 1 YEAR FREE</h4>
