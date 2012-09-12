@@ -74,6 +74,7 @@ require_once("constants.php");
 <script src="layout.js"></script>
 <script src="modules/categories/categories.js"></script>
 <script src="modules/gallery/gallery.js"></script>
+<script src="modules/ads/ads.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

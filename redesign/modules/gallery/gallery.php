@@ -141,7 +141,7 @@ HTML;
 HTML;
 }
 
-function renderPage() {
+function renderPage($isFirstPage) {
     global $Config;
 
     $totalRowsOnPage = GridSize / GridWidth;
@@ -150,7 +150,7 @@ function renderPage() {
 <div class="page">
 HTML;
 
-    renderTopRow($Config["TopRow"]);
+    renderTopRow($Config["TopRow"], $isFirstPage);
 
     echo <<<HTML
     <div class="pods">
@@ -171,14 +171,14 @@ HTML;
  * Main
  */
 if ($action == "loadPage") {
-    renderPage();
+    renderPage(false);
 } else {
     echo <<<HTML
 <div class="mod-gallery">
     <div class="pages">
 HTML;
 
-    renderPage();
+    renderPage(true);
 
     echo <<<HTML
     </div> <!-- .pages -->
