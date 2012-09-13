@@ -6,7 +6,7 @@ function renderFeaturedToday($size) {
 <div class="mod-featuredtoday size-{$size}">
 
     <div class="img">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Tostino's Savings Center" class="image"></a>
+        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Tostino's Savings Center"></a>
     </div>
     <div class="bd">
         <h4>FEATURED TODAY</h4>

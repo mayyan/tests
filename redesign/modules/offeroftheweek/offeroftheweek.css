@@ -1,5 +1,4 @@
 .mod-offeroftheweek {
-    min-height: 250px;
     border: 1px solid #CDCDCD;
     position: relative;
     margin: 12px 6px 6px 12px;
@@ -23,30 +22,68 @@
             border-radius: 6px;
 }
 /* inside */
-.mod-offeroftheweek .summary {
-    color: #8FC73D;
-    font-size: 123.1%;
-    font-weight: 700;
-    margin: 8px 0 6px 0;
+/* size-1: ModuleSize_Square */
+.mod-offeroftheweek.size-1 {
+    height: 250px;
+    width: 300px;
+}
+
+/* size-2: ModuleSize_Big */
+.mod-offeroftheweek.size-2 {
+    height: 250px;
+    width: 620px;
+}
+.mod-offeroftheweek.size-2 .bottom .left,
+.mod-offeroftheweek.size-2 .bottom .right {
+    display: inline-block;
+    vertical-align: top;
+}
+.mod-offeroftheweek.size-2 .bottom .left {
+    margin-right: 30px;
+}
+.mod-offeroftheweek.size-2 .top img {
+    border-radius: 6px 6px 0 0;
+    height: 156px;
+    width: 620px;
+}
+.mod-offeroftheweek.size-2 .bottom {
+    padding: 15px;
+}
+.mod-offeroftheweek.size-2 .summary1,
+.mod-offeroftheweek.size-2 .summary2 {
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 18px;
     text-transform: uppercase;
 }
-.mod-offeroftheweek .brand {
-    color: #555555;
-    font-size: 123.1%;
-    font-weight: 500;
-    margin: 0 0 4px 0;
+.mod-offeroftheweek.size-2 .summary2 {
+    font-size: 32px;
 }
-.mod-offeroftheweek .details {
-    color: #999999;
-    line-height: 1.3;
+.mod-offeroftheweek.size-2 .brand {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 17px;
+}
+.mod-offeroftheweek.size-2 .details {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #777777;
+    font-size: 15px;
 }
 /* size-3: ModuleSize_Long */
 .mod-offeroftheweek.size-3 {
-    min-height: 112px;
+    height: 115px;
+    width: 620px;
 }
 .mod-offeroftheweek.size-3 .inner {
     min-height: 90px;
 }
 .mod-offeroftheweek.size-3 .img {
     float: left;
+}
+
+/* size-4: ModuleSize_Grid */
+.mod-offeroftheweek.size-4 {
+    height: 160px;
+    width: 300px;
 }

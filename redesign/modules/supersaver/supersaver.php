@@ -6,7 +6,7 @@ function renderSuperSaver($size) {
 <div class="mod-supersaver size-{$size}">
 
     <div class="img">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club" class="image"></a>
+        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club"></a>
     </div>
     <div class="bd">
         <h4>SAVE MORE</h4>
