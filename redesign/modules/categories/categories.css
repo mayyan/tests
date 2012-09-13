@@ -1,37 +1,34 @@
 
 .mod-categories {
     border-top: 1px solid #FDFDF5;
+    padding: 6px 0 3px 0;
 }
 .mod-categories .teasers {
-    display: inline;
-    margin-right: 18px;
-    vertical-align: middle;
-    margin-top: 10px;
+
 }
 .mod-categories .teasers p {
-    color: #6C6E6D;
     display: inline;
-    font-size: 11px;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+    color: #6d6d6d;
+    text-shadow: 0 1px #fff;
+    font-size: 11px;
     text-transform: uppercase;
-    display: inline;
-    margin-right: 18px;
 }
 .mod-categories .teasers ul li {
     display: inline;
+    margin-left: 20px;
 }
 .mod-categories .teasers .teaser-list {
     display: inline;
     width: auto;
 }
 .mod-categories .teasers .teaser-list li a {
-    font-size: 92.3%;
-    margin-left: 4px;
-    padding-left: 8px;
+
 }
 .mod-categories .teasers .teaser-list li.first a {
-    margin-left: 0;
-    padding-left: 0;
+
 }
 .mod-categories .show-more {
     color: #0F94D2;
@@ -46,36 +43,34 @@
     text-decoration: underline;
 }
 .mod-categories .bd ul.show-less {
-    text-align:right;
+    position: absolute;
+    right: 5px;
     cursor: pointer;
     width: auto;
 }
 .mod-categories .show-more .triangle-down {
-    border-color: #0F94D2 transparent transparent transparent;
-    border-width: 4px;
     bottom: 1px;
     left: 3px;
 }
 .mod-categories .show-less .triangle-up {
-    border-color: transparent transparent #0F94D2 transparent;
-    border-width: 4px;
-    bottom: 6px;
+    bottom: 8px;
     left: 3px;
 }
 .mod-categories .bd ul {
     text-align: left;
     width: 22.5%;
 }
-.mod-categories .bd ul li {
-    margin: 8px 0;
-}
 .mod-categories .all-categories ul {
     float: left;
 }
 .mod-categories .bd li a {
-    color: #0F94D2;
-    font-size: 92.3%;
     text-decoration: none;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #0ea0e0;
+    text-shadow: 0 1px #fff;
+    font-size: 12px;
+    line-height: 2.2em;
 }
 .mod-categories .bd li a .title {
     font-weight: bold;
@@ -95,6 +90,7 @@
 }
 .mod-categories.categories-no-teasers .all-categories {
     display: block;
+    position: relative;
 }
 .mod-categories.categories-no-teasers .teasers {
     display: none;

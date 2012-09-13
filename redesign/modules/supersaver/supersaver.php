@@ -16,7 +16,7 @@ function renderSuperSaver($size) {
 
 </div>
 HTML;
-    } if ($size == ModuleSize_Long) {
+    } else if ($size == ModuleSize_Long) {
         $html = <<<HTML
 <div class="mod-supersaver size-{$size}">
     <div class="media">

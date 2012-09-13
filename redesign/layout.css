@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     position: relative;
     width: 100%;
+    z-index: 2;
 }
 .wrapper {
     background-color: #FFFFFF;
@@ -31,19 +32,13 @@ body {
     margin: 0 auto;
     width: 100%;
 }
-@font-face {
-    font-family: "MuseoSans";
-    font-style: normal;
-    font-weight: bold;
-    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.eot?#iefix") format("embedded-opentype"), url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.svg#webfontkQkWxTED") format("svg"), url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.woff") format("woff"), url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/MuseoSans_700-webfont.ttf") format("truetype");
-}
 .mod-stalker {
     background-color: #FDF7D7;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
-    padding: 13px;
+    padding: 0 16px;
     width: 740px;
-    border-radius: 0 0 7px 7px;
+    border-radius: 0 0 6px 6px;
 }
 .fixed-header .mod-stalker {
     position: fixed;

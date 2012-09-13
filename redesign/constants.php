@@ -10,6 +10,10 @@ const ModuleSize_Big    = 2;
 const ModuleSize_Long   = 3;
 const ModuleSize_Grid   = 4;
 
+const UserState_New       = 1;
+const UserState_SignedOut = 2;
+const UserState_SignedIn  = 3;
+
 /**
  * Modules can be injected into Gallery are:
  *  - offeroftheweek
@@ -19,6 +23,7 @@ const ModuleSize_Grid   = 4;
  */
 /* Mock 1: http://www.zurb.net/coupons/projects/interaction-design/implement/images/layouts/0910/1.jpg */
 $Config = array(
+    "UserState" => UserState_New,
     "TopRow" => array(
         "format" => 1, /*1: two horizontal squears; 2: one big rectangle; 3: two vertically stacked */
         "modules" => array("offeroftheweek", "savingsclub")

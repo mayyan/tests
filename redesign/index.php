@@ -1,5 +1,8 @@
 <?php
+const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
 require_once("constants.php");
+require_once(APPLICATION_PATH . "modules/header/header.php");
+require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#">
@@ -29,7 +32,7 @@ require_once("constants.php");
 <body>
     <div class="wrapper">
         <div id="header">
-            <?php include("modules/header/header.php"); ?>
+            <?php renderHeader() ?>
         </div> <!-- #header -->
 
         <div id="content">
@@ -38,7 +41,7 @@ require_once("constants.php");
 
                 <div class="mod-stalker">
 
-                    <?php include("modules/couponcarrier/couponcarrier.php"); ?>
+                    <?php renderCouponCarrier() ?>
 
                     <?php include("modules/categories/categories.php"); ?>
 
@@ -62,6 +65,7 @@ require_once("constants.php");
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+<script src="jquery.ba-outside-events.min.js"></script>
 <script>
     var APP_COUPONSINC = {};
     APP_COUPONSINC.contextData = {
@@ -72,6 +76,7 @@ require_once("constants.php");
     };
 </script>
 <script src="layout.js"></script>
+<script src="modules/header/header.js"></script>
 <script src="modules/categories/categories.js"></script>
 <script src="modules/gallery/gallery.js"></script>
 <script src="modules/ads/ads.js"></script>
