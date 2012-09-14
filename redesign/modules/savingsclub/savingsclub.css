@@ -13,22 +13,59 @@
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 /* inside */
-
+/* size-1: ModuleSize_Square */
+.mod-savingsclub.size-1 {
+    height: 250px;
+    width: 300px;
+}
+.mod-savingsclub.size-1 .top img {
+    border-radius: 6px 6px 0 0;
+    height: 156px;
+    width: 300px;
+}
+.mod-savingsclub.size-1 .bottom {
+    padding: 15px;
+}
+.mod-savingsclub.size-1 .bottom h4 {
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.mod-savingsclub.size-1 .bottom h5 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 17px;
+}
+.mod-savingsclub.size-1 .bottom p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #777777;
+    font-size: 15px;
+}
 
 /* size-3: ModuleSize_Long */
-.mod-savingsclub.size-3 .shadow {
-    min-height: 112px;
+.mod-savingsclub.size-3 {
+    height: 115px;
+    width: 620px;
 }
-.mod-savingsclub.size-3 .inner {
-    min-height: 90px;
+.mod-savingsclub.size-3 .left,
+.mod-savingsclub.size-3 .right {
+    display: inline-block;
+    vertical-align: top;
 }
-.mod-savingsclub.size-3 .img {
-    float: left;
+.mod-savingsclub.size-3 .right {
+    padding: 20px;
 }
-.mod-savingsclub.size-3 .image {
+.mod-savingsclub.size-3 .img img {
     border-radius: 6px 0 0 6px;
-    height: 112px;
-    margin-top: -8px;
+    height: 115px;
+    width: 300px;
+}
+/* size-4: ModuleSize_Grid */
+.mod-offeroftheweek.size-4 {
+    height: 160px;
+    width: 300px;
 }
 /* size-4: ModuleSize_Grid */
 .mod-savingsclub.size-4 {

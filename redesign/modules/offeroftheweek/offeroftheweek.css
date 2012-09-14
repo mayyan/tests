@@ -11,21 +11,36 @@
        -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-.mod-offeroftheweek .inner {
-    background: none repeat scroll 0 0 #FFFFFF;
-    cursor: pointer;
-    min-height: 150px;
-    padding: 8px 10px 12px 8px;
-
-    -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-            border-radius: 6px;
-}
 /* inside */
 /* size-1: ModuleSize_Square */
 .mod-offeroftheweek.size-1 {
     height: 250px;
     width: 300px;
+}
+.mod-offeroftheweek.size-1 .top img {
+    border-radius: 6px 6px 0 0;
+    height: 156px;
+    width: 300px;
+}
+.mod-offeroftheweek.size-1 .bottom {
+    padding: 15px;
+}
+.mod-offeroftheweek.size-1 .summary {
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.mod-offeroftheweek.size-1 .brand {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 17px;
+}
+.mod-offeroftheweek.size-1 .details {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #777777;
+    font-size: 15px;
 }
 
 /* size-2: ModuleSize_Big */
@@ -75,13 +90,19 @@
     height: 115px;
     width: 620px;
 }
-.mod-offeroftheweek.size-3 .inner {
-    min-height: 90px;
+.mod-offeroftheweek.size-3 .left,
+.mod-offeroftheweek.size-3 .right {
+    display: inline-block;
+    vertical-align: top;
 }
-.mod-offeroftheweek.size-3 .img {
-    float: left;
+.mod-offeroftheweek.size-3 .right {
+    padding: 20px;
 }
-
+.mod-offeroftheweek.size-3 .img img {
+    border-radius: 6px 0 0 6px;
+    height: 115px;
+    width: 300px;
+}
 /* size-4: ModuleSize_Grid */
 .mod-offeroftheweek.size-4 {
     height: 160px;

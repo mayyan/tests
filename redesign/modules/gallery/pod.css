@@ -74,6 +74,10 @@
     margin-top: 18%;
     text-align: center;
 }
+.pod .hover p span {
+    display:block;
+    font-size: 13px;
+}
 .pod p {
     color: #999999;
     font-size: 13px;

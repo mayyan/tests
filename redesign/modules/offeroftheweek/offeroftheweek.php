@@ -4,10 +4,10 @@ function renderOfferOfTheWeek($size) {
     if ($size == ModuleSize_Square || $size == ModuleSize_Grid) {
         $html = <<<HTML
 <div class="mod-offeroftheweek size-{$size}">
-    <div class="img">
+    <div class="top">
         <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
     </div>
-    <div class="bd">
+    <div class="bottom">
         <h4 class="summary">SAVE $0.75</h4>
         <h5 class="brand">Bagel-fuls&reg;</h5>
         <p class="details">On any TWO (2) Bagel-fuls&reg; (4ct)</p>
@@ -37,17 +37,15 @@ HTML;
     } else if ($size == ModuleSize_Long) {
         $html = <<<HTML
 <div class="mod-offeroftheweek size-{$size}">
-    <div class="media">
-
+    <div class="left">
         <div class="img">
-            <a href="#"><img width="80" height="100" src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
+            <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
         </div>
-        <div class="bd">
-            <h4 class="summary">SAVE $0.75</h4>
-            <h5 class="brand">Bagel-fuls&reg;</h5>
-            <p class="details">On any TWO (2) Bagel-fuls&reg; (4ct)</p>
-        </div>
-
+    </div>
+    <div class="right">
+        <h4 class="summary">SAVE $0.75</h4>
+        <h5 class="brand">Bagel-fuls&reg;</h5>
+        <p class="details">On any TWO (2) Bagel-fuls&reg; (4ct)</p>
     </div>
 </div>
 HTML;

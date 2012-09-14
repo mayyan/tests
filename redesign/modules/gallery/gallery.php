@@ -31,9 +31,9 @@ $POD_TYPE_MAP = array(
 
 $POD_CTA_MAP = array(
     "0" => "Clip Coupon",
-    "9" => "Sign up and Save",
-    "13" => "Watch to Clip",
-    "15" => "Click to Redeem",
+    "9" => "Clip Coupon <span>(sign up to redeem)</span>",
+    "13" => "Click to watch <span>(Redeem after video)</span>",
+    "15" => "Clcik to Redeem <span>(opens new window)</span>",
     "27" => "Clip Coupon"
 );
 
