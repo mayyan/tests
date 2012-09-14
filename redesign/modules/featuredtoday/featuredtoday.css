@@ -35,16 +35,12 @@
     height: 160px;
     width: 300px;
 }
-.mod-featuredtoday.size-4 .img img {
+.mod-featuredtoday.size-4 .top img {
     border-radius: 6px 6px 0 0;
     width: 300px;
     height: 100px;
 }
-.mod-featuredtoday.size-4 .bd {
+.mod-featuredtoday.size-4 .bottom {
     padding: 10px 15px 15px;
     position: relative;
-}
-.mod-featuredtoday.size-4 .image {
-    width: 250px;
-    height: 120px;
 }

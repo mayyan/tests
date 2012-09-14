@@ -5,7 +5,9 @@ function renderSavingsClub($size) {
         $html = <<<HTML
 <div class="mod-savingsclub size-{$size}">
     <div class="top">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
+        <div class="img">
+            <a href="#"><img src="images/food.png" alt="Bagel-fuls&reg;"></a>
+        </div>
     </div>
     <div class="bottom">
         <h4>GET 1 YEAR FREE</h4>
@@ -19,7 +21,7 @@ HTML;
 <div class="mod-savingsclub size-{$size}">
     <div class="left">
         <div class="img">
-            <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club"></a>
+            <a href="#"><img src="images/food.png" alt="Join the Savings Club"></a>
         </div>
     </div>
     <div class="right">

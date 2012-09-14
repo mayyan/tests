@@ -5,10 +5,12 @@ function renderSuperSaver($size) {
         $html = <<<HTML
 <div class="mod-supersaver size-{$size}">
 
-    <div class="img">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club"></a>
+    <div class="top">
+        <div class="img">
+            <a href="#"><img src="images/food.png" alt="Join the Savings Club"></a>
+        </div>
     </div>
-    <div class="bd">
+    <div class="bottom">
         <h4>SAVE MORE</h4>
         <h5>Sign up for Super Savers</h5>
         <button>Sign Up</button>
@@ -19,18 +21,18 @@ HTML;
     } else if ($size == ModuleSize_Long) {
         $html = <<<HTML
 <div class="mod-supersaver size-{$size}">
-    <div class="media">
+    <div class="left">
 
         <div class="img">
-            <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Join the Savings Club" class="image"></a>
+            <a href="#"><img src="images/food.png" alt="Join the Savings Club" class="image"></a>
         </div>
-        <div class="bd">
-            <h4>SAVE MORE</h4>
-            <h5>Sign up for Super Savers</h5>
-            <button>Sign Up</button>
-        </div>
-
     </div>
+    <div class="right">
+        <h4>SAVE MORE</h4>
+        <h5>Sign up for Super Savers</h5>
+        <button>Sign Up</button>
+    </div>
+
 </div>
 HTML;
     } else {

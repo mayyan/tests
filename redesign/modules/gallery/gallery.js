@@ -235,7 +235,7 @@ APP_COUPONSINC.gallery = (function ($) {
                 brand: contextData.gallery.brand
             };
         $.ajax({
-            url: "/~myan/tests/redesign/modules/gallery/gallery.php",
+            url: "modules/gallery/gallery.php",
             data: $.extend({
                 action: 'loadPage',
                 offset: offset,

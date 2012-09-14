@@ -3,6 +3,7 @@ const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
 require_once("constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
 require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
+
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#">

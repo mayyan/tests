@@ -45,7 +45,7 @@
     background: -webkit-linear-gradient(top, #ef6e5b 0%,#e93b20 100%);
 }
 .mod-couponcarrier .print-button .title {
-    background: url("http://localhost/~myan/tests/redesign/images/icon-print.png") no-repeat scroll 0 1px transparent;
+    background: url("../../images/icon-print.png") no-repeat scroll 0 1px transparent;
     padding-left: 24px;
     padding-right: 18px;
 

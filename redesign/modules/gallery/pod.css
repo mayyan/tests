@@ -29,7 +29,7 @@
 }
 
 .pod .hover {
-    background: url("/~myan/tests/redesign/images/bg-pod-hover.png") no-repeat scroll center center rgba(255, 255, 255, 0.8);
+    background: url("../../images/bg-pod-hover.png") no-repeat scroll center center rgba(255, 255, 255, 0.8);
     font-family: 'RockSaltRegular';
     height: 95%;
     left: 11px;

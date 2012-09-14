@@ -4,11 +4,12 @@ function renderFeaturedToday($size) {
     if ($size == ModuleSize_Square || $size == ModuleSize_Big || $size == ModuleSize_Grid) {
         $html = <<<HTML
 <div class="mod-featuredtoday size-{$size}">
-
-    <div class="img">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Tostino's Savings Center"></a>
+    <div class="top">
+        <div class="img">
+            <a href="#"><img src="images/food.png" alt="Tostino's Savings Center"></a>
+        </div>
     </div>
-    <div class="bd">
+    <div class="bottom">
         <h4>FEATURED TODAY</h4>
         <h5>Tostino's Savings Center</h5>
     </div>
@@ -20,7 +21,7 @@ HTML;
 <div class="mod-featuredtoday size-{$size}">
     <div class="left">
         <div class="img">
-            <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Tostino's Savings Center" class="image"></a>
+            <a href="#"><img src="images/food.png" alt="Tostino's Savings Center"></a>
         </div>
     </div>
     <div class="right">

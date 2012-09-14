@@ -5,7 +5,7 @@ function renderOfferOfTheWeek($size) {
         $html = <<<HTML
 <div class="mod-offeroftheweek size-{$size}">
     <div class="top">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
+        <a href="#"><img src="images/food.png" alt="Bagel-fuls&reg;"></a>
     </div>
     <div class="bottom">
         <h4 class="summary">SAVE $0.75</h4>
@@ -18,7 +18,7 @@ HTML;
         $html = <<<HTML
 <div class="mod-offeroftheweek size-{$size}">
     <div class="top">
-        <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
+        <a href="#"><img src="images/food.png" alt="Bagel-fuls&reg;"></a>
     </div>
     <div class="bottom">
         <div class="left">
@@ -39,7 +39,7 @@ HTML;
 <div class="mod-offeroftheweek size-{$size}">
     <div class="left">
         <div class="img">
-            <a href="#"><img src="/~myan/tests/redesign/images/food.png" alt="Bagel-fuls&reg;"></a>
+            <a href="#"><img src="images/food.png" alt="Bagel-fuls&reg;"></a>
         </div>
     </div>
     <div class="right">
