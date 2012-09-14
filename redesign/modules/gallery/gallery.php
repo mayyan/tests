@@ -191,11 +191,13 @@ HTML;
     </div>
 
     <div class="tools">
+        <a class="goto-top inactive" href="#top">Back to top</a>
+
         <div class="selectall">
             <input type="checkbox" id="couponsinc-gallery-selectall" class="selectall-chk">
-            <label for="couponsinc-gallery-selectall">Select All</label>
+            <label for="couponsinc-gallery-selectall">Clip All</label>
         </div>
-        <a class="goto-top inactive" href="#top"><span class="triangle triangle-top"></span>Back to top</a>
+
     </div>
 </div> <!--mod-gallery -->
 HTML;

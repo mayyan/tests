@@ -6,48 +6,42 @@
 }
 
 
-
-
-
-
-
 .mod-gallery .tools {
     background: #3597D3;
-    padding: 6px 12px;
+    padding: 11px 0;
 
     position: fixed;
     bottom: 0;
     right: 0;
 
-    /*tools protrude to the right, overlapping with fix-positioned ads. need z-index to bring tools on the top.*/
-    z-index: 1;
-
-    -webkit-border-top-left-radius: 5px;
-   -webkit-border-top-right-radius: 5px;
-        -moz-border-radius-topleft: 5px;
-       -moz-border-radius-topright: 5px;
-            border-top-left-radius: 5px;
-           border-top-right-radius: 5px;
+    height: 20px;
+    background: #fdf7d7;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px 6px 0 0;
 }
 .mod-gallery .tools.inactive {
     background-color: rgba(53, 151, 211, 0.75);
 }
 .mod-gallery .selectall {
-    border-right: 1px solid #FFF;
+    border-left: 1px solid #FFF;
     display: inline;
-    padding-right: 12px;
+    padding: 0 25px;
 }
 .mod-gallery .selectall label {
-    color: #FFF;
-    font-weight: normal;
     margin-left: 4px;
+
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
 }
 .mod-gallery .tools .goto-top {
-    color: #FFF;
-    padding-left: 12px;
+
+    padding: 0 25px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 92.3%;
+
+    font-size: 14px;
+    color: #333;
 }
 .mod-gallery .goto-top .triangle-top {
     margin-right: 8px;
