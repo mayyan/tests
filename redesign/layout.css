@@ -47,6 +47,6 @@ body {
     left: 50%;
     margin-left: -370px;
 }
-/*.fixed-header .mod-gallery {
-    margin-top: 83px;
-}*/
+.toolbarBodyShift.fixed-header .mod-stalker {
+    top: 34px; /* toolbar height */
+}

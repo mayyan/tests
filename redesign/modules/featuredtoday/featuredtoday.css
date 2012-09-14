@@ -13,9 +13,22 @@
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 /* size-3: ModuleSize_Long */
-.mod-featuredtoday.size-3 .image {
-    width: 250px;
-    height: 120px;
+.mod-featuredtoday.size-3 {
+    height: 115px;
+    width: 620px;
+}
+.mod-featuredtoday.size-3 .left,
+.mod-featuredtoday.size-3 .right {
+    display: inline-block;
+    vertical-align: top;
+}
+.mod-featuredtoday.size-3 .right {
+    padding: 20px;
+}
+.mod-featuredtoday.size-3 .img img {
+    border-radius: 6px 0 0 6px;
+    height: 115px;
+    width: 300px;
 }
 /* size-4: ModuleSize_Grid */
 .mod-featuredtoday.size-4 {

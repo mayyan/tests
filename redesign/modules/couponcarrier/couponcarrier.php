@@ -29,7 +29,7 @@ HTML;
     }
     $html .=<<<HTML
     <button class="btn-cta print-button" type="button">
-        <span class="title">Print Coupons</span><span class="separator"></span><span class="number">3</span>
+        <span class="title">Print Coupons</span><span class="number">3</span>
     </button>
 
 </div> <!-- .mod-couponcarrier -->

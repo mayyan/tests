@@ -9,6 +9,9 @@
 .mod-couponcarrier .print-button {
     display: inline-block;
 }
+.mod-couponcarrier .available {
+    margin-right: 20px;
+}
 .mod-couponcarrier .available span {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #363636;
@@ -23,7 +26,7 @@
 
 .mod-couponcarrier .print-button {
     cursor: pointer;
-    padding: 5px 0 3px 18px;
+    padding: 6px 0 5px 18px;
     position: absolute;
     right: 0;
     top: 15px;
@@ -45,6 +48,9 @@
     background: url("http://localhost/~myan/tests/redesign/images/icon-print.png") no-repeat scroll 0 1px transparent;
     padding-left: 24px;
     padding-right: 18px;
+
+    border-right: 1px solid #D12C13;
+    box-shadow: 1px 0 #F1806E;
 }
 .mod-couponcarrier .print-button .separator {
     display: inline-block;
@@ -75,7 +81,14 @@
     width: 300px;
 }
 .mod-couponcarrier .savings-bar {
-    background: -moz-linear-gradient(center top , #FFFFFF 0%, #8AC680 2%, #63B352 100%) repeat scroll 0 0 transparent;
+    background: #63b352;
+    background: -moz-linear-gradient(top, #ffffff 0%, #8ac680 2%, #63b352 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(2%,#8ac680), color-stop(100%,#63b352));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#8ac680 2%,#63b352 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#8ac680 2%,#63b352 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#8ac680 2%,#63b352 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#8ac680 2%,#63b352 100%);
+
     border-radius: 13px 13px 13px 13px;
     color: #FFFFFF;
     max-width: 298px;

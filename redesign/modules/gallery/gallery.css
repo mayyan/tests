@@ -23,9 +23,8 @@
     background-color: rgba(53, 151, 211, 0.75);
 }
 .mod-gallery .selectall {
-    border-left: 1px solid #FFF;
     display: inline;
-    padding: 0 25px;
+    padding: 0 25px 0 20px;
 }
 .mod-gallery .selectall label {
     margin-left: 4px;
@@ -35,13 +34,14 @@
     color: #333;
 }
 .mod-gallery .tools .goto-top {
-
     padding: 0 25px;
     cursor: pointer;
     text-decoration: none;
-
     font-size: 14px;
     color: #333;
+
+    border-right: 1px solid #DFD9B7;
+    box-shadow: 1px 0 #FFFFFF;
 }
 .mod-gallery .goto-top .triangle-top {
     margin-right: 8px;
