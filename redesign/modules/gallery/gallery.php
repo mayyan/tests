@@ -1,5 +1,7 @@
 <?php
 const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
+//const APPLICATION_PATH = "/var/www/";
+
 require_once(APPLICATION_PATH . "constants.php");
 require_once(APPLICATION_PATH . "library.php");
 require_once(APPLICATION_PATH . "modules/gallery/toprow.php");

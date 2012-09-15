@@ -1,6 +1,4 @@
 <?php
-require_once("constants.php");
-
 function injectItemIntoArray($oldArray, $injection) {
     $newArray = array_slice ($oldArray, 0); // make a copy, don't change $oldArray
 

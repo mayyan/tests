@@ -1,6 +1,8 @@
 <?php
 const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
-require_once("constants.php");
+//const APPLICATION_PATH = "/var/www/";
+
+require_once(APPLICATION_PATH . "constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
 require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
 
@@ -73,7 +75,8 @@ require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
         "gallery" : {
             "podsPerPage": 21,
             "totalPods": 298
-        }
+        },
+        "config" : <?php echo $configIndex ?>
     };
 </script>
 <script src="layout.js"></script>

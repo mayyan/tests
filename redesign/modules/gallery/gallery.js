@@ -226,22 +226,14 @@ APP_COUPONSINC.gallery = (function ($) {
         isLoading = true;
         toggleLoadControls();
 
-        var data = {
-                pid: contextData.pid,
-                nid: contextData.nid,
-                zid: contextData.zid,
-                cid: contextData.gallery.cid,
-                catId: contextData.gallery.catId,
-                brand: contextData.gallery.brand
-            };
         $.ajax({
             url: "modules/gallery/gallery.php",
-            data: $.extend({
+            data: {
                 action: 'loadPage',
                 offset: offset,
                 size : size,
-                toprow: contextData.gallery.toprow
-            }, data),
+                config: contextData.config
+            },
             success: callback,
             fail: handleLoadFailed
         });

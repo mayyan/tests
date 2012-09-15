@@ -1,6 +1,4 @@
 <?php
-const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
-
 const GridWidth = 3;
 
 const GridSize = 21;
