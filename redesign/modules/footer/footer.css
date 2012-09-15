@@ -47,7 +47,6 @@
 }
 .mod-footer .promos button {
     font-size: 11px;
-    background: -moz-linear-gradient(center top , #FFFFFF 0%, #FFFFFF 0%, #C8C8C8 2%, #999999 100%) repeat scroll 0 0 #999999;
     border: 1px solid #999999;
     color: #FFFFFF;
     border-radius: 5px;
@@ -57,4 +56,12 @@
     font-family: 'Proxima',Helvetica,Arial,sans-serif;
     font-weight: bold;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+    background: #999999;
+    background: -moz-linear-gradient(top, #ffffff 0%, #c8c8c8 2%, #999999 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(2%,#c8c8c8), color-stop(100%,#999999));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#c8c8c8 2%,#999999 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#c8c8c8 2%,#999999 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#c8c8c8 2%,#999999 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#c8c8c8 2%,#999999 100%);
 }
