@@ -11,8 +11,9 @@ function renderCategories() {
             <li class="personal-care"><a href="/coupons/Personal-Care-Coupons-101/"><span class="title">Personal Care</span> (47)</a></li>
             <li class="household"><a href="/coupons/Household-Coupons-105/"><span class="title">Household</span> (38)</a></li>
             <li class="beverages"><a href="/coupons/Beverages-Coupons-103/"><span class="title">Beverages</span> (16)</a></li>
-            <li><a class="show-more">More <span class="triangle triangle-down"></span></a></li>
         </ul>
+
+        <a class="show-more">More<span class="triangle triangle-down"></span></a>
     </div>
 
     <div class="bd all-categories">
@@ -49,10 +50,7 @@ function renderCategories() {
             <li class="static-link"><a href="/savingsclub/preview?pid=13306&amp;nid=10&amp;zid=iq37"><span class="title">Savings Club Offers</span> (22)</a></li>
         </ul>
 
-        <ul class="show-less">
-            <li><a><span class="title">Less</span> <span class="triangle triangle-up"></span></a></li>
-        </ul>
-
+        <a class="show-less"><span class="title">Less</span><span class="triangle triangle-up"></span></a>
 
     </div>
     <div class="clearfix"></div>

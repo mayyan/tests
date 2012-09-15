@@ -2,9 +2,7 @@
 .mod-categories {
     border-top: 1px solid #FDFDF5;
     padding: 6px 0 3px 0;
-}
-.mod-categories .teasers {
-
+    position: relative;
 }
 .mod-categories .teasers p {
     display: inline;
@@ -17,36 +15,34 @@
     text-transform: uppercase;
 }
 .mod-categories .teasers ul li {
-    display: inline;
     margin-left: 20px;
 }
 .mod-categories .teasers .teaser-list {
-    display: inline;
+    display: inline-block;
     width: auto;
 }
-.mod-categories .teasers .teaser-list li a {
-
-}
-.mod-categories .teasers .teaser-list li.first a {
-
-}
-.mod-categories .show-more {
-    color: #0F94D2;
-    cursor: pointer;
-    display: inline;
-    font-size: 92.3%;
-    line-height: 1.33;
-    padding-left: 2px;
-    font-weight: bold;
-}
-.mod-categories .show-more:hover {
+.mod-categories .show-more:hover,
+.mod-categories .show-less:hover{
     text-decoration: underline;
 }
-.mod-categories .bd ul.show-less {
-    position: absolute;
-    right: 5px;
+.mod-categories .show-more,
+.mod-categories .show-less {
     cursor: pointer;
     width: auto;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #0ea0e0;
+    text-shadow: 0 1px #fff;
+    font-size: 12px;
+}
+.mod-categories .show-more {
+    margin-left: 25px;
+}
+.mod-categories .show-less {
+    position: absolute;
+    top: 12px;
+    right: 8px;
 }
 .mod-categories .show-more .triangle-down {
     bottom: 1px;
@@ -90,7 +86,6 @@
 }
 .mod-categories.categories-no-teasers .all-categories {
     display: block;
-    position: relative;
 }
 .mod-categories.categories-no-teasers .teasers {
     display: none;
