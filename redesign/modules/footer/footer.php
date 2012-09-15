@@ -71,6 +71,9 @@ function renderFooter() {
 
     </div> <!-- .bd -->
 
+    <div class="bottom">
+        &copy; Copyright 2012 Coupons.com Incorporated. All rights reserved. <a href="#">Terms of Use</a> <a href="#">Privacy Policy</a>
+
 </div> <!-- .footer -->
 HTML;
 

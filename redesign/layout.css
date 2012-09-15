@@ -12,9 +12,8 @@ body {
     z-index: 2;
 }
 .wrapper {
-    background-color: #FFFFFF;
+    background-color: #FAF9F5;
     margin: 0 auto;
-    padding: 0 5px;
     width: 970px;
 }
 #content {
@@ -26,7 +25,6 @@ body {
     float: left;
     margin-right: 5px;
     width: 100%;
-    background: #faf9f5;
 }
 #footer {
     clear: both;

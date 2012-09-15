@@ -4,13 +4,16 @@
 }
 .mod-footer .endorsements {
     float: right;
+    margin-right: 20px;
 }
 .mod-footer .sitemap a {
-    color: #1C9AD5;
-    font-size: 11px;
-    font-weight: bold;
-    margin-left: 15px;
+    margin-left: 16px;
     text-decoration: none;
+
+    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #1b9ad6;
+    font-size: 12px;
 }
 .mod-footer .truste {
     background-position: 0 -105px;
@@ -28,17 +31,25 @@
 }
 
 .mod-footer .promos li {
-    width: 24%;
+    margin-left: 19px;
+    max-width: 220px;
     text-align: left;
+    vertical-align: top;
 }
 .mod-footer .promos h3 {
-    color: #515151;
-    font-weight: bold;
     margin-bottom: 5px;
+
+    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
 }
 .mod-footer .promos p {
-    color: #515048;
     margin-bottom: 12px;
+
+    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    color: #333333;
+    font-size: 12px;
 }
 .mod-footer .promos input,
 .mod-footer .promos button {
@@ -64,4 +75,16 @@
     background: -o-linear-gradient(top, #ffffff 0%,#c8c8c8 2%,#999999 100%);
     background: -ms-linear-gradient(top, #ffffff 0%,#c8c8c8 2%,#999999 100%);
     background: linear-gradient(to bottom, #ffffff 0%,#c8c8c8 2%,#999999 100%);
+}
+.mod-footer .bottom {
+    background: #EEEBE6;
+    padding: 10px 20px;
+    border-top: 1px solid #AEADA9;
+    margin-top: 40px;
+}
+.mod-footer .bottom,
+.mod-footer .bottom a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333333;
+    font-size: 12px;
 }

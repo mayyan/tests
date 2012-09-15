@@ -78,13 +78,7 @@
     color: #FFFFFF;
     cursor: pointer;
     font-weight: bold;
-    margin: 12px;
+    margin: 12px 0 20px;
     padding: 9px;
-    width: 98%;
-
-
-
-
-}
-.mod-gallery .more button:hover {
+    width: 97%;
 }
