@@ -1,3 +1,6 @@
+<?php
+function renderCategories() {
+    $html =<<<HTML
 <div class="mod-categories categories-show-teasers">
     <div class="bd teasers">
         <p>Popular Categories</p>
@@ -54,3 +57,8 @@
     </div>
     <div class="clearfix"></div>
 </div> <!-- .mod-categories -->
+HTML;
+
+    return $html;
+}
+?>

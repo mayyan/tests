@@ -227,9 +227,9 @@ APP_COUPONSINC.gallery = (function ($) {
         toggleLoadControls();
 
         $.ajax({
-            url: "modules/gallery/gallery.php",
+            url: ".",
             data: {
-                action: 'loadPage',
+                action: 'paginate',
                 offset: offset,
                 size : size,
                 config: contextData.config

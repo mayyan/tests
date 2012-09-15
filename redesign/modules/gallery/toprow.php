@@ -1,124 +1,114 @@
 <?php
+require_once(APPLICATION_PATH . "modules/ads/mrec.php");
 require_once(APPLICATION_PATH . "modules/supersaver/supersaver.php");
 require_once(APPLICATION_PATH . "modules/featuredtoday/featuredtoday.php");
 require_once(APPLICATION_PATH . "modules/offeroftheweek/offeroftheweek.php");
 require_once(APPLICATION_PATH . "modules/savingsclub/savingsclub.php");
 
 function renderTopRowModule($moduleName, $size) {
+    $html = '';
     switch ($moduleName) {
     case "supersaver":
-        renderSuperSaver($size);
+        $html = renderSuperSaver($size);
         break;
     case "featuredtoday":
-        renderFeaturedToday($size);
+        $html = renderFeaturedToday($size);
         break;
     case "savingsclub":
-        renderSavingsClub($size);
+        $html = renderSavingsClub($size);
         break;
     case "offeroftheweek":
-        renderOfferOfTheWeek($size);
+        $html = renderOfferOfTheWeek($size);
         break;
     default:
-        echo "Unknow module ($moduleName) in top row of gallery.";
+        $html = "Unknow module ($moduleName) in top row of gallery.";
         break;
     }
-}
-function renderMREC($isFirstPage) {
-    $src = '';
-    $cssClass = 'house-ad';
-    if ($isFirstPage) {
-        $cssClass = "mrec";
-        $src = 'src="http://couponbar.coupons.com/adblob.asp?AdSize=300x250&pzn=13306iq3710&req=1347339507201&zip=&did=AMUAAREKS&spage=.com/&npage=1&mrec=true"';
-    }
-    $html =<<<HTML
-    <div class="mod-ads">
-        <iframe scrolling="no" frameborder="0" width="300" height="250" class="{$cssClass}" {$src}></iframe>
-    </div>
-HTML;
-    echo $html;
+
+    return $html;
 }
 
 function renderTopRow($config, $isFirstPage) {
     $format = $config["format"];
     $modules = $config["modules"];
 
-    if ($format == 1) {
-        $moduleSize = ModuleSize_Square;
+    $html = '';
+    if ($format == ModuleSize_Super) {
 
-        echo <<<HTML
+        $html .=<<<HTML
 <div class="row">
     <div class="column grid_1">
 HTML;
-        renderTopRowModule($modules[0], $moduleSize);
-        echo <<<HTML
+        $html .= renderTopRowModule($modules[0], $format);
+        $html .=<<<HTML
     </div>
 
     <div class="column grid_1">
 HTML;
-        renderTopRowModule($modules[1], $moduleSize);
-        echo <<<HTML
+        $html .= renderTopRowModule($modules[1], $format);
+        $html .=<<<HTML
     </div>
 
     <div class="column grid_1">
 HTML;
-        renderMREC($isFirstPage);
-        echo <<<HTML
+        $html .= renderMREC($isFirstPage);
+        $html .=<<<HTML
     </div>
 
 </div> <!-- .row -->
 HTML;
-    } else if ($format == 2) {
-        $moduleSize = ModuleSize_Big;
+    } else if ($format == ModuleSize_Double) {
 
-        echo <<<HTML
+        $html .=<<<HTML
 <div class="row">
 
     <div class="column grid_2">
 HTML;
-        print($module[0]);
-        renderTopRowModule($modules[0], $moduleSize);
-        echo <<<HTML
+
+        $html .= renderTopRowModule($modules[0], $format);
+        $html .=<<<HTML
     </div>
 
     <div class="column grid_1">
 HTML;
-        renderMREC($isFirstPage);
-        echo <<<HTML
+        $html .= renderMREC($isFirstPage);
+        $html .=<<<HTML
     </div>
 
 </div> <!-- .row -->
 HTML;
-    } else if ($format == 3) {
-        $moduleSize = ModuleSize_Long;
+    } else if ($format == ModuleSize_ShortStack) {
 
-        echo <<<HTML
+        $html .=<<<HTML
 <div class="row">
 
     <div class="column grid_2">
         <div class="row">
             <div class="column grid_2">
 HTML;
-        renderTopRowModule($modules[0], $moduleSize);
-        echo <<<HTML
+        $html .= renderTopRowModule($modules[0], $format);
+        $html .=<<<HTML
             </div>
         </div>
 
         <div class="row">
             <div class="column grid_2">
 HTML;
-        renderTopRowModule($modules[1], $moduleSize);
-        echo <<<HTML
+        $html .= renderTopRowModule($modules[1], $format);
+        $html .=<<<HTML
                 </div>
             </div>
         </div>
 
         <div class="column grid_1">
 HTML;
-        renderMREC($isFirstPage);
-        echo <<<HTML
+        $html .= renderMREC($isFirstPage);
+        $html .=<<<HTML
     </div>
 </div> <!-- .row -->
 HTML;
     }
+
+    return $html;
 }
 ?>

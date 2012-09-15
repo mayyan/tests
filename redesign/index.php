@@ -1,10 +1,20 @@
 <?php
-const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
-//const APPLICATION_PATH = "/var/www/";
+const APPLICATION_PATH = "./";
 
 require_once(APPLICATION_PATH . "constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
-require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
+require_once(APPLICATION_PATH . "modules/stalker/stalker.php");
+require_once(APPLICATION_PATH . "modules/gallery/gallery.php");
+require_once(APPLICATION_PATH . "modules/footer/footer.php");
+
+$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
+$action = empty($_GET["action"]) ? "" : $_GET["action"];
+
+if ($action == "paginate") {
+    $html = renderGalleryPage(false);
+    echo $html;
+    return;
+}
 
 ?>
 <!DOCTYPE html>
@@ -15,18 +25,18 @@ require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
     <link media="screen" rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css">
     <link media="screen" rel="stylesheet" type="text/css" href="common.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="layout.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="promo.css" >
 
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/categories/categories.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/pod.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/offeroftheweek/offeroftheweek.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/savingsclub/savingsclub.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/supersaver/supersaver.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/featuredtoday/featuredtoday.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/gallery.css" >
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/ads/ads.css" >
@@ -35,22 +45,16 @@ require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
 <body>
     <div class="wrapper">
         <div id="header">
-            <?php renderHeader() ?>
+            <?php echo renderHeader() ?>
         </div> <!-- #header -->
 
         <div id="content">
 
             <div id="main">
 
-                <div class="mod-stalker">
+                <?php echo renderStalker(); ?>
 
-                    <?php renderCouponCarrier() ?>
-
-                    <?php include("modules/categories/categories.php"); ?>
-
-                </div> <!-- .stalker -->
-
-                <?php include("modules/gallery/gallery.php"); ?>
+                <?php echo renderGallery(); ?>
 
             </div> <!-- #main -->
 
@@ -62,7 +66,7 @@ require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
         <div id="footer">
             <?php include("modules/ads/leaderboard.php"); ?>
 
-            <?php include("modules/footer/footer.php"); ?>
+            <?php echo renderFooter(); ?>
         </div>
     </div> <!--wrapper -->
 

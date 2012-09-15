@@ -1,9 +1,9 @@
 <?php
 
 function renderSuperSaver($size) {
-    if ($size == ModuleSize_Square || $size == ModuleSize_Big || $size == ModuleSize_Grid) {
+    if ($size == ModuleSize_Super || $size == ModuleSize_Double || $size == ModuleSize_Grid) {
         $html = <<<HTML
-<div class="mod-supersaver size-{$size}">
+<div class="mod-supersaver promo size-{$size}">
 
     <div class="top">
         <div class="img">
@@ -11,8 +11,8 @@ function renderSuperSaver($size) {
         </div>
     </div>
     <div class="bottom">
-        <h4>SAVE MORE</h4>
-        <h5>Sign up for Super Savers</h5>
+        <h4 class="typeline">SAVE MORE</h4>
+        <h5 class="headline">Sign up for Super Savers</h5>
         <button>Sign Up</button>
     </div>
 
@@ -20,7 +20,7 @@ function renderSuperSaver($size) {
 HTML;
     } else if ($size == ModuleSize_Long) {
         $html = <<<HTML
-<div class="mod-supersaver size-{$size}">
+<div class="mod-supersaver promo size-{$size}">
     <div class="left">
 
         <div class="img">
@@ -28,8 +28,8 @@ HTML;
         </div>
     </div>
     <div class="right">
-        <h4>SAVE MORE</h4>
-        <h5>Sign up for Super Savers</h5>
+        <h4 class="typeline">SAVE MORE</h4>
+        <h5 class="headline">Sign up for Super Savers</h5>
         <button>Sign Up</button>
     </div>
 
@@ -39,6 +39,6 @@ HTML;
         $html = "Unknown supersaver size ($size)";
     }
 
-    echo $html;
+    return $html;
 }
 ?>

@@ -3,10 +3,10 @@ const GridWidth = 3;
 
 const GridSize = 21;
 
-const ModuleSize_Square = 1;
-const ModuleSize_Big    = 2;
-const ModuleSize_Long   = 3;
-const ModuleSize_Grid   = 4;
+const ModuleSize_Super        = "super";
+const ModuleSize_Double       = "double";
+const ModuleSize_ShortStack   = "shortstack";
+const ModuleSize_Grid         = "grid";
 
 const UserState_New       = 1;
 const UserState_SignedOut = 2;
@@ -23,7 +23,7 @@ const UserState_SignedIn  = 3;
 $Config1 = array(
     "UserState" => UserState_SignedIn,
     "TopRow" => array(
-        "format" => ModuleSize_Square, /*1: two horizontal squears; 2: one big rectangle; 3: two vertically stacked */
+        "format" => ModuleSize_Super,
         "modules" => array("offeroftheweek", "savingsclub")
     ),
     "Gallery" => array( /* they are module names not used in TopRow, and their grid positions, starting from 1, the frist pod below TopRow */
@@ -36,11 +36,11 @@ $Config1 = array(
 $Config2 = array(
     "UserState" => UserState_SignedOut,
     "TopRow" => array(
-        "format" => ModuleSize_Big, /*1: two horizontal squears; 2: one big rectangle; 3: two vertically stacked */
+        "format" => ModuleSize_Double,
         "modules" => array("offeroftheweek")
     ),
     "Gallery" => array( /* they are module names not used in TopRow, and their grid positions, starting from 1, the frist pod below TopRow */
-        /*"savingsclub" => 13,*/
+        "savingsclub" => 13,
         "supersaver" => 21,
         "featuredtoday" => 22
     )
@@ -50,7 +50,7 @@ $Config2 = array(
 $Config3 = array(
     "UserState" => UserState_New,
     "TopRow" => array(
-        "format" => ModuleSize_Long, /*1: two horizontal squears; 2: one big rectangle; 3: two vertically stacked */
+        "format" => ModuleSize_ShortStack,
         "modules" => array("offeroftheweek", "featuredtoday")
     ),
     "Gallery" => array( /* they are module names not used in TopRow, and their grid positions, starting from 1, the frist pod below TopRow */

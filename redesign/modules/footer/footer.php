@@ -1,3 +1,6 @@
+<?php
+function renderFooter() {
+    $html =<<<HTML
 <div class="mod-footer">
 
     <div class="top">
@@ -48,7 +51,7 @@
             </li>
 
             <li>
-                <img height="130" width="203" alt="Get CouponBar" src="images/cfc.png"/>
+                <img height="130" width="203" alt="Get CouponBar" src="images/coupon-bar.png"/>
                 <h3>Get CouponBar</h3>
                 <p>Get access to 100's of Coupons organized by category always one click away. It's free!</p>
                 <form>
@@ -69,3 +72,7 @@
     </div> <!-- .bd -->
 
 </div> <!-- .footer -->
+HTML;
+
+    return $html;
+}

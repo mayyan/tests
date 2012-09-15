@@ -46,6 +46,6 @@ HTML;
 </div>
 HTML;
 
-    echo $html;
+    return $html;
 
 }

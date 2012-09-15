@@ -35,7 +35,7 @@ HTML;
 </div> <!-- .mod-couponcarrier -->
 HTML;
 
-    echo $html;
+    return $html;
 }
 
 ?>

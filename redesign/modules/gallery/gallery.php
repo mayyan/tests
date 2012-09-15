@@ -1,7 +1,4 @@
 <?php
-const APPLICATION_PATH = "/Users/myan/Sites/tests/redesign/";
-//const APPLICATION_PATH = "/var/www/";
-
 require_once(APPLICATION_PATH . "constants.php");
 require_once(APPLICATION_PATH . "library.php");
 require_once(APPLICATION_PATH . "modules/gallery/toprow.php");
@@ -10,8 +7,8 @@ require_once(APPLICATION_PATH . "modules/featuredtoday/featuredtoday.php");
 require_once(APPLICATION_PATH . "modules/offeroftheweek/offeroftheweek.php");
 require_once(APPLICATION_PATH . "modules/savingsclub/savingsclub.php");
 
-$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
-$action = empty($_GET["action"]) ? "" : $_GET["action"];
+//$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
+//$action = empty($_GET["action"]) ? "" : $_GET["action"];
 
 // Preparing all data
 $podJSON = file_get_contents(APPLICATION_PATH . "podCache.json");
@@ -35,7 +32,7 @@ $POD_CTA_MAP = array(
     "0" => "Clip Coupon",
     "9" => "Clip Coupon <span>(sign up to redeem)</span>",
     "13" => "Click to watch <span>(Redeem after video)</span>",
-    "15" => "Clcik to Redeem <span>(opens new window)</span>",
+    "15" => "Click to Redeem <span>(opens new window)</span>",
     "27" => "Clip Coupon"
 );
 
@@ -74,6 +71,8 @@ function renderPod($gridPosition) {
     global $podCache;
     global $podTemplate;
 
+    $html = '';
+
     if (is_numeric($podIdList[$gridPosition])) {
         // is a pod id
         $podIndex = $gridPosition;
@@ -96,93 +95,93 @@ function renderPod($gridPosition) {
                 $podData["brand"],
                 $podData["details"]);
 
-            echo preg_replace($search, $replace, $podTemplate);
+            $html = preg_replace($search, $replace, $podTemplate);
         }
     } else {
         // is a module name
         $moduleName = $podIdList[$gridPosition];
         switch ($moduleName) {
         case "supersaver":
-            renderSuperSaver(ModuleSize_Grid);
+            $html = renderSuperSaver(ModuleSize_Grid);
             break;
         case "featuredtoday":
-            renderFeaturedToday(ModuleSize_Grid);
+            $html = renderFeaturedToday(ModuleSize_Grid);
             break;
         case "savingsclub":
-            renderSavingsClub(ModuleSize_Grid);
+            $html = renderSavingsClub(ModuleSize_Grid);
             break;
         case "offeroftheweek":
-            renderOfferOfTheWeek(ModuleSize_Grid);
+            $html = renderOfferOfTheWeek(ModuleSize_Grid);
             break;
         default:
-            echo "Unknow module ($moduleName) injection to gallery.";
+            $html =  "Unknow module ($moduleName) injection to gallery.";
             break;
         }
     }
+
+    return $html;
 }
 
 function renderPodRow($row) {
     global $offset;
 
-    echo <<<HTML
+    $html = <<<HTML
 <div class="row">
 HTML;
 
     for ($c = 0; $c < GridWidth; $c++) {
 
-        echo <<<HTML
+        $html .=<<<HTML
     <div class="column grid_1">
 HTML;
-        renderPod($offset + $row * GridWidth + $c);
-        echo <<<HTML
+        $html .= renderPod($offset + $row * GridWidth + $c);
+        $html .=<<<HTML
     </div>
 HTML;
     }
-    echo <<<HTML
+    $html .=<<<HTML
 </div>
 HTML;
+    return $html;
 }
 
-function renderPage($isFirstPage) {
+function renderGalleryPage($isFirstPage) {
     global $Config;
 
     $totalRowsOnPage = GridSize / GridWidth;
 
-    echo <<<HTML
+    $html =<<<HTML
 <div class="page">
 HTML;
 
-    renderTopRow($Config["TopRow"], $isFirstPage);
+    $html .= renderTopRow($Config["TopRow"], $isFirstPage);
 
-    echo <<<HTML
+    $html .=<<<HTML
     <div class="pods">
 HTML;
 
     for ($row = 0; $row < $totalRowsOnPage; $row++) {
-        renderPodRow($row);
+        $html .= renderPodRow($row);
     }
 
-    echo <<<HTML
+    $html .=<<<HTML
     </div> <!-- .pods -->
     <div class="clearfix"></div>
 </div> <!-- .page -->
 HTML;
+
+    return $html;
 }
 
-/**
- * Main
- */
-if ($action == "loadPage") {
-    renderPage(false);
-} else {
-    echo <<<HTML
+function renderGallery() {
+    $html =<<<HTML
 <div class="mod-gallery">
     <div class="pages">
 HTML;
 
-    renderPage(true);
+    $html .= renderGalleryPage(true);
 
-    echo <<<HTML
+    $html .=<<<HTML
     </div> <!-- .pages -->
 
     <div class="loading-indicator" style="display: none;">
@@ -203,5 +202,7 @@ HTML;
     </div>
 </div> <!--mod-gallery -->
 HTML;
+
+    return $html;
 }
 ?>
