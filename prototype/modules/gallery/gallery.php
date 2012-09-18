@@ -2,22 +2,28 @@
 require_once(APPLICATION_PATH . "constants.php");
 require_once(APPLICATION_PATH . "library.php");
 require_once(APPLICATION_PATH . "modules/gallery/toprow.php");
+require_once(APPLICATION_PATH . "modules/gallery/category.php");
 require_once(APPLICATION_PATH . "modules/supersaver/supersaver.php");
 require_once(APPLICATION_PATH . "modules/featuredtoday/featuredtoday.php");
 require_once(APPLICATION_PATH . "modules/offeroftheweek/offeroftheweek.php");
 require_once(APPLICATION_PATH . "modules/savingsclub/savingsclub.php");
 
-//$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
-//$action = empty($_GET["action"]) ? "" : $_GET["action"];
-
 // Preparing all data
 $podJSON = file_get_contents(APPLICATION_PATH . "podCache.json");
 $podCache = json_decode($podJSON, true);
-$podIdList = array_keys($podCache);
 
-$podIdList = injectItemIntoArray($podIdList, $Config["Gallery"]);
-//print_r($podIdList);
+//$podIdList = array_keys($podCache);
+$podIdLists = segmentByCategory($podCache, $catid);
 
+$categoryPodIdList = $podIdLists["category"];
+$otherPodIdList    = injectItemIntoArray($podIdLists["other"], $Config["Gallery"]);
+
+
+if (is_numeric($catid)) {
+    $podIdList = $categoryPodIdList;
+} else {
+    $podIdList = $otherPodIdList;
+}
 $podIdListOnPage = array_slice($podIdList, $offset, GridSize);
 
 $POD_TYPE_MAP = array(
@@ -105,6 +111,8 @@ function renderPod($gridPosition) {
             $html = renderSuperSaver(ModuleSize_Grid);
             break;
         case "featuredtoday":
+        case "featuredtoday2":
+        case "featuredtoday3":
             $html = renderFeaturedToday(ModuleSize_Grid);
             break;
         case "savingsclub":
@@ -114,7 +122,7 @@ function renderPod($gridPosition) {
             $html = renderOfferOfTheWeek(ModuleSize_Grid);
             break;
         default:
-            $html =  "Unknow module ($moduleName) injection to gallery.";
+            //$html =  "Unknow module ($moduleName) injection to gallery.";
             break;
         }
     }
@@ -147,6 +155,7 @@ HTML;
 
 function renderGalleryPage($isFirstPage) {
     global $Config;
+    global $catid;
 
     $totalRowsOnPage = GridSize / GridWidth;
 
@@ -154,8 +163,15 @@ function renderGalleryPage($isFirstPage) {
 <div class="page">
 HTML;
 
-    $html .= renderTopRow($Config["TopRow"], $isFirstPage);
-
+    if ($isFirstPage) {
+        if (is_numeric($catid)) {
+            $html .= renderSegment($categoryPodIdList, $isFirstPage);
+        } else {
+            $html .= renderTopRowModules($Config["TopRow"], $isFirstPage);
+        }
+    } else {
+        $html .= renderTopRowPods();
+    }
     $html .=<<<HTML
     <div class="pods">
 HTML;
@@ -166,7 +182,7 @@ HTML;
 
     $html .=<<<HTML
     </div> <!-- .pods -->
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
 </div> <!-- .page -->
 HTML;
 

@@ -26,7 +26,7 @@ HTML;
     </div>
     <div class="right">
         <h4 class="typeline">GET 1 YEAR FREE</h4>
-        <h5 class="headline>Join the Savings Club</h5>
+        <h5 class="headline">Join the Savings Club</h5>
         <p class="text">Get bigger, better savings, first dibs on offers.</p>
     </div>
 </div>

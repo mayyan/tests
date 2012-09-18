@@ -1,17 +1,24 @@
 <?php
 const APPLICATION_PATH = "./";
 
+$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
+$action = empty($_GET["action"]) ? "" : $_GET["action"];
+$catid  = empty($_GET["catid"]) ? "" : $_GET["catid"];
+
 require_once(APPLICATION_PATH . "constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
 require_once(APPLICATION_PATH . "modules/stalker/stalker.php");
 require_once(APPLICATION_PATH . "modules/gallery/gallery.php");
+require_once(APPLICATION_PATH . "modules/featuredtoday/featuredtoday.php");
 require_once(APPLICATION_PATH . "modules/footer/footer.php");
 
-$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
-$action = empty($_GET["action"]) ? "" : $_GET["action"];
 
 if ($action == "paginate") {
     $html = renderGalleryPage(false);
+    echo $html;
+    return;
+} else if ($action == "featuredtoday") {
+    $html = renderFeaturedTodayDialog();
     echo $html;
     return;
 }
@@ -41,6 +48,8 @@ if ($action == "paginate") {
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/ads/ads.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/footer/footer.css" >
+
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/featuredtoday/featuredtoday_dialog.css" >
 </head>
 <body>
     <div class="wrapper">
@@ -69,6 +78,7 @@ if ($action == "paginate") {
             <?php echo renderFooter(); ?>
         </div>
     </div> <!--wrapper -->
+    <div class="dialog-inner hidden"></div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
@@ -80,6 +90,7 @@ if ($action == "paginate") {
             "podsPerPage": 21,
             "totalPods": 298
         },
+        "catid"  : "<?php echo $catid ?>",
         "config" : <?php echo $configIndex ?>
     };
 </script>
@@ -87,6 +98,7 @@ if ($action == "paginate") {
 <script src="modules/header/header.js"></script>
 <script src="modules/categories/categories.js"></script>
 <script src="modules/gallery/gallery.js"></script>
+<script src="modules/featuredtoday/featuredtoday.js"></script>
 <script src="modules/ads/ads.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

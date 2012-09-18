@@ -51,11 +51,13 @@ $Config3 = array(
     "UserState" => UserState_New,
     "TopRow" => array(
         "format" => ModuleSize_ShortStack,
-        "modules" => array("offeroftheweek", "featuredtoday")
+        "modules" => array("offeroftheweek", "savingsclub")
     ),
     "Gallery" => array( /* they are module names not used in TopRow, and their grid positions, starting from 1, the frist pod below TopRow */
-        "supersaver" => 13,
-        "savingsclub" => 21
+        "featuredtoday" => 3,
+        "supersaver" => 21,
+        "featuredtoday2" => 24,
+        "featuredtoday3" => 45,
     )
 );
 

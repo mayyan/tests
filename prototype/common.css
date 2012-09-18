@@ -31,6 +31,8 @@ button {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-weight: bold;
 }
 .txt-offscreen {
     text-indent: -999em;
@@ -87,4 +89,24 @@ button {
 .media .imgExt {
     float: right;
     margin-left: 10px;
+}
+
+.ui-widget-overlay {
+    background: rgba(0,0,0,0.6);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.dialog-outer .ui-icon-closethick {
+    font-size: 30px;
+    color: #333;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.dialog-outer {
+    padding: 20px 20px 40px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
