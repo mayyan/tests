@@ -89,7 +89,7 @@
 
     function getPodCache() {
         $.ajax({
-            url: "http://vdevusvr06.corp.coupons.com/ajax/allpods",
+            url: "http://vdevusvr06.corp.coupons.com/ajax/allpods", // this service is on branch CPN-3786
             dataType: 'json',
             success: handleGetPodCacheSuccess,
             error: handleGetPodCacheError
@@ -101,7 +101,9 @@
     }
 
     function handleGetPodCacheError(jqXHR, textStatus, errorThrown) {
-        alert(errorThrown);
+        //alert("handleGetPodCacheError: " + errorThrown);
+        // fallback to fake response
+        podCache = fakeResp.gallery.podCache;
     }
 
     function openSocket() {

@@ -1,3 +1,7 @@
+<?php
+$contextDataFile = file_get_contents("podCache.dat");
+$contextData = json_encode($contextDataFile, true);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,5 +36,10 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="waterfall.js"></script>
+<script>
+
+    var fakeResp = JSON.parse(<?php echo $contextData ?>);
+
+</script>
 </body>
 </html>
