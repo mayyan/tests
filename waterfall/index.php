@@ -13,7 +13,7 @@ $contextData = json_encode($contextDataFile, true);
 <body>
     <div class="background">
         <audio autoplay loop>
-            <!--source src="http://themusicboyz.com/media/Hornpipe_In_D_Major_Water_Music_Recessional_.mp3" type="audio/mpeg" /-->
+            <source src="http://themusicboyz.com/media/Hornpipe_In_D_Major_Water_Music_Recessional_.mp3" type="audio/mpeg" />
             <source src="http://www.jetcityorange.com/sounds/WestSeattleWaterfall.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>

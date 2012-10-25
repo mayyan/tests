@@ -1,0 +1,46 @@
+.wrapper {
+    margin: 0 auto;
+}
+.mod-offeroftheweek,
+.mod-featuredtoday,
+.mod-ads,
+.pod {
+    border: 1px solid #000;
+}
+.mod-ads.mrec-ads {
+    width: 300px;
+    height: 250px;
+}
+.mod-offeroftheweek,
+.mod-ads.short-stack-ads {
+    width: 620px;
+    height: 115px;
+}
+
+
+@media only screen and (min-width: 980px) {
+    .wrapper {
+        width: 980px;
+    }
+}
+@media only screen and (max-width: 980px) and (min-width: 620px) {
+    .wrapper {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 620px) and (min-width: 300px) {
+    .mod-offeroftheweek,
+    .mod-ads.short-stack-ads {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .mod-offeroftheweek {
+        width: 100%;
+    }
+    .mod-ads.short-stack-ads {
+        display: none;
+    }
+}

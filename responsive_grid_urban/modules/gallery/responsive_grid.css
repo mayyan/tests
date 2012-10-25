@@ -1,0 +1,74 @@
+/*  SECTIONS  */
+.row {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.column {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.column:first-child { margin-left: 0; }
+
+/*And this is the code for the three and four column layout:*/
+
+/*  GRID OF THREE  */
+.gird_3 {
+    width: 100%;
+}
+.grid_2 {
+    width: 66.1%;
+}
+.grid_1 {
+    width: 32.2%;
+}
+
+/*  GROUPING  */
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+@media only screen and (max-width: 980px) and (min-width: 620px) {
+    .grid_3 {
+        width: 100%;
+    }
+    .grid_2 {
+        width: 100%;
+    }
+    .grid_1 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 620px) and (min-width: 300px) {
+    .grid_3 {
+        width: 100%;
+    }
+    .grid_2 {
+        width: 100%;
+    }
+    .grid_1 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .grid_3 {
+        width: 100%;
+    }
+    .grid_2 {
+        width: 100%;
+    }
+    .grid_1 {
+        width: 100%;
+    }
+}
+
+
+
+

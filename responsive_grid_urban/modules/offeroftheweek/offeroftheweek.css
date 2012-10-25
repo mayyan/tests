@@ -1,0 +1,12 @@
+.mod-offeroftheweek .badge {
+    background: url("../../images/ootw-badge.png") no-repeat scroll 0 0 transparent;
+    height: 91px;
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    width: 91px;
+}
+.mod-offeroftheweek.size-shortstack .badge {
+    right: auto;
+    left: -14px;
+}
