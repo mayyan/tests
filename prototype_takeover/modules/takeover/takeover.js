@@ -19,23 +19,22 @@ APP_COUPONSINC.takeover = (function ($) {
         moduleBody = $(".mod-takeover");
 
     function showTakeoverAd() {
+        var expandedContent = $(".expanded-content", moduleBody);
 
-        $(".expaned-content", moduleBody).slideToggle("slow");
+        expandedContent.slideToggle("slow");
 
         if (moduleBody.hasClass("pencil")) {
-            $(".expaned-content", moduleBody)
-                .position({
-                    my: "center top",
-                    at: "center top",
-                    of: $(".pencil-content", moduleBody)
-                });
+            expandedContent.position({
+                my: "center top",
+                at: "center top",
+                of: $(".pencil-content", moduleBody)
+            });
        } else {
-           $(".expaned-content", moduleBody)
-                .position({
-                    my: "center top",
-                    at: "center top",
-                    of: $(".initial-content", moduleBody)
-                });
+           expandedContent.position({
+                my: "center top",
+                at: "center top",
+                of: $(".initial-content", moduleBody)
+            });
        }
     }
 

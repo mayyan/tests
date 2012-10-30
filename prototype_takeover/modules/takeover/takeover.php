@@ -11,7 +11,7 @@ function renderTakeover() {
         <img src="images/pencil.jpg" width="980" height="31">
     </div>
 
-    <div class="expaned-content" style="display:none">
+    <div class="expanded-content" style="display:none">
         <img src="images/expanded.jpg" width="970" height="415">
     </div>
 </div>
