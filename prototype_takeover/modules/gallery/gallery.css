@@ -1,0 +1,84 @@
+.mod-gallery .mrec,
+.mod-gallery .house-ad {
+    height: 250px;
+    width: 300px;
+    margin: 12px 6px 6px 12px;
+}
+
+
+.mod-gallery .tools {
+    background: #3597D3;
+    padding: 11px 0;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    height: 20px;
+    background: #fdf7d7;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px 6px 0 0;
+}
+.mod-gallery .tools.inactive {
+    background-color: rgba(53, 151, 211, 0.75);
+}
+.mod-gallery .selectall {
+    display: inline;
+    padding: 0 25px 0 20px;
+}
+.mod-gallery .selectall label {
+    margin-left: 4px;
+
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
+}
+.mod-gallery .tools .goto-top {
+    padding: 0 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+
+    border-right: 1px solid #DFD9B7;
+    box-shadow: 1px 0 #FFFFFF;
+}
+.mod-gallery .goto-top .triangle-top {
+    margin-right: 8px;
+    border-color: transparent transparent white transparent;
+    bottom: 9px;
+    border-width: 9px 6px;
+}
+.mod-gallery .loading-indicator,
+.mod-gallery .page-break {
+    clear: both;
+    text-align: center;
+}
+.mod-gallery .loading-indicator p,
+.mod-gallery .page-break {
+    font-size: 92.3%;
+    font-weight: bold;
+    color: #0D92df;
+}
+.mod-gallery .loading-indicator p {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+.mod-gallery .page-break {
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+}
+/**
+ * "Show more" button
+ */
+.mod-gallery .more {
+    text-align: center;
+}
+.mod-gallery .more button {
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 12px 0 20px;
+    padding: 9px;
+    width: 97%;
+}

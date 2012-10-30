@@ -1,0 +1,120 @@
+/************* Nesting **********/
+/* Nesting selectors */
+#navbar {
+  width: 80%;
+  height: 23px;
+}
+#navbar ul {
+  list-style-type: none;
+}
+#navbar li {
+  float: left;
+}
+#navbar li a {
+  font-weight: bold;
+}
+
+/* Nesting properties */
+.fakeshadow {
+  border-style: solid;
+  border-left-width: 4px;
+  border-left-color: #888;
+  border-right-width: 2px;
+  border-right-color: #ccc;
+}
+
+/************ Parent References **************/
+a {
+  color: #ce4dd6;
+}
+a:hover {
+  color: #ffb3ff;
+}
+a:visited {
+  color: #c458cb;
+}
+
+/************ Variables ***************/
+#navbar {
+  border-bottom-color: #ce4dd6;
+  border-bottom-style: solid;
+}
+
+a {
+  color: #ce4dd6;
+}
+a:hover {
+  border-bottom: solid 1px;
+}
+
+/************* Operations and Functions **************/
+#navbar {
+  width: 800px;
+  border-bottom: 2px solid #ce4dd6;
+}
+#navbar li {
+  float: left;
+  width: 150px;
+  background-color: #e5a0e9;
+}
+#navbar li:hover {
+  background-color: #d976e0;
+}
+
+/************ Interpolation *************/
+.rounded-top {
+  border-top-radius: 10px;
+  -moz-border-radius-top: 10px;
+  -webkit-border-top-radius: 10px;
+}
+
+/************ Mixin **************/
+#navbar li {
+  border-top-radius: 10px;
+  -moz-border-radius-top: 10px;
+  -webkit-border-top-radius: 10px;
+}
+
+#footer {
+  border-top-radius: 10px;
+  -moz-border-radius-top: 10px;
+  -webkit-border-top-radius: 10px;
+}
+
+/************ Arguments ****************/
+#navbar li {
+  border-top-radius: 10px;
+  -moz-border-radius-top: 10px;
+  -webkit-border-top-radius: 10px;
+}
+
+#footer {
+  border-top-radius: 5px;
+  -moz-border-radius-top: 5px;
+  -webkit-border-top-radius: 5px;
+}
+
+#sidebar {
+  border-left-radius: 8px;
+  -moz-border-radius-left: 8px;
+  -webkit-border-left-radius: 8px;
+}
+
+/************* @import ****************/
+#navbar li {
+  border-top-radius: 10px;
+  -moz-border-radius-top: 10px;
+  -webkit-border-top-radius: 10px;
+}
+
+#footer {
+  border-top-radius: 5px;
+  -moz-border-radius-top: 5px;
+  -webkit-border-top-radius: 5px;
+}
+
+#sidebar {
+  border-left-radius: 8px;
+  -moz-border-radius-left: 8px;
+  -webkit-border-left-radius: 8px;
+}

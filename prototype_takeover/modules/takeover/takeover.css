@@ -1,0 +1,29 @@
+.mod-takeover {
+    position: relative;
+}
+.mod-takeover.initial .initial-content {
+    display: block;
+}
+.mod-takeover.initial .pencil-content {
+    display: none;
+}
+.mod-takeover.pencil .initial-content {
+    display: none;
+}
+.mod-takeover.pencil .pencil-content {
+    display: block;
+}
+.mod-takeover .pencil-content {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    height: 31px;
+}
+.mod-takeover .expaned-content {
+    position: absolute;
+    z-index: 1;
+
+}
+.mod-takeover.pencil .expaned-content {
+    z-index: 2;
+}

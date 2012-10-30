@@ -1,0 +1,85 @@
+.pod-shadow {
+    border: 1px solid #CDCDCD;
+    position: relative;
+    margin: 12px 6px 6px 12px;
+    width: 300px;
+
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+.pod {
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: pointer;
+    height: 120px;
+    padding: 20px;
+    overflow: hidden;
+
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+
+    -webkit-box-shadow: 0 -4px 0 #E8E8E8 inset;
+       -moz-box-shadow: 0 -4px 0 #E8E8E8 inset;
+            box-shadow: 0 -4px 0 #E8E8E8 inset;
+}
+
+.pod .hover {
+    background: url("../../images/bg-pod-hover.png") no-repeat scroll center center rgba(255, 255, 255, 0.8);
+    font-family: 'RockSaltRegular';
+    height: 95%;
+    left: 11px;
+    opacity: 0;
+    position: absolute;
+    text-transform: lowercase;
+    top: 1px;
+    width: 93%;
+}
+.pod .hover:hover{
+    opacity: 1;
+}
+
+/* inside pod */
+.pod .img {
+    margin-right: 15px;
+}
+.pod .summary {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #8fc73d;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.pod .brand {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 16px;
+}
+.pod .details {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #777777;
+    font-size: 13px;
+}
+
+.pod .hover p {
+    -moz-transform: rotate(-7deg);
+    color: #222222;
+    font-size: 20px;
+    margin-top: 18%;
+    text-align: center;
+}
+.pod .hover p span {
+    display:block;
+    font-size: 13px;
+}
+.pod p {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.3;
+}
