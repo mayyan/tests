@@ -1,0 +1,93 @@
+.mod-categories {
+    padding: 0 0 3px 0;
+    position: relative;
+}
+.mod-categories .horizontal-bar {
+    border-top: 1px solid #D4D3D2;
+    border-bottom: 1px solid #FDFDF5;
+    margin-bottom: 6px;
+}
+.mod-categories .teasers p {
+    display: inline;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.mod-categories .teasers ul li {
+    margin-left: 18px;
+}
+.mod-categories .teasers .teaser-list {
+    display: inline-block;
+    width: auto;
+}
+.mod-categories .show-more:hover,
+.mod-categories .show-less:hover{
+    text-decoration: underline;
+}
+.mod-categories .show-more,
+.mod-categories .show-less {
+    cursor: pointer;
+    width: auto;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #08B4DF;
+    font-size: 12px;
+}
+.mod-categories .show-more,
+.mod-categories .show-less {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+}
+.mod-categories .show-more .triangle-down {
+    bottom: 1px;
+    left: 3px;
+}
+.mod-categories .show-less .triangle-up {
+    bottom: 8px;
+    left: 3px;
+}
+.mod-categories .bd ul {
+    text-align: left;
+    width: 22.5%;
+}
+.mod-categories .all-categories ul {
+    float: left;
+}
+.mod-categories .bd li a {
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #08B4DF;
+    font-size: 12px;
+    line-height: 2.2em;
+}
+.mod-categories .bd li.selected a .title {
+    font-weight: bold;
+}
+.mod-categories .bd li a:hover {
+    text-decoration: underline;
+}
+.mod-categories .bd li.selected a {
+    color: #444;
+}
+.mod-categories.categories-show-teasers .all-categories {
+    display: none;
+}
+.mod-categories.categories-show-teasers .teasers {
+    display: block;
+}
+.mod-categories.categories-no-teasers .all-categories {
+    display: block;
+}
+.mod-categories.categories-no-teasers .teasers {
+    display: none;
+}
+.mod-categories .expander {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    bottom: -3px;
+}

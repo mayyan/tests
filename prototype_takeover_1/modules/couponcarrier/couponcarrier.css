@@ -1,0 +1,161 @@
+.mod-couponcarrier {
+    padding: 16px 0;
+    position: relative;
+    min-height: 27px;
+}
+.mod-couponcarrier.is-active-user .active-user {
+    display: inline-block;
+}
+.mod-couponcarrier.is-active-user .new-user {
+    display: none;
+}
+.mod-couponcarrier.is-new-user .active-user {
+    display: none;
+}
+.mod-couponcarrier.is-new-user .new-user {
+    display: inline-block;
+}
+.mod-couponcarrier .welcome,
+.mod-couponcarrier .available,
+.mod-couponcarrier .cart,
+.mod-couponcarrier .print-button {
+    display: inline-block;
+}
+.mod-couponcarrier .available {
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.mod-couponcarrier .available.local {
+    line-height: 29px;
+}
+.mod-couponcarrier .available h3 {
+    display: inline-block;
+}
+.mod-couponcarrier .available span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-size: 16px;
+}
+.mod-couponcarrier .available em {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #363636;
+    font-size: 16px;
+}
+
+.mod-couponcarrier .print-button {
+    cursor: pointer;
+    padding: 6px 0 5px 18px;
+    position: absolute;
+    right: 0;
+    top: 16px;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 -1px #a54133;
+    font-size: 13px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #A0927D, inset 0 1px white;
+    border: 1px solid #D33820;
+    background: #ef6e5b;
+    background: -moz-linear-gradient(top, #ef6e5b 0%, #e93b20 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ef6e5b), color-stop(100%,#e93b20));
+    background: -webkit-linear-gradient(top, #ef6e5b 0%,#e93b20 100%);
+}
+
+.mod-couponcarrier .print-button.clipped-none {
+    cursor: default;
+    color: #999;
+    text-shadow: none;
+    border: 0;
+    background: #D9D9D9;
+    /*background: -moz-linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d9d9d9));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#d9d9d9 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#d9d9d9 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#d9d9d9 100%);
+    background: linear-gradient(top, #ffffff 0%,#d9d9d9 100%);*/
+}
+.mod-couponcarrier .print-button .title {
+    background-position: 0 0;
+    padding-left: 24px;
+    padding-right: 18px;
+
+    border-right: 1px solid #D12C13;
+    box-shadow: 1px 0 #F1806E;
+}
+.mod-couponcarrier .print-button.clipped-none .title {
+    background-position: 0 -265px;
+    border-right: 1px solid #999;
+    box-shadow: 1px 0 #FFFFFF;
+}
+.mod-couponcarrier .print-button .separator {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: #d12c13;
+    box-shadow: 1px 0 #f1806e;
+    vertical-align: middle;
+}
+.mod-couponcarrier .print-button .number {
+    display: inline-block;
+    text-align: center;
+    width: 43px;
+}
+.couponcarrier-transfer-clipped,
+.couponcarrier-transfer-clipped-with-couponbar {
+    z-index: 2;
+}
+.couponcarrier-transfer-clipped-with-couponbar {
+    margin-top: -34px; /* toolbar height */
+}
+.mod-couponcarrier .progress {
+    /*display: inline-block;
+    position: relative;*/
+}
+.mod-couponcarrier .bar {
+    background-color: #D2D2D1;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 1px 3px rgba(100, 100, 100, 0.5) inset;
+    height: 25px;
+    padding: 2px 0 0 2px;
+    width: 300px;
+}
+.mod-couponcarrier .savings-bar {
+    background: #63b352;
+    background: -moz-linear-gradient(top, #ffffff 0%, #8ac680 2%, #63b352 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(2%,#8ac680), color-stop(100%,#63b352));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#8ac680 2%,#63b352 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#8ac680 2%,#63b352 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#8ac680 2%,#63b352 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#8ac680 2%,#63b352 100%);
+
+    border-radius: 13px 13px 13px 13px;
+    color: #FFFFFF;
+    max-width: 285px;
+    min-width: 34px;
+    padding: 3px 6px 4px 7px;
+    text-align: right;
+    width: 0;
+}
+.mod-couponcarrier .savings-bar.clipped-none {
+    min-width: 15px;
+}
+.mod-couponcarrier .welcome {
+    font-size: 15px;
+    line-height: 27px;
+}
+.mod-couponcarrier .welcome .text {
+    font-size: 115.4%;
+    color: #333;
+}
+.mod-couponcarrier .welcome .headline {
+    font-family: RockSaltRegular;
+    text-transform: lowercase;
+    color: #08b4df;
+}
+.mod-couponcarrier .welcome em {
+    font-weight: bold;
+    text-transform: uppercase;
+}

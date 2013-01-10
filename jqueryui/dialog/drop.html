@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Dialog - Drop dialog from outside viewport to the desired position</title>
+
+    <style>
+        .ui-widget-overlay {
+            background-color: #000;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .ui-dialog {
+            border: 1px solid #000;
+            background-color: #fff;
+            position: absolute;
+        }
+        .dialog-modal {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p>jQuery UI Dialog - Drop dialog from outside viewport to the desired position.</p>
+
+    <div id="dialog" title="Basic dialog">
+        <p>jQuery UI Dialog - Drop dialog from outside viewport to the desired position.</p>
+    </div>
+
+<script src="../jquery-1.7.2.min.js"></script>
+<script src="../1.8.16/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $( "#dialog" ).dialog({
+        resizable: false,
+        modal: true,
+        autoOpen: false,
+        dialogClass: "dialog-modal",
+        open: function(event, ui) {
+            var dialog = $( ".ui-dialog" ),
+                targetOffsetTop = dialog.offset().top, //dialog actually is already open but invisible, so we can get the desired position
+                dialogHeight = dialog.outerHeight(true);
+
+            dialog
+                .css("top", -dialogHeight) // move it out of viewport
+                .css("visibility", "visible") // show it
+                .animate({"top": targetOffsetTop}, 700, "swing"); // move it
+
+        }
+    });
+    $( "#dialog" ).dialog("open");
+});
+</script>
+</html>
