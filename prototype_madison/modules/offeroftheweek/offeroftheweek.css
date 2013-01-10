@@ -1,0 +1,166 @@
+.mod-offeroftheweek .pod {
+    width: 620px;
+    height: 115px;
+}
+.mod-gallery .mod-offeroftheweek .pod {
+    margin: 3px 15px 8px 3px;
+    position: static;
+}
+.mod-offeroftheweek .pod .circle {
+    width: 616px;
+    height: 115px;
+    background-position: 200px 14px;
+    margin-top: 0px;
+}
+.mod-offeroftheweek .pod .left {
+    height: 115px;
+    width: 240px;
+}
+.mod-offeroftheweek .pod .right {
+    height: 115px;
+    width: 380px;
+    border-radius: 0 6px 6px 0;
+}
+.mod-offeroftheweek.lifestyle .pod .left {
+    height: 115px;
+    width: 300px;
+}
+.mod-offeroftheweek.lifestyle .pod .right {
+    height: 115px;
+    width: 320px;
+}
+.mod-offeroftheweek .pod .pod-info {
+    margin: 15px 15px 0 15px;
+}
+.mod-offeroftheweek .badge {
+    height: 91px;
+    position: absolute;
+    margin-top: -18px;
+    margin-left: -8px;
+    width: 91px;
+    background-position: 0 -235px;
+}
+.mod-offeroftheweek .pod:hover .badge,
+.mod-offeroftheweek .pod.clipped .badge,
+.mod-offeroftheweek .pod.limited .badge {
+    background-position: 0 -341px;
+}
+.mod-offeroftheweek .pod .premium-label {
+    display: none;
+}
+.mod-offeroftheweek .pod .pod-media {
+    border-radius: 6px 0 0 6px;
+    height: 115px;
+    width: 230px;
+    margin: 0;
+}
+.mod-offeroftheweek .pod .pod-media .pod-image {
+    padding: 6px 20px 6px 96px;
+    height: 100px;
+    width: 80px;
+}
+.mod-offeroftheweek.product .pod .pod-media .pod-image {
+    width: 110px;
+}
+.mod-offeroftheweek.lifestyle .pod .pod-media .pod-image {
+    /*border-radius: 6px 0 0 6px;*/
+    height: 111px;
+    width: 300px;
+    padding: 0;
+}
+.mod-offeroftheweek.lifestyle .pod.clipped .pod-media .pod-image,
+.mod-offeroftheweek.lifestyle .pod.limited .pod-media .pod-image {
+    border-radius: 6px 0 0 6px;
+    height: 115px;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container,
+.mod-offeroftheweek .pod.limited .clipped-container {
+    width: 365px;
+    margin:71px 0 0 255px;
+}
+.mod-offeroftheweek .pod.show-more .right,
+.mod-offeroftheweek .pod.show-share .right {
+    display: none;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container .social-container,
+.mod-offeroftheweek .pod.limited .clipped-container .social-container,
+.mod-offeroftheweek .pod.clipped .clipped-container .more-container,
+.mod-offeroftheweek .pod.limited .clipped-container .more-container {
+    width: 360px;
+    top: -60px;
+    height: 60px;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container .social-container .social-message,
+.mod-offeroftheweek .pod.limited .clipped-container .social-container .social-message {
+    margin: 10px 0 0 0;
+    display: inline;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container .share-box .social-container .social-strip,
+.mod-offeroftheweek .pod.limited .clipped-container .share-box .social-container .social-strip {
+    margin-left: 150px;
+    margin-top: 0;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container .share-box .social-container .social-strip div,
+.mod-offeroftheweek .pod.limited .clipped-container .share-box .social-container .social-strip div {
+    margin: auto auto auto 20px;
+}
+.mod-offeroftheweek .more-container .cta-3d.promo-button {
+    margin-top: 10px;
+}
+.mod-offeroftheweek .promo-unit {
+    margin: 0 0 0 0;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container .clipped-info,
+.mod-offeroftheweek .pod.limited .clipped-container .clipped-info {
+    height: 60px;
+    margin: 11px;
+    margin-left: 20px;
+}
+.mod-offeroftheweek .pod.clipped .clipped-container .clipped-info .pod-info,
+.mod-offeroftheweek .pod.limited .clipped-container .clipped-info .pod-info {
+    margin: 10px 10px 0 0;
+}
+.mod-offeroftheweek .pod .promo-unit.category-promo .promo-button {
+    margin: 5px 0px 0px 0px;
+}
+.mod-offeroftheweek .pod .hover {
+    height: 110px;
+    width: 616px;
+    margin-left: 0;
+}
+.mod-offeroftheweek .pod .hover p.click-text {
+    margin-top: 7%;
+}
+.mod-offeroftheweek .pod.clipped .pod-clipped-media,
+.mod-offeroftheweek .pod.limited .pod-clipped-media {
+    height: 90px;
+    width: 210px;
+    margin-top: 20px;
+}
+.mod-offeroftheweek .pod.clipped .pod-clipped-media .check,
+.mod-offeroftheweek .pod.limited .pod-clipped-media .check {
+    margin-left: 90px;
+}
+.mod-offeroftheweek .pod.clipped .pod-clipped-media p,
+.mod-offeroftheweek .pod.limited .pod-clipped-media p{
+    margin-left: 121px;
+    margin-top: 20px;
+}
+.mod-offeroftheweek .pod .clipped-container span.unclip-action,
+.mod-offeroftheweek .pod .clipped-container span.share-box,
+.mod-offeroftheweek .pod .clipped-container span.more-box {
+    padding: 0 15px;
+}
+.mod-offeroftheweek .pod .clipped-container span.limit-action {
+    margin-left: 10px;
+}
+.mod-offeroftheweek .pod.show-share:hover .left,
+.mod-offeroftheweek .pod.show-more:hover .left {
+    opacity: 0.30;
+    filter: alpha(opacity = 70);
+}
+
+.mod-offeroftheweek .pod .hover p.info {
+    margin: 8px 0 0 494px;
+    transform: rotate(0deg);
+}
