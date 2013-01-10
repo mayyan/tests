@@ -88,8 +88,8 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-</body>
+}(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 </html>
 

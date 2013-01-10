@@ -24,7 +24,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <div class="wrapper">
         <div class="shadow">
             <div id="header">
-                <?php echo renderHeader(false) ?>
+                <?php echo renderHeader(false); // false = no nav?>
             </div> <!-- #header -->
 
             <div id="content">
@@ -60,6 +60,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
 </script>
 <script src="modules/header/header.js"></script>
 <script src="modules/printstatus/printstatus.js"></script>
+
 </body>
 </html>
 
