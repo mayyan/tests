@@ -10,9 +10,32 @@ HTML;
     if ($userState == UserState_New) {
         $html .=<<<HTML
 <div class="mod-couponcarrier is-new-user">
-    <div class="welcome">
-        <p>Welcome! Start saving with our free printable coupons.</p>
+
+    <div class="new-user">
+        <h1 class="welcome">
+            <span class="headline">221 coupons available for you.</span>
+            <span class="text">Just <em>Click,</em> <em>Print</em> and <em>Save.</em></span>
+        </h1>
     </div>
+
+    <div class="active-user">
+        <div class="available">
+            <h3><em class="value">$414.77</em> <span>Available Savings</span></h3>
+        </div>
+        <div class="cart">
+            <div class="progress">
+                <div class="bar" style="">
+                    <div class="savings-bar clipped-none" style="width: 0px;">$0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn-cta print-button clipped-none">
+        <span class="title sprite-icons">Print Coupons</span><span class="number">0</span>
+    </button>
+
+</div> <!-- .mod-couponcarrier -->
 HTML;
     } else {
         $html .=<<<HTML
@@ -30,16 +53,12 @@ HTML;
         </div>
     </div>
 
-
-HTML;
-    }
-    $html .=<<<HTML
     <button type="button" class="btn-cta print-button">
         <span class="title sprite-icons">Print Coupons</span><span class="number">3</span>
     </button>
-
 </div> <!-- .mod-couponcarrier -->
 HTML;
+    }
 
     return $html;
 }

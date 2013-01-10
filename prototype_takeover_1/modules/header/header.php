@@ -7,7 +7,7 @@ function renderHeader() {
         $userHTML =<<<HTML
 <ul class="tablist horizontal-list">
     <li class="tab"><a href="#" class="signin">Sign In</a></li>
-    <li class="tab last"><a href="#" class="signup">Sign Up</a></li>
+    <li class="tab last"><button href="#" class="signup primary">Sign Up</button></li>
 </ul>
 HTML;
     } else {
@@ -31,10 +31,11 @@ HTML;
     <div class="navbar">
         <div class="tab-container">
             <ul class="tablist horizontal-list">
-                <li class="tab first selected"><a href="/coupons/" id="tab-coupons" class="sprite-utils">Coupons</a></li>
-                <li class="tab"><a href="http://www.coupons.com/couponweb/eoffers.aspx?pid=13306&amp;nid=10&amp;zid=iq37">Savings Card</a></li>
-                <li class="tab"><a href="http://www.coupons.com/couponweb/localoffers.aspx?pid=13306&amp;nid=10&amp;zid=iq37">Local Deals</a></li>
-                <li class="tab"><a href="/coupon-codes/">Coupon Codes</a></li>
+                <li class="tab first selected"><a href="#" id="tab-coupons" class="sprite-utils">Coupons</a></li>
+                <li class="tab"><a href="http://www.coupons.com/couponweb/eoffers.aspx?pid=13306&nid=10&zid=iq37">Savings Card</a></li>
+                <li class="tab"><a href="http://www.coupons.com/local-offers/">Local</a></li>
+                <li class="tab"><a href="http://www.coupons.com/coupon-codes/">Coupon Codes</a></li>
+                <li class="tab"><a href="http://blog.coupons.com/">Blog</a></li>
             </ul>
             {$userHTML}
         </div>

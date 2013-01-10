@@ -1,8 +1,5 @@
 .mod-header {
-    background: #54bce9;
-    background: -moz-linear-gradient(top, #54bce9 0%, #10a2e0 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#54bce9), color-stop(100%,#10a2e0));
-    background: -webkit-linear-gradient(top, #54bce9 0%,#10a2e0 100%);
+    background: #FAF9F5;
     box-shadow: 0 1px 2px #a7a5a3;
 
     height: 72px;
@@ -31,14 +28,19 @@
 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
-    color: #fff;
-    text-shadow: 0 1px #1d789f;
-    font-size: 11px;
+    color: #A3A2A0;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 .mod-header .navbar .tab.selected a {
-    border-bottom: 2px solid #FFF;
+    color: #0AA0DF;
+}
+.mod-header .navbar .tab button.signup {
+    font-size: 12px;
+    padding: 6px 13px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 .mod-header .user-dropdown {
     vertical-align: top;
@@ -50,7 +52,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     color: #fff;
-    font-size: 11px;
+    font-size: 12px;
     border-radius: 3px;
     border: solid 1px #009bde;
     box-shadow: 0 1px 5px rgba(0,0,0,.5);
@@ -73,12 +75,11 @@
 }
 .mod-header .user-dropdown li,
 .mod-header .user-dropdown li a{
-    color: #fff;
+    color: #A3A2A0;
     text-decoration: none;
 }
 .mod-header .user-dropdown li.first {
     text-transform: uppercase;
-    text-shadow: 0 1px #1D789F;
 }
 .mod-header .user-dropdown.closed {
     background: none;
@@ -99,7 +100,7 @@
     padding: 0;
 }
 .mod-header .user-dropdown .triangle-down {
-    border-color: #FFFFFD transparent transparent transparent;
-    bottom: 0;
+    border-color: #0AA0DF transparent transparent transparent;
+    bottom: 2px;
     margin-left: 7px;
 }

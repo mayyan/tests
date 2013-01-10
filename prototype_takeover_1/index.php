@@ -31,7 +31,7 @@ if ($action == "paginate") {
 <html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Site Redesign - Takeover</title>
+    <title>Site Redesign - Madison Ave</title>
     <link media="screen" rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css">
     <link media="screen" rel="stylesheet" type="text/css" href="common.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="layout.css" >
@@ -68,11 +68,11 @@ if ($action == "paginate") {
             <div id="content">
 
                 <div id="main">
-
+<?php if ($Config["TakeOver"] == 1) { ?>
                     <?php echo renderTakeover(); ?>
 
                     <?php echo renderHero(); ?>
-
+<?php } ?>
                     <?php echo renderStalker(); ?>
 
                     <?php echo renderGallery(); ?>
@@ -93,7 +93,7 @@ if ($action == "paginate") {
     </div> <!--wrapper -->
     <div class="dialog-inner hidden"></div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
 <script src="jquery.ba-outside-events.min.js"></script>
 <script>
@@ -110,6 +110,7 @@ if ($action == "paginate") {
 <script src="layout.js"></script>
 <script src="modules/header/header.js"></script>
 <script src="modules/takeover/takeover.js"></script>
+<script src="modules/couponcarrier/couponcarrier.js"></script>
 <script src="modules/categories/categories.js"></script>
 <script src="modules/gallery/gallery.js"></script>
 <script src="modules/featuredtoday/featuredtoday.js"></script>
