@@ -13,7 +13,7 @@ HTML;
 
     <div class="new-user">
         <h1 class="welcome">
-            <span class="headline">221 coupons available for you.</span>
+            <span class="headline">298 coupons available for you.</span>
             <span class="text">Just <em>Click,</em> <em>Print</em> and <em>Save.</em></span>
         </h1>
     </div>

@@ -1,6 +1,26 @@
 <?php
-function renderHeader() {
+function renderHeader($showNav = true) {
+    $nav = ($showNav) ? renderNav() : "";
+
+    $html =<<<HTML
+<div class="mod-header">
+    <a title="Return to the homepage" class="company-logo" href="/">
+        <img width="173" height="71" src="images/coupons-logo.png" alt="Coupons.com" />
+    </a>
+
+    {$nav}
+
+</div>
+HTML;
+
+    return $html;
+
+}
+
+function renderNav() {
     global $Config;
+    global $configIndex;
+
     $userState = $Config["UserState"];
 
     if ($userState != UserState_SignedIn) {
@@ -21,29 +41,22 @@ HTML;
 HTML;
     }
 
+
     $html =<<<HTML
-<div class="mod-header">
-    <a title="Return to the homepage" class="company-logo" href="/">
-        <img width="173" height="71" src="images/coupons-logo.png" alt="Coupons.com" />
-    </a>
-
-
-    <div class="navbar">
-        <div class="tab-container">
-            <ul class="tablist horizontal-list">
-                <li class="tab first selected"><a href="#" id="tab-coupons" class="sprite-utils">Coupons</a></li>
-                <li class="tab"><a href="http://www.coupons.com/couponweb/eoffers.aspx?pid=13306&nid=10&zid=iq37">Savings Card</a></li>
-                <li class="tab"><a href="http://www.coupons.com/local-offers/">Local</a></li>
-                <li class="tab"><a href="http://www.coupons.com/coupon-codes/">Coupon Codes</a></li>
-                <li class="tab"><a href="http://blog.coupons.com/">Blog</a></li>
-            </ul>
-            {$userHTML}
-        </div>
-
+<div class="navbar">
+    <div class="tab-container">
+        <ul class="tablist horizontal-list">
+            <li class="tab first selected"><a href="./?config={$configIndex}" id="tab-coupons" class="sprite-utils">Coupons</a></li>
+            <li class="tab"><a href="http://www.coupons.com/couponweb/eoffers.aspx?pid=13306&nid=10&zid=iq37">Savings Card</a></li>
+            <li class="tab"><a href="http://www.coupons.com/local-offers/">Local</a></li>
+            <li class="tab"><a href="http://www.coupons.com/coupon-codes/">Coupon Codes</a></li>
+            <li class="tab"><a href="http://blog.coupons.com/">Blog</a></li>
+        </ul>
+        {$userHTML}
     </div>
+
 </div>
 HTML;
 
     return $html;
-
 }

@@ -1,10 +1,25 @@
 <?php
 
-function renderMisc() {
+function renderMisc($bottomOnly = false) {
+    $top = ($bottomOnly) ? "" : renderMiscTop();
+    $bottom = renderMiscBottom();
+
     $html =<<<HTML
 <div class="mod-miscellaneous">
-    <div class="top">
-        <ul class="horizontal-list promos">
+    {$top}
+
+    {$bottom}
+
+</div>
+HTML;
+
+    return $html;
+}
+
+function renderMiscTop() {
+    $html =<<<HTML
+<div class="top">
+    <ul class="horizontal-list promos">
 
 <li>
 <img width="220" height="130" src="//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/footer-SuperSaver_1.jpg" alt="">
@@ -26,23 +41,30 @@ function renderMisc() {
 <h3>Coupon Codes</h3>
 <p>Skip the lines and shop online with coupon codes. Get <a href="/coupon-codes/sears/" target="_blank">Sears coupons</a>, <a href="/coupon-codes/best-buy/" target="_blank">Best Buy coupons</a>, and <a href="/coupon-codes/" target="_blank">promo codes</a> from thousands of top retailers.</p>
 <a href="/coupon-codes/" target="_new" class="cta-link">Shop Now</a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="bottom">
-        <ul class="horizontal-list sitemap">
+    </ul>
+    <div class="clearfix"></div>
+</div>
+HTML;
+
+    return $html;
+}
+
+function renderMiscBottom() {
+    $html =<<<HTML
+<div class="bottom">
+    <ul class="horizontal-list sitemap">
 
 <li><a href="//www.couponsinc.com/" target="_new">About</a></li>
 <li>|<a href="//www.coupons.com/couponweb/help/index.html?pid=13306&amp;nid=10&amp;zid=iq37" target="_new">Help</a></li>
 <li>|<a href="//www.couponsinc.com/" target="_new">Business Solutions</a></li>
 <li>|<a href="//www.couponsinc.com/corp/source/u_signup.asp?ref=50001" target="_new">Affiliate Program</a></li>
 <li>|<a href="//www.couponsinc.com/corporate/OurCompany/Careers.aspx" target="_new">Careers</a></li>
-<li>|<a href="//www.couponsinc.com/corporate/ContactUs.aspx" target="_new">Contact</a></li>                    <li>|<div class="mod-fblike">
-    <fb:like action="like" show_faces="false" width="90" layout="button_count" send="false" href="http://www.facebook.com/couponscom" />
+<li>|<a href="//www.couponsinc.com/corporate/ContactUs.aspx" target="_new">Contact</a></li>
+<li>|<div class="mod-fblike">
+<fb:like action="like" show_faces="false" width="90" layout="button_count" send="false" href="http://www.facebook.com/couponscom" />
 </div>
 </li>
-                </ul>
-    </div>
+    </ul>
 </div>
 HTML;
 

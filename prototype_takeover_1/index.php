@@ -34,7 +34,7 @@ if ($action == "paginate") {
     <title>Site Redesign - Madison Ave</title>
     <link media="screen" rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css">
     <link media="screen" rel="stylesheet" type="text/css" href="common.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="layout.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="one-column-layout.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="promo.css" >
 
 

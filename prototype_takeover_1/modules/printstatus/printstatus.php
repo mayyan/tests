@@ -42,3 +42,26 @@ HTML;
 
     return $html;
 }
+
+function renderPostPrintStatus() {
+    $html =<<<HTML
+<div class="printed-hd">
+    <div><span class="sprite-icons printed-msg">Your coupons printed successfully!</span></div>
+</div>
+
+<div class="mod-titlebar">
+
+    <div class="inner">
+
+        <h1>More Coupons for You</h1>
+
+        <p>Boost your savings with these valuable coupons on our partners' websites.</p>
+
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+HTML;
+
+    return $html;
+}
