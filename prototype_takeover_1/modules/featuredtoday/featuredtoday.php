@@ -1,16 +1,26 @@
 <?php
 
 function renderFeaturedToday($size) {
+    global $Config;
+
     if ($size == ModuleSize_Super || $size == ModuleSize_Double || $size == ModuleSize_Grid) {
+        if ($Config["TakeOver"] == 1) {
+            $imgSrc = "images/yoplait-logo.jpg";
+            $brand = "Yoplait&reg;";
+        } else {
+            $imgSrc = "http://cdn.cpnscdn.com/static.coupons.com/images/cprimages/743/11743_1_prgId.gif";
+            $brand = "Glade&reg;";
+        }
+
         $html = <<<HTML
 <div data-program="11743" class="featuredtoday product">
     <div class="hd">
         <p>Featured Today</p>
     </div>
     <div class="bd">
-        <img width="80" height="100" border="0" alt="" src="http://cdn.cpnscdn.com/static.coupons.com/images/cprimages/743/11743_1_prgId.gif">
+        <img width="80" height="100" border="0" alt="" src="{$imgSrc}">
         <div class="right">
-            <h3>Glade&reg;</h3>
+            <h3>{$brand}</h3>
             <p>Savings Center</p>
             <button class="cta-3d">View All Offers</button>
         </div>

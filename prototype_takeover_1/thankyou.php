@@ -8,6 +8,7 @@ require_once(APPLICATION_PATH . "modules/gallery/gallery.php");
 require_once(APPLICATION_PATH . "modules/misc/misc.php");
 require_once(APPLICATION_PATH . "modules/ads/mrec.php");
 require_once(APPLICATION_PATH . "modules/ads/supersaver.php");
+require_once(APPLICATION_PATH . "modules/ads/leaderboard.php");
 require_once(APPLICATION_PATH . "modules/footer/footer.php");
 
 ?>
@@ -54,6 +55,8 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
                 </div> <!-- #rail -->
 
                 <div class="clearfix"></div>
+
+                <?php echo renderLeaderBoardAds(); ?>
 
                 <?php echo renderMisc(true); ?>
             </div> <!-- #content -->

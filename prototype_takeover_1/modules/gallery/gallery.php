@@ -7,6 +7,7 @@ require_once(APPLICATION_PATH . "modules/supersaver/supersaver.php");
 require_once(APPLICATION_PATH . "modules/featuredtoday/featuredtoday.php");
 require_once(APPLICATION_PATH . "modules/offeroftheweek/offeroftheweek.php");
 require_once(APPLICATION_PATH . "modules/savingsclub/savingsclub.php");
+require_once(APPLICATION_PATH . "modules/ads/leaderboard.php");
 
 // Preparing all data
 $podJSON = file_get_contents(APPLICATION_PATH . "podCache.json");
@@ -260,11 +261,11 @@ HTML;
     <div class="more">
         <button class="primary">Show More Coupons</button>
     </div>
+HTML;
 
-    <div data-popup="0" data-inhouse="0" class="mod-ads container-728x90">
-        <iframe scrolling="no" frameborder="0" style="height:90px;width:728px" src="//couponbar.coupons.com/adblob.asp?AdSize=728x90&amp;pzn=13306iq3710&amp;req=1357805013855&amp;zip=95014&amp;did=AMUAAREKS&amp;spage=.com/&amp;npage=1&amp;kvhouse=0&amp;kvss=0&amp;kvsc=0&amp;kvcb=0"></iframe>
-    </div>
+    $html .= renderLeaderBoardAds();
 
+    $html .=<<<HTML
     <div class="tools">
         <div class="selectall">
             <input type="checkbox" class="selectall-chk" id="couponsinc-gallery-selectall">
@@ -821,7 +822,7 @@ function renderPostPrintGallery() {
     </div>
 </div>
         </div>
-        
+
 
     </div>
 HTML;

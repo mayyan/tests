@@ -1,6 +1,8 @@
 <?php
 
 function renderOfferOfTheWeek($size) {
+    global $Config;
+
     if ($size == ModuleSize_Super || $size == ModuleSize_Grid) {
         $html = <<<HTML
 <div class="mod-offeroftheweek promo size-{$size}">
@@ -37,6 +39,17 @@ HTML;
 </div>
 HTML;
     } else if ($size == ModuleSize_ShortStack) {
+        if ($Config["TakeOver"] == 1) {
+            $imgSrc = "//cdn.cpnscdn.com/insight.coupons.com/COS20/_Cache/_ImageCache/135/17605135.gif";
+            $brand = "Yoplait&reg;";
+            $summary = "SAVE 50¢ ON TWO";
+            $detail = "when you buy TWO CUPS any flavor Yoplait® Greek yogurt (Void in LA, NJ, ND, NV & TN)";
+        } else {
+            $imgSrc = "//cdn.cpnscdn.com/insight.coupons.com/COS20/_Cache/_ImageCache/011/17639011.gif";
+            $brand = "Glade&reg;";
+            $summary = "SAVE $2.00";
+            $detail = "on any Glade&reg; Sense &amp; Spray&reg; starter kit";
+        }
         $html = <<<HTML
 <div data-order="order-0" class="mod-offeroftheweek ">
     <div data-gridy="" data-gridx="" data-podid="17639011" class="pod  coupon">
@@ -51,15 +64,15 @@ HTML;
     <div class="left">
         <div class="pod-media">
             <div class="img">
-                <img width="80" height="100" class="pod-image" alt="Glade®" src="//cdn.cpnscdn.com/insight.coupons.com/COS20/_Cache/_ImageCache/011/17639011.gif">
+                <img width="80" height="100" class="pod-image" alt="{$brand}" src="{$imgSrc}">
             </div>
         </div>
     </div>
     <div class="right">
         <div class="pod-info">
-    <h4 class="summary">SAVE $2.00</h4>
-    <h5 class="brand">Glade&reg;</h5>
-    <p class="details">on any Glade&reg; Sense &amp; Spray&reg; starter kit</p>
+    <h4 class="summary">{$summary}</h4>
+    <h5 class="brand">{$brand}</h5>
+    <p class="details">{$detail}</p>
 </div>    </div>
     <div class="clipped-container">
         <div class="clipped-view">
