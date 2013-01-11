@@ -26,7 +26,7 @@ APP_COUPONSINC.featuredtoday = (function ($) {
 
     function getDialogHTML() {
         $.ajax({
-            url: ".",
+            url: "." + window.location.search,
             data: {
                 action: 'featuredtoday'
             },

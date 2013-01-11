@@ -1,4 +1,28 @@
 <?php
+function renderCoupon($podData) {
+    global $podTemplate;
+    
+    $podTypeCSSClass = getPodTypeCSSClass($podData);
+    $podCTAString = getPodCTAString($podData);
+    $podCTA2String = getPodCTA2String($podData);
+    $podImageUrl = $podData["image"]["url"];
+
+    $search = array('/{type}/', '/{cta}/', '/{cta2}/', '/{imageUrl}/', '/{imageAlt}/', '/{summary}/', '/{brand}/', '/{details}/');
+    $replace = array(
+        $podTypeCSSClass,
+        $podCTAString,
+        $podCTA2String,
+        $podImageUrl,
+        $podData["brand"],
+        $podData["summary"],
+        $podData["brand"],
+        $podData["details"]);
+
+    $html = preg_replace($search, $replace, $podTemplate);
+
+    return $html;
+}
+
 function injectItemIntoArray($oldArray, $injection) {
     $newArray = array_slice ($oldArray, 0); // make a copy, don't change $oldArray
 
