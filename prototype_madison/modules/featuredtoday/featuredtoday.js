@@ -19,7 +19,9 @@ APP_COUPONSINC.featuredtoday = (function ($) {
         moduleBody = $(".featuredtoday");
 
     function onDialogOpen() {
-
+        $(".mod-featuredtoday-flyout .close-button").click(function() {
+            $('.flyout-inner').dialog("destroy");
+        });
     }
 
     function getDialogHTML() {
@@ -35,15 +37,15 @@ APP_COUPONSINC.featuredtoday = (function ($) {
         var dlgOption = {
                 modal: true,
                 autoOpen: false,
-                dialogClass: 'dialog-outer',
+                dialogClass: 'flyout-outer',
                 draggable: false,
                 resizable: false,
                 closeText: "x",
                 height: 'auto',
-                width: '660px',
+                width: 'auto',
                 open: onDialogOpen
         },
-        dialog =  $('.dialog-inner')
+        dialog =  $('.flyout-inner')
             .html(html)
             .removeClass("hidden")
             .dialog(dlgOption);

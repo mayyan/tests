@@ -91,7 +91,7 @@ if ($action == "paginate") {
             <?php echo renderFooter(); ?>
         </div>
     </div> <!--wrapper -->
-    <div class="dialog-inner hidden"></div>
+    <div class="flyout-inner hidden"></div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
