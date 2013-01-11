@@ -67,6 +67,8 @@ function renderFeaturedTodayPods() {
 }
 
 function renderFeaturedTodayDialog() {
+    global $Config;
+    
     $pods = renderFeaturedTodayPods();
 
     $imgSrc = ($Config["TakeOver"] == 1) ? "" : "http://cdn.cpnscdn.com/static.coupons.com/images/cprimages/743/11743_2_prgId.gif";
