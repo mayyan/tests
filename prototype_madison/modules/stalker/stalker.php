@@ -6,7 +6,7 @@ require_once(APPLICATION_PATH . "modules/printcontrol/printcontrol.php");
 function renderStalker() {
     $modCategories   = renderCategories();
     $modCarrier      = renderCouponCarrier();
-    $modPrintControl = renderPrintControl();
+    $modPrintControl = embedPrintControl();
 
     $html =<<<HTML
 <div class="mod-stalker">
@@ -39,14 +39,32 @@ function renderStalker() {
         <li class="module">
             {$modCarrier}
         </li>
-        <li class="module">
-            {$modPrintControl}
-        </li>
+
+        {$modPrintControl}
+
     </ul>
 
     <div class="clearfix"></div>
 </div> <!-- .stalker -->
 HTML;
+
+    return $html;
+}
+
+function embedPrintControl() {
+    global $Config;
+
+    $html = '';
+
+    if ($Config["UserState"] != UserState_New) {
+        $modPrintControl = renderPrintControl();
+        
+        $html =<<<HTML
+<li class="module">
+    {$modPrintControl}
+</li>
+HTML;
+    }
 
     return $html;
 }
