@@ -41,9 +41,11 @@ if ($action == "paginate") {
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/takeover/takeover.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/hero/hero.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/categories/categories.css">
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/printcontrol/printcontrol.css">
+
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/pod.css" >
@@ -65,9 +67,9 @@ if ($action == "paginate") {
 
         <?php if ($Config["TakeOver"] == 1) { ?>
             <?php //echo renderTakeover(); ?>
-
-            <?php echo renderHero(); ?>
         <?php } ?>
+        
+        <?php echo renderHero(); ?>
 
         <?php echo renderStalker(); ?>
     </div> <!-- #header -->
@@ -120,8 +122,7 @@ if ($action == "paginate") {
 <script src="modules/header/header.js"></script>
 <script src="modules/takeover/takeover.js"></script>
 <script src="modules/hero/hero.js"></script>
-<script src="modules/couponcarrier/couponcarrier.js"></script>
-<script src="modules/categories/categories.js"></script>
+<script src="modules/printcontrol/printcontrol.js"></script>
 <script src="modules/gallery/gallery.js"></script>
 <script src="modules/featuredtoday/featuredtoday.js"></script>
 <script src="modules/ads/ads.js"></script>

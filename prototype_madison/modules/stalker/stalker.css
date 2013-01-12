@@ -2,11 +2,29 @@
     background-color: #ebebea;
     /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);*/
     width: 100%;
-    /*border-radius: 0 0 6px 6px;*/
+    border-bottom: 1px solid #CCCBCB;
+    box-shadow: 1px 0 #FFFFFF;
 }
 .mod-stalker .content {
     margin: auto;
     max-width: 980px;
+    position: relative;
+    height: 60px;
+}
+.mod-stalker .module {
+    border-right: 1px solid #CCCBCB;
+    box-shadow: 1px 0 #FFFFFF;
+    float: left;
+    height: 100%;
+    padding: 0 15px;
+}
+.mod-stalker .module:last-child {
+    border:none;
+    padding-right: 0;
+    box-shadow: none;
+}
+.mod-stalker .module:first-child {
+    padding-left: 0;
 }
 .fixed-header .mod-stalker {
     position: fixed;
@@ -15,4 +33,33 @@
 }
 .toolbarBodyShift.fixed-header .mod-stalker {
     top: 34px; /* toolbar height */
+}
+
+
+
+/***************************
+ * Module sitenav
+ ***************************/
+.mod-sitenav {
+    margin-top: 15px;
+}
+.mod-sitenav .triangle-down {
+    bottom: 12px;
+}
+
+
+.mod-sortcontrol .curr-sort {
+    padding: 20px 0;
+}
+.mod-sortcontrol .triangle-down {
+    bottom: 0;
+    margin-left: 10px;
+}
+
+.mod-zipcode .curr-zip {
+    padding: 20px 0;
+}
+.mod-zipcode .triangle-down {
+    bottom: 0;
+    margin-left: 10px;
 }

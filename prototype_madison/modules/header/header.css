@@ -5,6 +5,7 @@
     max-width: 980px;
     overflow: visible;
     position: relative;
+    z-index: 1;
 }
 .mod-header .navbar {
     position: absolute;

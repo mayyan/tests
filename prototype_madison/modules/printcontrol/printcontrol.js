@@ -5,8 +5,8 @@
  * @type Object
  * @static
  */
-APP_COUPONSINC.couponcarrier = (function ($) {
-    var body = $(".mod-couponcarrier");
+APP_COUPONSINC.printcontrol = (function ($) {
+    var body = $(".mod-printcontrol");
 
     function handleClick(event) {
         var target = $(event.target);
@@ -31,5 +31,5 @@ APP_COUPONSINC.couponcarrier = (function ($) {
 }(jQuery));
 
 jQuery(document).ready(function () {
-    APP_COUPONSINC.couponcarrier.onReady();
+    APP_COUPONSINC.printcontrol.onReady();
 });

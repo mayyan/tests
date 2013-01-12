@@ -68,13 +68,12 @@ button::-moz-focus-inner {
     margin: 0 auto;
     padding: 0;
 }
-.horizontal-list li {
-    text-align: center;
+.horizontal-list > li {
     display: inline-block;
     list-style: none;
 }
 .triangle { /* default, pointing to right */
-    border-color: transparent transparent transparent #08B4DF;
+    border-color: transparent transparent transparent #535355;
     border-style: solid;
     border-width: 6px 4px;
     font-size: 0;
@@ -85,7 +84,7 @@ button::-moz-focus-inner {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
 }
 .triangle-down {
-    border-color: #08B4DF transparent transparent transparent;
+    border-color: #535355 transparent transparent transparent;
 }
 .triangle-up {
     border-color: transparent transparent #08B4DF transparent;

@@ -1,0 +1,62 @@
+.mod-printcontrol {
+    margin-top: 15px;
+}
+.mod-printcontrol .print-button {
+    cursor: pointer;
+    padding: 6px 0 5px 18px;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 -1px #a54133;
+    font-size: 13px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #A0927D, inset 0 1px white;
+}
+
+.mod-printcontrol .print-button.clipped-none {
+    cursor: default;
+    color: #999;
+    text-shadow: none;
+    border: 0;
+    background: #D9D9D9;
+    /*background: -moz-linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d9d9d9));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#d9d9d9 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#d9d9d9 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#d9d9d9 100%);
+    background: linear-gradient(top, #ffffff 0%,#d9d9d9 100%);*/
+}
+.mod-printcontrol .print-button .title {
+    background-position: 0 0;
+    padding-left: 24px;
+    padding-right: 18px;
+
+    border-right: 1px solid #D12C13;
+    box-shadow: 1px 0 #F1806E;
+}
+.mod-printcontrol .print-button.clipped-none .title {
+    background-position: 0 -265px;
+    border-right: 1px solid #999;
+    box-shadow: 1px 0 #FFFFFF;
+}
+.mod-printcontrol .print-button .separator {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background: #d12c13;
+    box-shadow: 1px 0 #f1806e;
+    vertical-align: middle;
+}
+.mod-printcontrol .print-button .number {
+    display: inline-block;
+    text-align: center;
+    width: 43px;
+}
+.couponcarrier-transfer-clipped,
+.couponcarrier-transfer-clipped-with-couponbar {
+    z-index: 2;
+}
+.couponcarrier-transfer-clipped-with-couponbar {
+    margin-top: -34px; /* toolbar height */
+}

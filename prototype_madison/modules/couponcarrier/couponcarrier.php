@@ -31,31 +31,23 @@ HTML;
         </div>
     </div>
 
-    <button type="button" class="btn-cta print-button clipped-none">
-        <span class="title sprite-icons">Print Coupons</span><span class="number">0</span>
-    </button>
-
 </div> <!-- .mod-couponcarrier -->
 HTML;
     } else {
         $html .=<<<HTML
 <div class="mod-couponcarrier is-active-user">
     <div class="active-user">
-        <div class="available">
-            <h3><em class="value">$416.20</em> <span>Available Savings</span></h3>
-        </div>
+
         <div class="cart">
             <div class="progress">
                 <div class="bar">
                     <div class="savings-bar" style="width: 45.3px;">$1.30</div>
                 </div>
+                <h3>Available <span class="value">$416.20</span></h3>
             </div>
         </div>
     </div>
 
-    <button type="button" class="btn-cta print-button">
-        <span class="title sprite-icons">Print Coupons</span><span class="number">3</span>
-    </button>
 </div> <!-- .mod-couponcarrier -->
 HTML;
     }
