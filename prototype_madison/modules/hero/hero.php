@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * http://csscience.com/responsiveslidercss3/
+ */
 function renderHero() {
     $html =<<<HTML
 <div class="mod-hero">
