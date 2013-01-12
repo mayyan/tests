@@ -159,7 +159,7 @@ APP_COUPONSINC.layout = (function ($) {
          */
         module = themeModule || this;
 
-        var scrollEventIntervalMS = 250;
+        var scrollEventIntervalMS = 0;
 
         setupEventHandler();
 

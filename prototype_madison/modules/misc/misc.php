@@ -6,10 +6,11 @@ function renderMisc($bottomOnly = false) {
 
     $html =<<<HTML
 <div class="mod-miscellaneous">
-    {$top}
+    <div class="content">
+        {$top}
 
-    {$bottom}
-
+        {$bottom}
+    </div>
 </div>
 HTML;
 

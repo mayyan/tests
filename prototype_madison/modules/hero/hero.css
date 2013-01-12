@@ -1,5 +1,36 @@
-.mod-hero {
-    width: 980px;
+.mod-hero .viewport {
     height: 272px;
-    background: url("../../images/slide1.jpg");
+    margin: 0 auto;
+    max-width: 980px;
+    overflow: hidden;
+    position: relative;
+}
+.mod-hero .panels {
+    width: 10000px;
+}
+
+.mod-hero button {
+    position: absolute;
+    top: 50%;
+}
+.mod-hero .prev {
+    left: 0;
+}
+.mod-hero .next {
+    right: 0;
+}
+.mod-hero .panels:nth-child(0) {
+    left: 0;
+}
+.mod-hero .panel:nth-child(1) {
+    left: 0;
+}
+.mod-hero .panel:nth-child(2) {
+    left: 0;
+}
+.mod-hero .panels {
+    transition: left 2s;
+    -webkit-transition: left 2s;
+       -moz-transition: left 2s;
+        -o-transition: left 2s;
 }

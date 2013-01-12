@@ -59,25 +59,30 @@ if ($action == "paginate") {
     <link media="screen" rel="stylesheet" type="text/css" href="modules/featuredtoday/featuredtoday_dialog.css" >
 </head>
 <body>
-    <div class="wrapper">
-        <div class="shadow">
-            <div id="header">
-                <?php echo renderHeader() ?>
-            </div> <!-- #header -->
 
+    <div id="header">
+        <?php echo renderHeader() ?>
+
+        <?php if ($Config["TakeOver"] == 1) { ?>
+            <?php //echo renderTakeover(); ?>
+
+            <?php echo renderHero(); ?>
+        <?php } ?>
+
+        <?php echo renderStalker(); ?>
+    </div> <!-- #header -->
+
+    <div class="wrapper">
+        <div class="">
             <div id="content">
 
                 <div id="main">
-<?php if ($Config["TakeOver"] == 1) { ?>
-                    <?php echo renderTakeover(); ?>
 
-                    <?php echo renderHero(); ?>
-<?php } ?>
-                    <?php echo renderStalker(); ?>
+
 
                     <?php echo renderGallery(); ?>
 
-                    <?php echo renderMisc(); ?>
+
 
                 </div> <!-- #main -->
 
@@ -87,10 +92,14 @@ if ($action == "paginate") {
             </div> <!-- #content -->
         </div>
 
-        <div id="footer">
-            <?php echo renderFooter(); ?>
-        </div>
+
     </div> <!--wrapper -->
+
+    <div id="footer">
+        <?php echo renderMisc(); ?>
+        <?php echo renderFooter(); ?>
+    </div>
+
     <div class="flyout-inner hidden"></div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -110,6 +119,7 @@ if ($action == "paginate") {
 <script src="layout.js"></script>
 <script src="modules/header/header.js"></script>
 <script src="modules/takeover/takeover.js"></script>
+<script src="modules/hero/hero.js"></script>
 <script src="modules/couponcarrier/couponcarrier.js"></script>
 <script src="modules/categories/categories.js"></script>
 <script src="modules/gallery/gallery.js"></script>

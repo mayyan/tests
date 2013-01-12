@@ -1,5 +1,14 @@
-.mod-miscellaneous .top {
-    margin-top: 30px;
+.mod-miscellaneous {
+    background: #f3ebe0;
+
+    -webkit-box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.5);
+       -moz-box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.5);
+            box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.5);
+}
+.mod-miscellaneous .content {
+    margin: 30px auto 0 auto;
+    max-width: 980px;
+    padding-top: 30px;
 }
 .mod-miscellaneous .promos li {
     margin-left: 18px;
@@ -69,11 +78,8 @@
     text-align: center;
 }
 .mod-miscellaneous .bottom {
-    background: #f3ebe0;
-    padding: 10px 20px;
     margin-top: 30px;
     height: 30px;
-    text-align: center;
 }
 .mod-miscellaneous .sitemap {
     margin-top: 7px;
