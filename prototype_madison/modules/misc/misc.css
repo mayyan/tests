@@ -8,7 +8,6 @@
 .mod-miscellaneous .content {
     margin: 30px auto 0 auto;
     max-width: 980px;
-    padding-top: 30px;
 }
 .mod-miscellaneous .promos li {
     margin-left: 18px;
@@ -77,9 +76,11 @@
     text-decoration: none;
     text-align: center;
 }
+.mod-miscellaneous .top {
+    padding-bottom: 20px;
+}
 .mod-miscellaneous .bottom {
-    margin-top: 30px;
-    height: 30px;
+    padding: 12px 0;
 }
 .mod-miscellaneous .sitemap {
     margin-top: 7px;

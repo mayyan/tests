@@ -68,33 +68,23 @@ if ($action == "paginate") {
         <?php if ($Config["TakeOver"] == 1) { ?>
             <?php //echo renderTakeover(); ?>
         <?php } ?>
-        
+
         <?php echo renderHero(); ?>
 
         <?php echo renderStalker(); ?>
     </div> <!-- #header -->
 
     <div class="wrapper">
-        <div class="">
-            <div id="content">
+        <div id="content">
 
-                <div id="main">
+            <div id="main">
 
+                <?php echo renderGallery(); ?>
 
+            </div> <!-- #main -->
 
-                    <?php echo renderGallery(); ?>
-
-
-
-                </div> <!-- #main -->
-
-
-
-                <div class="clearfix"></div>
-            </div> <!-- #content -->
-        </div>
-
-
+            <div class="clearfix"></div>
+        </div> <!-- #content -->
     </div> <!--wrapper -->
 
     <div id="footer">

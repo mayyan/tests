@@ -28,45 +28,42 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="modules/footer/footer.css" >
 </head>
 <body>
+    <div id="header">
+        <?php echo renderHeader() ?>
+    </div> <!-- #header -->
+
     <div class="wrapper">
-        <div class="shadow">
-            <div id="header">
-                <?php echo renderHeader() ?>
-            </div> <!-- #header -->
+        <div id="content">
+            <div id="main">
 
-            <div id="content">
-                <div id="main">
+                <div class="printed-content">
+                    <?php echo renderPostPrintStatus(); ?>
 
-                    <div class="printed-content">
-                        <?php echo renderPostPrintStatus(); ?>
+                    <?php echo renderPostPrintGallery(); ?>
 
-                        <?php echo renderPostPrintGallery(); ?>
+                </div>
 
-                    </div>
+            </div> <!-- #main -->
 
-                </div> <!-- #main -->
+            <div id="rail">
 
-                <div id="rail">
+                <?php echo renderMREC(true); ?>
 
-                    <?php echo renderMREC(true); ?>
+                <?php echo renderSuperSaverAds(); ?>
 
-                    <?php echo renderSuperSaverAds(); ?>
+            </div> <!-- #rail -->
 
-                </div> <!-- #rail -->
+            <div class="clearfix"></div>
+        </div> <!-- #content -->
 
-                <div class="clearfix"></div>
-
-                <?php echo renderLeaderBoardAds(); ?>
-
-                <?php echo renderMisc(true); ?>
-            </div> <!-- #content -->
-        </div>
-
-        <div id="footer">
-
-            <?php echo renderFooter(); ?>
-        </div>
+        <?php echo renderLeaderBoardAds(); ?>
     </div> <!--wrapper -->
+
+    <div id="footer">
+
+        <?php echo renderMisc(true); ?>
+        <?php echo renderFooter(); ?>
+    </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
