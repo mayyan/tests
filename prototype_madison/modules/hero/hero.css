@@ -1,75 +1,69 @@
-
-
 body {
   overflow-x: hidden;
 }
 
-#slider {
+.mod-hero .slider {
 	margin: 0 auto;
+    max-width: 980px;
+    position: relative;
 }
 
-
-
-/* NEW EXPERIMENT */
 /* Slider Setup */
 
-input {
+.mod-hero input {
 	display: none;
 }
 
-#slide1:checked ~ #slides .inner { margin-left:0; }
-#slide2:checked ~ #slides .inner { margin-left:-100%; }
-#slide3:checked ~ #slides .inner { margin-left:-200%; }
-#slide4:checked ~ #slides .inner { margin-left:-300%; }
-#slide5:checked ~ #slides .inner { margin-left:-400%; }
+.mod-hero #hero-slide1:checked ~ .slides .inner { margin-left:0; }
+.mod-hero #hero-slide2:checked ~ .slides .inner { margin-left:-100%; }
+.mod-hero #hero-slide3:checked ~ .slides .inner { margin-left:-200%; }
 
-
-#overflow {
+.mod-hero .overflow {
 	width: 100%;
 	overflow: hidden;
 }
 
-article img {
+.mod-hero article img {
 	width: 100%;
 }
 
-#slides .inner {
-	width: 500%;
+.mod-hero .slides .inner {
+	width: 300%;
 	line-height: 0;
 }
 
-#slides article {
-	width: 20%;
+.mod-hero .slides article {
+	width: 33.33%;
 	float: left;
 }
 
-/* Slider Styling */
-
+/**
+ * Slider Styling
+ */
 /* Control Setup */
 
-#controls {
+.mod-hero .controls {
     position: absolute;
-    top:250px;
+    top: 50%;
+    margin-top: -25px;
 	width: 100%;
 	height: 50px;
 }
 
-#controls label {
+.mod-hero .controls label {
 	display: none;
 	width: 39px;
 	height: 50px;
 	opacity: 0.3;
 }
 
-#controls label:hover {
+.mod-hero .controls label:hover {
 	opacity: 0.8;
 }
 
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(5),
-#slide5:checked ~ #controls label:nth-child(1) {
+.mod-hero #hero-slide1:checked ~ .controls label:nth-child(2),
+.mod-hero #hero-slide2:checked ~ .controls label:nth-child(3),
+.mod-hero #hero-slide3:checked ~ .controls label:nth-child(1) {
 	background: url('../../images/right-arrow.png') no-repeat;
 	float: right;
 	margin: 0 0px 0 0;
@@ -77,11 +71,9 @@ article img {
 }
 
 
-#slide1:checked ~ #controls label:nth-child(5),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2),
-#slide4:checked ~ #controls label:nth-child(3),
-#slide5:checked ~ #controls label:nth-child(4) {
+.mod-hero #hero-slide1:checked ~ .controls label:nth-child(3),
+.mod-hero #hero-slide2:checked ~ .controls label:nth-child(1),
+.mod-hero #hero-slide3:checked ~ .controls label:nth-child(2) {
 	background: url('../../images/left-arrow.png') no-repeat;
 	float: left;
 	margin: 0 0 0 0px;
@@ -90,7 +82,7 @@ article img {
 
 /* Info Box */
 
-.info {
+.mod-hero .info {
 	line-height: 20px;
 	margin: 0 0 -150%;
 	position: absolute;
@@ -101,7 +93,7 @@ article img {
 	text-align: left;
 }
 
-.info h3 {
+.mod-hero .info h3 {
 	color: #333;
 	margin: 0 0 5px;
 	font-weight: normal;
@@ -109,12 +101,10 @@ article img {
 	font-style: normal;
 }
 
-/* Slider Styling */
-
 
 /* Animation */
 
-#slides .inner {
+.mod-hero .slides .inner {
 	-webkit-transform: translateZ(0);
 	-webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 	-moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
@@ -129,7 +119,7 @@ article img {
         transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
 }
 
-#slider {
+.mod-hero .slider {
 	-webkit-transform: translateZ(0);
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
@@ -137,7 +127,7 @@ article img {
 	transition: all 0.5s ease-out;
 }
 
-#controls label{
+.mod-hero .controls label{
 	-webkit-transform: translateZ(0);
 	-webkit-transition: opacity 0.2s ease-out;
 	-moz-transition: opacity 0.2s ease-out;
@@ -145,11 +135,9 @@ article img {
 	transition: opacity 0.2s ease-out;
 }
 
-#slide1:checked ~ #slides article:nth-child(1) .info,
-#slide2:checked ~ #slides article:nth-child(2) .info,
-#slide3:checked ~ #slides article:nth-child(3) .info,
-#slide4:checked ~ #slides article:nth-child(4) .info,
-#slide5:checked ~ #slides article:nth-child(5) .info {
+.mod-hero #slide1:checked ~ .slides article:nth-child(1) .info,
+.mod-hero #slide2:checked ~ .slides article:nth-child(2) .info,
+.mod-hero #slide3:checked ~ .slides article:nth-child(3) .info {
 	opacity: 1;
 	-webkit-transition: all 1s ease-out 0.6s;
 	-moz-transition: all 1s ease-out 0.6s;
