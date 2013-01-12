@@ -23,6 +23,9 @@ body {
 	overflow: hidden;
 }
 
+.mod-hero article a {
+    display: block;
+}
 .mod-hero article img {
 	width: 100%;
 }

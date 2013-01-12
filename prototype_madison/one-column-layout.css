@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 #header {
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
     position: relative;
     width: 100%;
     z-index: 2;
@@ -13,7 +13,7 @@ body {
 .wrapper {
     background-color: #FAF9F5;
     margin: 0 auto;
-    width: 980px;
+    width: 100%;
 }
 .wrapper .shadow {
     background: #faf9f5;
@@ -24,12 +24,11 @@ body {
 }
 #content {
     margin: 0 auto;
-    width: 100%;
+    max-width: 980px;
     z-index: 1;
 }
 #main {
     float: left;
-    margin-right: 5px;
     width: 100%;
 }
 #footer {

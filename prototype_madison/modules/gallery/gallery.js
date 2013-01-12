@@ -317,6 +317,30 @@ APP_COUPONSINC.gallery = (function ($) {
     }
 
     /**
+     * Maintain "Go to Top | Clip All" at the bottom of window
+     * and inside gallery
+     */
+    function handleResize() {
+        if (body.length === 0) {
+            return;
+        }
+
+        var modOffset = body.offset(),
+            modOffsetLeft = modOffset.left,
+            modOuterWidth = body.outerWidth(),
+            right = win.width() - modOffsetLeft - modOuterWidth;
+
+//        console.log("window.scrollTop = " + $(window).scrollTop() +
+//            ", window.height = " + $(window).height() +
+//            ", gallery offset.top = " + body.offset().top +
+//            ", gallery outerHeight = " + body.outerHeight());
+
+        //console.log("gallery fixToolsPosition right = " + right);
+        $(".tools", body)
+            .css("right", right + "px");
+    }
+
+    /**
      * Bind all types of event this module handles.
      * @method setupEventHandlers
      */
@@ -341,6 +365,7 @@ APP_COUPONSINC.gallery = (function ($) {
         module = themeModule || this;
 
         setupEventHandlers();
+        win.resize(handleResize);
 
         contextData = APP_COUPONSINC.contextData;
         init(APP_COUPONSINC.contextData.gallery.podCache);
@@ -358,6 +383,7 @@ APP_COUPONSINC.gallery = (function ($) {
         // Chrome still loads page 2.
         // IE no change.
         win.scrollTop(0);
+        handleResize();
 
         // Rarely, but just in case, there's only one page of pods from CLIP, don't show loading indicator.
         if (getPodCount(body) >= contextData.gallery.totalPods) {

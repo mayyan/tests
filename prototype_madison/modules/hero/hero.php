@@ -3,6 +3,8 @@
  * http://csscience.com/responsiveslidercss3/
  */
 function renderHero() {
+    global $configIndex;
+
     $html =<<<HTML
 <div class="mod-hero">
     <article class="slider">
@@ -22,8 +24,10 @@ function renderHero() {
 				<div class="inner">
 
 					<article>
-						<div class=info></div>
-						<img src="images/slide1.jpg" />
+                        <a href="brand.php?config={$configIndex}">
+                            <div class=info></div>
+                            <img src="images/slide1.jpg" />
+                        </a>
 					</article>
 
 					<article>

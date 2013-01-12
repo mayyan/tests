@@ -10,17 +10,15 @@ APP_COUPONSINC.layout = (function ($) {
      */
     var module,
 
-        win              = $(window),
-        doc              = $(document),
-        body             = $("body"),
+        win               = $(window),
+        doc               = $(document),
+        body              = $("body"),
+        mainRegion        = $("#main"),
 
+        modIntronagbar   = $("mod-intronagbar"),
         modStalker       = $(".mod-stalker"),
-        modGallery       = $(".mod-gallery"),
-        modTakeover      = $(".mod-takeover"),
+        modBelowStalker  = modStalker.next(),
         stalkerOffsetTop = modStalker.offset().top,
-        galleryOffsetTop = modGallery.offset().top,
-        pencilHeight     = $(".pencil-content", modTakeover).outerHeight(true),
-        takeoverState    = "initial",
 
         didScroll = false,
         lastScrollTop = 0;
@@ -35,24 +33,13 @@ APP_COUPONSINC.layout = (function ($) {
 
             body.addClass("fixed-header");
 
-            var left = (win.width() - modStalker.outerWidth()) / 2;
+            var left = $("#main").offset().left + (mainRegion.outerWidth() - modStalker.outerWidth()) / 2;
             modStalker.css("left", left);
 
-            if (takeoverState === "pencil" /*modTakeover.hasClass("pencil")*/ ) {
-                //console.log("changeStalker to fixed and takeove is pencil");
-                modStalker
-                    .css("top", pencilHeight + "px");
-            } else {
-                //console.log("changeStalker to fixed and takeove is initial");
-                modStalker
-                    .css("top", "0"); /* original */
-            }
-
         } else { /* toState === "static" */
-            //console.log("changeStalker to static");
+
             body.removeClass("fixed-header");
-            modStalker
-                .css("left", "auto"); /* original */
+            modStalker.css("left", "auto");
 
         }
     }
@@ -66,42 +53,25 @@ APP_COUPONSINC.layout = (function ($) {
 
         if (toState === "fixed") {
             stalkerHeight = modStalker.outerHeight(true);
-            modGallery.css("margin-top", stalkerHeight + "px");
+            modBelowStalker.css("margin-top", stalkerHeight + "px");
 
         } else { /* toState === "static" */
 
-            modGallery.css("margin-top", "auto");
+            modBelowStalker.css("margin-top", "auto");
 
         }
     }
 
     /**
-     * Change to one of the two possible states of takeover
-     * @param {String} toState "pencil" or "initial"
+     * Hanldes window resize event.
+     * Center stalker module to the window
      */
-    function changeTakeover(toState) {
-        if (toState === "pencil") {
-            //console.log("changeTakeover to pencil");
-            takeoverState = "pencil";
-            modTakeover.switchClass("initial", "pencil");
-            $(".initial-content", modTakeover).slideUp("slow");
-            $(".pencil-content", modTakeover).slideDown("slow");
+    function handleResize() {
+        if (body.hasClass("fixed-header")) {
+            changeStalker("fixed");
         } else {
-            //console.log("changeTakeover to initial");
-            takeoverState = "initial";
-            modTakeover.switchClass("pencil", "initial");
-            $(".initial-content", modTakeover).slideDown("slow");
-            $(".pencil-content", modTakeover).slideUp("slow");
+            changeStalker("static");
         }
-    }
-    /**
-     * Event handler for scroll event
-     * Simply detects scroll event happened.
-     * We don't process scroll event eveythime it fires.
-     * We process scroll event in a timer.
-     */
-    function handleScroll(e) {
-        didScroll = true;
     }
 
     /**
@@ -119,37 +89,39 @@ APP_COUPONSINC.layout = (function ($) {
      * turn rail from absolute position to fixed position, so that the rail does not continue go down.
      */
     function processScroll() {
-        didScroll = false;
-
         var windowScrollTop  = win.scrollTop();
 
-        //console.log("windowScrollTop=" + windowScrollTop + "; stalkerOffsetTop=" + stalkerOffsetTop + "; galleryOffsetTop=" + galleryOffsetTop);
-
-        if (windowScrollTop > galleryOffsetTop) {
-            //console.log("state 3");
-            //changeTakeover("pencil");
-            changeStalker("fixed");
-            changeGallery("fixed");
-        } else if (stalkerOffsetTop <= windowScrollTop && windowScrollTop <= galleryOffsetTop) {
-            //console.log("state 2");
-            //changeTakeover("initial");
+        if (windowScrollTop > stalkerOffsetTop) {
             changeStalker("fixed");
             changeGallery("fixed");
         } else {
-            //console.log("state 1");
-            //changeTakeover("initial");
             changeStalker("static");
             changeGallery("static");
         }
-
-        doc.trigger("couponsinc:windowScrolled");
 
         // Remember last scroll position, so later I'll know scroll direction
         lastScrollTop = windowScrollTop;
     }
 
+    function handleIntronagbar(e, params) {
+        stalkerOffsetTop = modStalker.offset().top + modIntronagbar.outerHeight(true);
+    }
+
+    /**
+     * Event handler for scroll event
+     * Simply detects scroll event happened.
+     * We don't process scroll event eveythime it fires.
+     * We process scroll event in a timer.
+     */
+    function handleScroll(e) {
+        didScroll = true;
+        processScroll();
+    }
+
     function setupEventHandler() {
         win.scroll(handleScroll);
+        win.resize(handleResize);
+        doc.bind("couponsinc:intronagbar", handleIntronagbar);
     }
 
     function onReady(themeModule) {
@@ -159,7 +131,7 @@ APP_COUPONSINC.layout = (function ($) {
          */
         module = themeModule || this;
 
-        var scrollEventIntervalMS = 0;
+        var scrollEventIntervalMS = 112; // IE8 skips timer callback if interval is 0
 
         setupEventHandler();
 
@@ -172,9 +144,10 @@ APP_COUPONSINC.layout = (function ($) {
         //(or even after a given number of executions - and then a delay).
         setInterval(function () {
             if (didScroll) {
-                // Check your page position and then
-                // Load in more results
-                processScroll();
+                // Tell other module about scrolling
+                // but not at every scroll event
+                doc.trigger("couponsinc:windowScrolled");
+                didScroll = false;
             }
         }, scrollEventIntervalMS);
     }

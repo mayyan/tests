@@ -1,28 +1,18 @@
 .mod-takeover {
-    position: relative;
-}
-.mod-takeover.initial .initial-content {
-    display: block;
-}
-.mod-takeover.initial .pencil-content {
-    display: none;
-}
-.mod-takeover.pencil .initial-content {
-    display: none;
-}
-.mod-takeover.pencil .pencil-content {
-    display: block;
-}
-.mod-takeover .pencil-content {
-    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 2;
-    height: 31px;
+    position: fixed;
+    background: #FAF9F5;
 }
-.mod-takeover .expanded-content {
-    position: absolute;
-    z-index: 1;
+
+.mod-takeover.initial .content {
+    display: none;
 }
-.mod-takeover.pencil .expanded-content {
-    z-index: 2;
+.mod-takeover.pencil .content {
+    display: block;
+    margin: auto;
+    max-width: 980px;
+}
+.mod-takeover .frame {
+    margin: 20px 0;
 }

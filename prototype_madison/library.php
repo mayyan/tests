@@ -1,7 +1,22 @@
 <?php
+function getPodTypeCSSClass($podData) {
+    global $POD_TYPE_MAP;
+    return $POD_TYPE_MAP[$podData["type"]];
+}
+
+function getPodCTAString($podData) {
+    global $POD_CTA_MAP;
+    return $POD_CTA_MAP[$podData["type"]];
+}
+
+function getPodCTA2String($podData) {
+    global $POD_CTA2_MAP;
+    return $POD_CTA2_MAP[$podData["type"]];
+}
+
 function renderCoupon($podData) {
     global $podTemplate;
-    
+
     $podTypeCSSClass = getPodTypeCSSClass($podData);
     $podCTAString = getPodCTAString($podData);
     $podCTA2String = getPodCTA2String($podData);

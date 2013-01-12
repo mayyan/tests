@@ -1,0 +1,14 @@
+.mod-recipe img {
+    border: 1px solid #CDCDCD;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+    background: #f6c2c4;
+}
+.mod-gallery .primary {
+    padding: 10px 0;
+    width: 300px;
+    margin: 0 15px 15px 3px;
+}

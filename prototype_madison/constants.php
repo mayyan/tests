@@ -12,6 +12,30 @@ const UserState_New       = 1;
 const UserState_SignedOut = 2;
 const UserState_SignedIn  = 3;
 
+$POD_TYPE_MAP = array(
+    "0" => "coupon",
+    "9" => "duet",
+    "13" => "video",
+    "15" => "cpc",
+    "27" => "coupon"
+);
+
+$POD_CTA_MAP = array(
+    "0" => "Clip Coupon",
+    "9" => "Clip Coupon",
+    "13" => "Click to Watch",
+    "15" => "Click to Save",
+    "27" => "Clip Coupon"
+);
+
+$POD_CTA2_MAP = array(
+    "0" => "",
+    "9" => "(Clip after signup)",
+    "13" => "(Redeem after video)",
+    "15" => "(Opens new window)",
+    "27" => ""
+);
+
 /**
  * Modules can be injected into Gallery are:
  *  - offeroftheweek
