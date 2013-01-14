@@ -5,7 +5,7 @@ $offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
 $action = empty($_GET["action"]) ? "" : $_GET["action"];
 $catid  = empty($_GET["catid"]) ? "" : $_GET["catid"];
 
-require_once(APPLICATION_PATH . "constants.php");
+require_once(APPLICATION_PATH . "library/constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
 require_once(APPLICATION_PATH . "modules/takeover/takeover.php");
 require_once(APPLICATION_PATH . "modules/stalker/stalker.php");
@@ -33,9 +33,9 @@ if ($action == "paginate") {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Site Redesign - Madison Ave</title>
     <link media="screen" rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css">
-    <link media="screen" rel="stylesheet" type="text/css" href="common.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="one-column-layout.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="promo.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="library/common.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="library/one-column-layout.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="library/promo.css" >
 
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
@@ -96,7 +96,7 @@ if ($action == "paginate") {
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
-<script src="jquery.ba-outside-events.min.js"></script>
+<script src="library/jquery.ba-outside-events.min.js"></script>
 <script>
     var APP_COUPONSINC = {};
     APP_COUPONSINC.contextData = {
@@ -108,7 +108,7 @@ if ($action == "paginate") {
         "config" : <?php echo $configIndex ?>
     };
 </script>
-<script src="layout.js"></script>
+<script src="library/layout.js"></script>
 <script src="modules/header/header.js"></script>
 <script src="modules/hero/hero.js"></script>
 <script src="modules/printcontrol/printcontrol.js"></script>

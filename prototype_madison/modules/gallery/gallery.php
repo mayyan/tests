@@ -1,7 +1,7 @@
 <?php
-require_once(APPLICATION_PATH . "constants.php");
-require_once(APPLICATION_PATH . "library.php");
-require_once(APPLICATION_PATH . "pod-template.php");
+require_once(APPLICATION_PATH . "library/constants.php");
+require_once(APPLICATION_PATH . "library/library.php");
+require_once(APPLICATION_PATH . "library/pod-template.php");
 require_once(APPLICATION_PATH . "modules/gallery/toprow.php");
 require_once(APPLICATION_PATH . "modules/gallery/category.php");
 require_once(APPLICATION_PATH . "modules/supersaver/supersaver.php");
@@ -11,7 +11,7 @@ require_once(APPLICATION_PATH . "modules/savingsclub/savingsclub.php");
 require_once(APPLICATION_PATH . "modules/ads/leaderboard.php");
 
 // Preparing all data
-$podJSON = file_get_contents(APPLICATION_PATH . "podCache.json");
+$podJSON = file_get_contents(APPLICATION_PATH . "data/podCache.json");
 $podCache = json_decode($podJSON, true);
 
 //$podIdList = array_keys($podCache);

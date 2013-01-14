@@ -1,13 +1,13 @@
 <?php
-require_once(APPLICATION_PATH . "constants.php");
-require_once(APPLICATION_PATH . "library.php");
-require_once(APPLICATION_PATH . "pod-template.php");
+require_once(APPLICATION_PATH . "library/constants.php");
+require_once(APPLICATION_PATH . "library/library.php");
+require_once(APPLICATION_PATH . "library/pod-template.php");
 
 function renderBranchGallery() {
     $html = '';
 
     // Preparing all data
-    $podJSON = file_get_contents(APPLICATION_PATH . "featuredtoday-yoplait.json");
+    $podJSON = file_get_contents(APPLICATION_PATH . "data/featuredtoday-yoplait.json");
     $podCache = json_decode($podJSON, true);
     $podHTML = array();
     foreach($podCache as $podData) {

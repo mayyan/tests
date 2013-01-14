@@ -55,7 +55,7 @@ function renderFeaturedTodayPods() {
     // Preparing all data
     $dataFile = ($Config["TakeOver"] == 1) ? "featuredtoday-yoplait.json" : "featuredtoday-glade.json";
 
-    $podJSON = file_get_contents(APPLICATION_PATH . $dataFile);
+    $podJSON = file_get_contents(APPLICATION_PATH . 'data/' . $dataFile);
     $podCache = json_decode($podJSON, true);
 
     $html = '';

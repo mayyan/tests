@@ -61,7 +61,7 @@ $Config1 = array(
 /* Mock 2: http://www.zurb.net/coupons/projects/interaction-design/implement/images/layouts/0910/2.jpg */
 $Config2 = array(
     "UserState" => UserState_SignedOut,
-    "TakeOver" => 0,
+    "TakeOver" => 1,
     "TopRow" => array(
         "format" => ModuleSize_ShortStack,
         "modules" => array("offeroftheweek", "savingsclub")
