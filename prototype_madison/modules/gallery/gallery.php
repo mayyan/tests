@@ -111,7 +111,7 @@ HTML;
             $html .= renderTopRowModules($Config["TopRow"], $isFirstPage);
         }
     } else {
-        $html .= renderTopRowPods();
+        $html .= renderTopRowPods($isFirstPage);
     }
     $html .=<<<HTML
     <div class="pods">

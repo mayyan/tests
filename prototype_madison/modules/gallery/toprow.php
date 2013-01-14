@@ -112,8 +112,8 @@ HTML;
     return $html;
 }
 
-function renderTopRowPods() {
-    $html .=<<<HTML
+function renderTopRowPods($isFirstPage) {
+    $html =<<<HTML
 <div class="row">
 
     <div class="column grid_2">
