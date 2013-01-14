@@ -22,9 +22,10 @@ function renderCoupon($podData) {
     $podCTA2String = getPodCTA2String($podData);
     $podImageUrl = $podData["image"]["url"];
 
-    $search = array('/{type}/', '/{cta}/', '/{cta2}/', '/{imageUrl}/', '/{imageAlt}/', '/{summary}/', '/{brand}/', '/{details}/');
+    $search = array('/{type}/', '/{podId}/', '/{cta}/', '/{cta2}/', '/{imageUrl}/', '/{imageAlt}/', '/{summary}/', '/{brand}/', '/{details}/');
     $replace = array(
         $podTypeCSSClass,
+        $podData["podId"],
         $podCTAString,
         $podCTA2String,
         $podImageUrl,

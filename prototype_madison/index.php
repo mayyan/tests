@@ -100,15 +100,22 @@ if ($action == "paginate") {
 <script>
     var APP_COUPONSINC = {};
     APP_COUPONSINC.contextData = {
+        "User":{"IsLoggedIn":0,"DetectedZip":"94043","SuperSaver":0,"SavingsClub":0,"CouponClubMember":{"Status":0,"Newsletter":0,"ExpDate":"01\/01\/1900"}},
         "gallery" : {
             "podsPerPage": 21,
-            "totalPods": 298
+            "totalPods": 298,
+            "podCache": <?php echo renderPodCacheOnPage(0); ?>
         },
         "catid"  : "<?php echo $catid ?>",
         "config" : <?php echo $configIndex ?>
     };
 </script>
 <script src="library/layout.js"></script>
+<script src="library/classHelper.js"></script>
+<script src="library/pod.js"></script>
+<script src="library/pod_urban.js"></script>
+<script src="library/pod_printable.js"></script>
+<script src="library/pod_printable_urban.js"></script>
 <script src="modules/header/header.js"></script>
 <script src="modules/hero/hero.js"></script>
 <script src="modules/printcontrol/printcontrol.js"></script>

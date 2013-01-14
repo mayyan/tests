@@ -167,6 +167,11 @@ HTML;
     return $html;
 }
 
+function renderPodCacheOnPage($offset) {
+    global $podJSON;
+    return $podJSON;
+}
+
 function renderPostPrintGallery() {
     $html =<<<HTML
 <div class="printed-bd">

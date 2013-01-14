@@ -1,7 +1,7 @@
 <?php
 
 $podTemplate =<<<HTML
-<div class="pod {type}">
+<div class="pod {type}" data-podid="{podId}" id="couponsinc-gallery-POD{podId}">
     <h3 class="premium-label">Savings Club</h3>
 
     <div class="hover">

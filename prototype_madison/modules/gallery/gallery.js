@@ -45,21 +45,21 @@ APP_COUPONSINC.gallery = (function ($) {
      * @param {Object} podData pod JSON data
      * @param {Obejct} podNode jQuery pod node
      */
-    function createPodObject(podData, podNode) {
+    function createPodObject(podNode, podData) {
         var podObj = null;
 
         switch (podData.type) {
         case POD_TYPE_PRINTABLE:
-            podObj = new APP_COUPONSINC.PodPrintable(podData, podNode);
+            podObj = new APP_COUPONSINC.PodPrintable(podNode, podData);
             break;
         case POD_TYPE_DUET:
-            podObj = new APP_COUPONSINC.PodDuet(podData, podNode);
+            //podObj = new APP_COUPONSINC.PodDuet(podNode, podData);
             break;
         case POD_TYPE_VIDEO:
-            podObj = new APP_COUPONSINC.PodVideo(podData, podNode);
+            //podObj = new APP_COUPONSINC.PodVideo(podNode, podData);
             break;
         case POD_TYPE_CPC:
-            podObj = new APP_COUPONSINC.PodCPC(podData, podNode);
+            //odObj = new APP_COUPONSINC.PodCPC(podNode, podData);
             break;
         default:
             break;
@@ -125,9 +125,11 @@ APP_COUPONSINC.gallery = (function ($) {
                 podId   = pod.data().podid,
                 podData = podCache[podId],
                 //create podObj
-                podObj = createPodObject(podData, pod);
+                podObj = createPodObject(pod, podData);
 
-            podObj.bindEventHandlers();
+            if (podObj) {
+                podObj.bindEventHandlers();
+            }
         });
     }
     /**
@@ -140,9 +142,9 @@ APP_COUPONSINC.gallery = (function ($) {
         // Since HTML is already present, all it left to do
         // is to set up the event handlers on the existing pod DOM elements.
         var page0 = $(".page", body)[0],
-            pods  = $(".pod-shadow", page0);
+            pods  = $(".pod", page0);
 
-        //attachDataToPod(pods, podCache);
+        attachDataToPod(pods, podCache);
 
         if (getPodCount(body) >= contextData.gallery.totalPods) {
             endReached = true;
@@ -188,7 +190,7 @@ APP_COUPONSINC.gallery = (function ($) {
 
         // Populate the DOM using pod data.
         // Part of populating is re-setting up event handlers on the new obj
-        pods = $(".pod-shadow", newPage);
+        pods = $(".pod", newPage);
 
         //attachDataToPod(pods, resp.data.podCache);
 
