@@ -32,13 +32,13 @@ function renderStalker() {
                     </div>
                 </div>
             </li>
-            <li class="module">
+            <!--li class="module">
                 <div class="mod-zipcode">
                     <div class="curr-zip">
                         <span>Zip</span><span class="triangle triangle-down">&nbsp;</span>
                     </div>
                 </div>
-            </li>
+            </li-->
             <li class="module">
                 {$modCarrier}
             </li>

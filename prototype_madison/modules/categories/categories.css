@@ -2,10 +2,15 @@
     position: relative;
 }
 .mod-categories .curr-category {
+    color: #666666;
+    font-family: "helvetica neue";
+    font-size: 10px;
+    font-weight: bold;
     padding: 20px 0;
+    text-transform: uppercase;
 }
 .mod-categories .triangle-down {
-    bottom: 0;
+    bottom: 1px;
     margin-left: 10px;
 }
 .mod-categories .all-categories {
@@ -15,7 +20,7 @@
     overflow: hidden;
     padding-left: 25px;
     position: absolute;
-    top: 60px;
+    top: 50px;
     white-space: nowrap;
     border: 1px solid #CCCBCB;
     border-top-width: 0;
