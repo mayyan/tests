@@ -19,8 +19,7 @@ function renderStalker() {
         <ul class="content">
             <li class="module">
                 <div class="mod-sitenav">
-                    <img height="29" src="images/coupons-logo.png" alt="Coupons.com" />
-                    <span class="triangle triangle-down"></span>
+                    <img height="29" src="images/coupons-logo.png" alt="Coupons.com" /><span class="triangle triangle-down">&nbsp;</span>
                 </div>
             </li>
             <li class="module">
@@ -29,16 +28,14 @@ function renderStalker() {
             <li class="module">
                 <div class="mod-sortcontrol">
                     <div class="curr-sort">
-                        <span>Most Recent</span>
-                        <span class="triangle triangle-down"></span>
+                        <span>Most Recent</span><span class="triangle triangle-down">&nbsp;</span>
                     </div>
                 </div>
             </li>
             <li class="module">
                 <div class="mod-zipcode">
                     <div class="curr-zip">
-                        <span>Zip</span>
-                        <span class="triangle triangle-down"></span>
+                        <span>Zip</span><span class="triangle triangle-down">&nbsp;</span>
                     </div>
                 </div>
             </li>

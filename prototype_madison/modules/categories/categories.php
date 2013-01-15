@@ -4,8 +4,7 @@ function renderCategories() {
 <div class="mod-categories">
 
     <div class="curr-category">
-        <span>All Coupons</span>
-        <span class="triangle triangle-down"></span>
+        <span>All Coupons</span><span class="triangle triangle-down">&nbsp;</span>
     </div>
 
     <div class="all-categories">

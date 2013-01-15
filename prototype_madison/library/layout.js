@@ -33,15 +33,9 @@ APP_COUPONSINC.layout = (function ($) {
 
             body.addClass("fixed-header");
 
-            //var left = $("#main").offset().left + (mainRegion.outerWidth() - modStalker.outerWidth()) / 2;
-            //modStalker.css("left", left);
-
         } else { /* toState === "static" */
 
             body.removeClass("fixed-header");
-            //modStalker.css("left", "auto");
-
-            //$(".mod-leavebehind").hide();
 
         }
     }
@@ -124,7 +118,7 @@ APP_COUPONSINC.layout = (function ($) {
 
     function setupEventHandler() {
         win.scroll(handleScroll);
-        win.resize(handleResize);
+        //win.resize(handleResize);
         doc.bind("couponsinc:intronagbar", handleIntronagbar);
     }
 
