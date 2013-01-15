@@ -11,7 +11,7 @@ APP_COUPONSINC.printcontrol = (function ($) {
     function handleClick(event) {
         var target = $(event.target);
 
-        if (target.hasClass("print-button")) {
+        if (target.hasClass("print-button") || target.parents(".print-button").length == 1) {
             window.location.href = "printing.php" + window.location.search;
         }
     }

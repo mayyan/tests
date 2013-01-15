@@ -87,8 +87,6 @@ APP_COUPONSINC.layout = (function ($) {
     function processScroll() {
         var windowScrollTop  = win.scrollTop();
 
-        console.log("windowScrollTop=" + windowScrollTop + ", stalkerOffsetTop=" + stalkerOffsetTop);
-
         if (windowScrollTop > stalkerOffsetTop) {
             changeStalker("fixed");
             changeGallery("fixed");
