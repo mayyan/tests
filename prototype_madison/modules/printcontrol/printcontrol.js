@@ -63,7 +63,8 @@ APP_COUPONSINC.printcontrol = (function ($) {
      */
     function onReady() {
         body.click(handleClick);
-        $(document).bind('couponsinc:clipped couponsinc:unclipped', updatePrintButton);
+        $(document).bind('couponsinc:clipped', updatePrintButton);
+        $(document).bind('couponsinc:unclipped', updatePrintButton);
         $(document).on('couponsinc:clip-effect-started', '.mod-printcontrol', handleEffectStarted);
     }
     /**

@@ -64,7 +64,7 @@ function renderBranchGallery() {
                         </div>
 
                         <div class="column grid_1">
-                            {$podHTML[0]}
+                            {$podHTML[4]}
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ $catid  = empty($_GET["catid"]) ? "" : $_GET["catid"];
 require_once(APPLICATION_PATH . "library/constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
 require_once(APPLICATION_PATH . "modules/stalker/stalker.php");
+require_once(APPLICATION_PATH . "modules/gallery/gallery.php");
 require_once(APPLICATION_PATH . "modules/gallery/brandGallery.php");
 require_once(APPLICATION_PATH . "modules/misc/misc.php");
 require_once(APPLICATION_PATH . "modules/footer/footer.php");
@@ -75,9 +76,11 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
 <script>
     var APP_COUPONSINC = {};
     APP_COUPONSINC.contextData = {
+        "User":{"IsLoggedIn":0,"DetectedZip":"94043","SuperSaver":0,"SavingsClub":0,"CouponClubMember":{"Status":0,"Newsletter":0,"ExpDate":"01\/01\/1900"}},
         "gallery" : {
             "podsPerPage": 21,
-            "totalPods": 298
+            "totalPods": 298,
+            "podCache": <?php echo renderPodCacheOnPage(0); ?>
         },
         "catid"  : "<?php echo $catid ?>",
         "config" : <?php echo $configIndex ?>
@@ -85,6 +88,11 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
 </script>
 <script src="modules/header/header.js"></script>
 <script src="modules/printcontrol/printcontrol.js"></script>
+<script src="library/classHelper.js"></script>
+<script src="library/pod.js"></script>
+<script src="library/pod_urban.js"></script>
+<script src="library/pod_printable.js"></script>
+<script src="library/pod_printable_urban.js"></script>
 <script src="modules/gallery/gallery.js"></script>
 <script src="modules/ads/ads.js"></script>
 <div id="fb-root"></div>
