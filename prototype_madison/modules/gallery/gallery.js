@@ -192,7 +192,7 @@ APP_COUPONSINC.gallery = (function ($) {
         // Part of populating is re-setting up event handlers on the new obj
         pods = $(".pod", newPage);
 
-        //attachDataToPod(pods, resp.data.podCache);
+        attachDataToPod(pods, APP_COUPONSINC.contextData.gallery.podCache);
 
         if (getPodCount(body) >= contextData.gallery.totalPods) {
             endReached = true;

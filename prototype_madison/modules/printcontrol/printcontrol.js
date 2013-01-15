@@ -17,24 +17,17 @@ APP_COUPONSINC.printcontrol = (function ($) {
     }
 
     function updatePrintButton(e, params) {
-        var podIdWithEffect = params.podIds[0];
-
-        showTransferEffect(podIdWithEffect);
-
-
-        var printBtn = $(".print-button", body),
+        var podIdWithEffect = params.podIds[0],
+            printBtn = $(".print-button", body),
             numberSection = $(".number", printBtn),
             count = parseInt(numberSection.text(), 10);
 
-        /*if (count === 0) {
-            printBtn.addClass("disabled");
-            numberSection.html("");
+        if (e.type === 'couponsinc:clipped') {
+            showTransferEffect(podIdWithEffect);
+            numberSection.html(count + 1);
         } else {
-            printBtn.removeClass("disabled");
-            numberSection.html(count);
-        }*/
-        printBtn.removeClass("disabled");
-        numberSection.html(count+1);
+            numberSection.html(count - 1);
+        }
     }
 
     function showTransferEffect(podId) {
@@ -70,7 +63,7 @@ APP_COUPONSINC.printcontrol = (function ($) {
      */
     function onReady() {
         body.click(handleClick);
-        $(document).bind('couponsinc:clipped', updatePrintButton);
+        $(document).bind('couponsinc:clipped couponsinc:unclipped', updatePrintButton);
         $(document).on('couponsinc:clip-effect-started', '.mod-printcontrol', handleEffectStarted);
     }
     /**

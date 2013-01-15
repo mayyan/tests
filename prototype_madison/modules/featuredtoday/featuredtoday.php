@@ -2,9 +2,10 @@
 
 function renderFeaturedToday($size) {
     global $Config;
+    global $offset;
 
     if ($size == ModuleSize_Super || $size == ModuleSize_Double || $size == ModuleSize_Grid) {
-        if ($Config["TakeOver"] == 1) {
+        if ($Config["TakeOver"] == 1 && $offset == 0) {
             $imgSrc = "images/yoplait-logo.jpg";
             $brand = "Yoplait&reg;";
         } else {
