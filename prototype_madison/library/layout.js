@@ -17,7 +17,7 @@ APP_COUPONSINC.layout = (function ($) {
 
         modIntronagbar   = $("mod-intronagbar"),
         modStalker       = $(".mod-stalker"),
-        modBelowStalker  = modStalker.next(),
+        modBelowStalker  = $(".wrapper"),
         stalkerOffsetTop = modStalker.offset().top,
 
         didScroll = false,
@@ -33,13 +33,15 @@ APP_COUPONSINC.layout = (function ($) {
 
             body.addClass("fixed-header");
 
-            var left = $("#main").offset().left + (mainRegion.outerWidth() - modStalker.outerWidth()) / 2;
-            modStalker.css("left", left);
+            //var left = $("#main").offset().left + (mainRegion.outerWidth() - modStalker.outerWidth()) / 2;
+            //modStalker.css("left", left);
 
         } else { /* toState === "static" */
 
             body.removeClass("fixed-header");
-            modStalker.css("left", "auto");
+            //modStalker.css("left", "auto");
+
+            //$(".mod-leavebehind").hide();
 
         }
     }
@@ -90,6 +92,8 @@ APP_COUPONSINC.layout = (function ($) {
      */
     function processScroll() {
         var windowScrollTop  = win.scrollTop();
+
+        console.log("windowScrollTop=" + windowScrollTop + ", stalkerOffsetTop=" + stalkerOffsetTop);
 
         if (windowScrollTop > stalkerOffsetTop) {
             changeStalker("fixed");

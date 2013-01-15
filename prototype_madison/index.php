@@ -7,7 +7,6 @@ $catid  = empty($_GET["catid"]) ? "" : $_GET["catid"];
 
 require_once(APPLICATION_PATH . "library/constants.php");
 require_once(APPLICATION_PATH . "modules/header/header.php");
-require_once(APPLICATION_PATH . "modules/takeover/takeover.php");
 require_once(APPLICATION_PATH . "modules/stalker/stalker.php");
 require_once(APPLICATION_PATH . "modules/hero/hero.php");
 require_once(APPLICATION_PATH . "modules/gallery/gallery.php");
@@ -39,7 +38,7 @@ if ($action == "paginate") {
 
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/takeover/takeover.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/leavebehind.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/hero/hero.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
@@ -66,7 +65,7 @@ if ($action == "paginate") {
         <?php echo renderHeader() ?>
 
         <?php if ($Config["TakeOver"] == 1) { ?>
-            <?php echo renderTakeover(); ?>
+            <?php //echo renderTakeover(); ?>
         <?php } ?>
 
         <?php echo renderHero(); ?>
@@ -118,6 +117,7 @@ if ($action == "paginate") {
 <script src="library/pod_printable_urban.js"></script>
 <script src="modules/header/header.js"></script>
 <script src="modules/hero/hero.js"></script>
+<!--script src="modules/leavebehind/leavebehind.js"></script-->
 <script src="modules/printcontrol/printcontrol.js"></script>
 <script src="modules/gallery/gallery.js"></script>
 <script src="modules/featuredtoday/featuredtoday.js"></script>

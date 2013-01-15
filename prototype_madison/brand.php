@@ -19,9 +19,12 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css">
     <link media="screen" rel="stylesheet" type="text/css" href="library/common.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/one-column-layout.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="library/brand.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/promo.css" >
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/leavebehind.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/brandLeavebehind.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/categories/categories.css">

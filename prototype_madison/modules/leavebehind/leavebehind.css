@@ -1,0 +1,19 @@
+.mod-leavebehind {
+	background: #e8e7e3;
+	/*display: none;*/
+    height: 0;
+    overflow: hidden;
+
+    -webkit-transition: height 1s; /* Safari and Chrome */
+         -o-transition: height 1s; /* Opera */
+            transition: height 1s;
+}
+.fixed-header .mod-leavebehind {
+	height: auto;
+}
+
+.mod-leavebehind .frame {
+    margin: 20px auto;
+    max-width: 980px;
+}
+

@@ -1,11 +1,15 @@
 .mod-stalker {
-    background-color: #ebebea;
+    
     /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);*/
     width: 100%;
     border-bottom: 1px solid #CCCBCB;
     box-shadow: 1px 0 #FFFFFF;
 }
-.mod-stalker .content {
+.mod-stalker .discovery-bar {
+    background-color: #dddad5;
+}
+
+.mod-stalker .discovery-bar .content{
     margin: auto;
     max-width: 980px;
     position: relative;
