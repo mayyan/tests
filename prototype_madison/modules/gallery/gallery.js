@@ -318,6 +318,22 @@ APP_COUPONSINC.gallery = (function ($) {
         module.load(offset, size, module.handleLoadSuccess);
     }
 
+    function handleSelectAll(event) {
+        var target = $(event.target);
+
+        if (target.is(':checked')) {
+            doc.trigger("couponsinc:clipped", {
+                "all": true,
+                "count": APP_COUPONSINC.contextData.gallery.totalPods
+            });
+        } else {
+            doc.trigger("couponsinc:unclipped", {
+                "all": true,
+                "count": APP_COUPONSINC.contextData.gallery.totalPods
+            });
+        }
+    }
+
     /**
      * Maintain "Go to Top | Clip All" at the bottom of window
      * and inside gallery
@@ -350,6 +366,7 @@ APP_COUPONSINC.gallery = (function ($) {
 
         moreButton.click(module.handleMoreClick);
         $(".goto-top", body).click(handleGotoClick);
+        $(".selectall-chk", body).click(handleSelectAll);
         //$(window).resize(handleResize);
         //$(document).bind("couponsinc:layoutChanged", handleLayoutChanged);
         doc.bind("couponsinc:windowScrolled", handleWindowScrolled);

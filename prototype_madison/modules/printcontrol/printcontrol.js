@@ -17,20 +17,24 @@ APP_COUPONSINC.printcontrol = (function ($) {
     }
 
     function updatePrintButton(e, params) {
-        var podIdWithEffect = params.podIds[0],
+        var podIdWithEffect = (params.podIds && params.podIds.length > 0) ? params.podIds[0] : -1,
             printBtn = $(".print-button", body),
             numberSection = $(".number", printBtn),
-            count = parseInt(numberSection.text(), 10);
+            count = parseInt(numberSection.text(), 10),
+            diff = params.count ? params.count : params.podIds.length;
 
         if (e.type === 'couponsinc:clipped') {
             showTransferEffect(podIdWithEffect);
-            numberSection.html(count + 1);
+            numberSection.html(count + diff);
         } else {
-            numberSection.html(count - 1);
+            numberSection.html(count - diff);
         }
     }
 
     function showTransferEffect(podId) {
+        if (podId < 0) {
+            return;
+        }
         var effectElement = $('.couponcarrier-transfer-clipped'),
             podImage = $("#couponsinc-gallery-POD" + podId + " .pod-image");
 

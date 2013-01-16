@@ -82,7 +82,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
         "User":{"IsLoggedIn":0,"DetectedZip":"94043","SuperSaver":0,"SavingsClub":0,"CouponClubMember":{"Status":0,"Newsletter":0,"ExpDate":"01\/01\/1900"}},
         "gallery" : {
             "podsPerPage": 21,
-            "totalPods": 298,
+            "totalPods": 6,
             "podCache": <?php echo renderPodCacheOnPage(0); ?>
         },
         "catid"  : "<?php echo $catid ?>",

@@ -72,7 +72,17 @@ function renderBrandGallery() {
             </div> <!-- .row -->
         </div> <!-- .page -->
     </div> <!-- .pages -->
+
+    <div class="tools">
+        <div class="selectall">
+            <input type="checkbox" class="selectall-chk" id="couponsinc-gallery-selectall">
+            <label for="couponsinc-gallery-selectall">Clip All</label>
+        </div>
+        <a href="#top" class="goto-top inactive">Back to Top</a>
+    </div>
+
 </div> <!--mod-gallery -->
+HTML;
 HTML;
 
     return $html;
