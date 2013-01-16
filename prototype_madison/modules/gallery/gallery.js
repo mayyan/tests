@@ -426,6 +426,8 @@ APP_COUPONSINC.gallery = (function ($) {
         handleMoreClick: handleMoreClick,
         handleLoadSuccess: handleLoadSuccess,
 
+        attachDataToPod: attachDataToPod,
+
         /* Analytics */
         currPageNum: currPageNum,
 

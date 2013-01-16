@@ -19,7 +19,12 @@ APP_COUPONSINC.featuredtoday = (function ($) {
         moduleBody = $(".featuredtoday");
 
     function onDialogOpen() {
-        $(".mod-featuredtoday-flyout .close-button").click(function() {
+        var flyout = $(".mod-featuredtoday-flyout"),
+            pods = $(".pod", flyout);
+
+        APP_COUPONSINC.gallery.attachDataToPod(pods, APP_COUPONSINC.contextData.gallery.podCache);
+        
+        $(".close-button", flyout).click(function() {
             $('.flyout-inner').dialog("destroy");
         });
     }
