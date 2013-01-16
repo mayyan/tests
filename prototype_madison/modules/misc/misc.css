@@ -1,9 +1,9 @@
 .mod-miscellaneous {
     background: #f3ebe0;
 
-    -webkit-box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.5);
-       -moz-box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.5);
-            box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.5);
+    -webkit-box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);
+       -moz-box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);
+            box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);
 }
 .mod-miscellaneous .content {
     margin: 0 auto;

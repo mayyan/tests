@@ -20,13 +20,12 @@ function renderBrandGallery() {
         <div class="page">
 
             <div class="row">
-                    <div class="column grid_2">
-                        <h1>Featured Yoplait Offers</h1>
-                    </div>
+                <div class="column grid_2">
+                    <h1>Featured Yoplait Offers</h1>
+                </div>
 
-                    <div class="column grid_1">
-                        <fb:like action="like" show_faces="false" width="90" layout="button_count" send="false" href="http://www.facebook.com/couponscom" />
-                    </div>
+                <div class="column grid_1">
+                    <fb:like action="like" show_faces="false" width="90" layout="button_count" send="false" href="http://www.facebook.com/couponscom" />
                 </div>
             </div>
 
