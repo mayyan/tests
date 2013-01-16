@@ -35,6 +35,7 @@ if ($action == "paginate") {
     <link media="screen" rel="stylesheet" type="text/css" href="library/common.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/one-column-layout.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/promo.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="library/menu.css" >
 
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >

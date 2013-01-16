@@ -22,6 +22,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="library/one-column-layout.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/brand.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/promo.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="library/menu.css" >
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/leavebehind.css" >
@@ -57,7 +58,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
 
             <div id="main">
 
-                <?php echo renderBranchGallery(); ?>
+                <?php echo renderBrandGallery(); ?>
 
             </div> <!-- #main -->
 

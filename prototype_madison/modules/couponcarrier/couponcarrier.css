@@ -1,5 +1,5 @@
 .mod-couponcarrier {
-    margin-top: 15px;
+    margin: 15px;
 }
 .mod-couponcarrier.is-active-user .active-user {
     display: inline-block;

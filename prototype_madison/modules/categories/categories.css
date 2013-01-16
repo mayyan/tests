@@ -1,5 +1,6 @@
 .mod-categories {
     position: relative;
+    padding: 0 15px;
 }
 .mod-categories .curr-category {
     color: #666666;
@@ -14,22 +15,19 @@
     margin-left: 10px;
 }
 .mod-categories .all-categories {
-    background: none repeat scroll 0 0 #EBEBEA;
+    background: #dddad5;
     height: 0;
-    margin-left: -16px;
+    margin-left: -15px;
     overflow: hidden;
-    padding-left: 25px;
+    padding-left: 15px;
     position: absolute;
     top: 50px;
     white-space: nowrap;
-    border: 1px solid #CCCBCB;
-    border-top-width: 0;
-    box-shadow: 1px 0 #FFFFFF inset;
 
 
-    -webkit-transition: height 1s, border-top-width 1s; /* Safari and Chrome */
-         -o-transition: height 1s, border-top-width 1s; /* Opera */
-            transition: height 1s, border-top-width 1s;
+    -webkit-transition: height 1s; /* Safari and Chrome */
+         -o-transition: height 1s; /* Opera */
+            transition: height 1s;
 }
 .mod-categories:hover .all-categories {
     height: 150px;
@@ -40,14 +38,16 @@
 .mod-categories .all-categories ul {
     display: inline-block;
     margin-right: 25px;
+    margin-top: 10px;
     vertical-align: top;
 }
 .mod-categories li a {
     text-decoration: none;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #08B4DF;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 2.2em;
+    font-weight: bold;
+    color: #666;
 }
 .mod-categories li.selected a .title {
     font-weight: bold;

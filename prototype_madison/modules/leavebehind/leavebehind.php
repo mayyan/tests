@@ -1,15 +1,22 @@
 <?php
 
 function renderLeaveBehind() {
-    $html =<<<HTML
-<div class="mod-leavebehind">
+	global $Config;
+	global $configIndex;
 
-    <div class="frame">
-        <img src="images/pushdown.jpg" width="980" height="90">
-    </div>
+	$html = '';
 
-</div>
+	if ($Config['TakeOver'] == 1) {
+	    $html .=<<<HTML
+	<div class="mod-leavebehind">
+
+	    <div class="frame">
+	        <a href="brand.php?config={$configIndex}"><img src="images/pushdown.jpeg" width="980" height="90"></a>
+	    </div>
+
+	</div>
 HTML;
+	} 
 
     return $html;
 }

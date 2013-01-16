@@ -1,10 +1,10 @@
 <?php
 function renderCategories() {
     $html =<<<HTML
-<div class="mod-categories">
+<div class="module mod-categories">
 
     <div class="curr-category">
-        <span>All Coupons</span><span class="triangle triangle-down">&nbsp;</span>
+        <span>All Categories</span><span class="triangle triangle-down">&nbsp;</span>
     </div>
 
     <div class="all-categories">

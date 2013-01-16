@@ -24,7 +24,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
 </head>
 <body>
     <div class="wrapper">
-        <div class="shadow">
+        <div class="">
             <div id="header">
                 <?php echo renderHeader(false); // false = no nav?>
             </div> <!-- #header -->

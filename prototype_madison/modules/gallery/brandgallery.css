@@ -3,8 +3,14 @@
     border-radius: 6px 6px 6px 6px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
-.mod-gallery .primary {
-    padding: 10px 0;
-    width: 300px;
-    margin: 0 15px 15px 3px;
+.mod-gallery {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.mod-gallery h1 {
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 25px;
 }

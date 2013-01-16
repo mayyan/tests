@@ -1,12 +1,13 @@
 <?php
 function renderMREC($isFirstPage) {
     global $Config;
+    global $configIndex;
     
     if ($Config["TakeOver"] == 1) {
 
         $html =<<<HTML
 <div data-popup="0" data-inhouse="0" class="mod-ads container-300x250">
-    <img alt="Advertise with us" src="images/mrec.jpg">
+    <a href="brand.php?config={$configIndex}"><img alt="Advertise with us" src="images/mrec.jpg"></a>
 </div>
 HTML;
 

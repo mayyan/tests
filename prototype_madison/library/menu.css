@@ -1,0 +1,181 @@
+
+/*#pcm{display:none;}*/
+ul.cssMenu ul{
+	/*display:none;*/
+	display:block;
+}
+ul.cssMenu li:hover>ul {
+	display:block;
+}
+ul.cssMenu ul{position: absolute;left:-1px;top:98%;}
+ul.cssMenu ul ul{position: absolute;left:98%;top:-2px;}
+ul.cssMenu,ul.cssMenu ul {
+	margin:0px;
+	list-style:none;
+	padding:0px 1px 1px 0px;
+	/*background-color:#A5A5A5;
+	background-repeat:repeat;
+	border-color:#A6A6A6;
+	border-width:0px;
+	border-style:solid;*/
+}
+ul.cssMenu table {border-collapse:collapse}
+ul.cssMenu {
+	display:block;
+	zoom:1;
+	float: left;
+}
+ul.cssMenu ul{
+	width:140.70000000000002px;
+}
+ul.cssMenu li{
+	display:block;
+	/*margin:1px 0px 0px 1px;*/
+	font-size:0px;
+}
+ul.cssMenu a:active, ul.cssMenu a:focus {
+outline-style:none;
+}
+ul.cssMenu a, ul.cssMenu li.dis a:hover, ul.cssMenu li.sep a:hover {
+	display:block;
+	vertical-align:middle;
+	background: #dddad5;
+	border-width:0px;
+	border-color:#FCEEB0;
+	border-style:solid;
+	text-align:left;
+	text-decoration:none;
+	padding:5px;
+	_padding-left:0;
+	/*font:normal 11px Arial;*/
+	font: bold 11px "helvetica neue";
+	color: #666;
+	text-decoration:none;
+	cursor:pointer;
+}
+ul.cssMenu span{
+	overflow:hidden;
+}
+ul.cssMenu li {
+	float:left;
+}
+ul.cssMenu ul li {
+	float:none;
+}
+ul.cssMenu ul a {
+	text-align:left;
+	white-space:nowrap;
+	padding-left: 15px;
+}
+ul.cssMenu li.sep{
+	text-align:left;
+	padding:0px;
+	line-height:0;
+	height:100%;
+}
+ul.cssMenu li.sep span{
+	float:none;	padding-right:0;
+	width:3;
+	height:100%;
+	display:inline-block;
+	background-color:#A6A6A6;	background-image:none;}
+ul.cssMenu ul li.sep span{
+	width:100%;
+	height:3;
+}
+ul.cssMenu li:hover{
+	position:relative;
+}
+ul.cssMenu li:hover>a{
+	/*background-color:#FF1C1C;*/
+	border-color:#4C99AB;
+	border-style:solid;
+	/*font:normal 11px Arial;*/
+	font: bold 11px "helvetica neue";
+	/*color: #FFFFFF;*/
+	text-decoration:none;
+}
+ul.cssMenu li a:hover{
+	position:relative;
+	/*background-color:#FF1C1C;*/
+	border-color:#4C99AB;
+	border-style:solid;
+	/*font:normal 11px Arial;*/
+	font: bold 11px "helvetica neue";
+	/*color: #FFFFFF;*/
+	text-decoration:none;
+}
+ul.cssMenu li.dis a {
+	color: #AAAAAA !important;
+}
+ul.cssMenu img {border: none;float:left;_float:none;margin-right:5px;width:16px;
+height:16px;
+}
+ul.cssMenu ul img {width:16px;
+height:16px;
+}
+ul.cssMenu img.over{display:none}
+ul.cssMenu li.dis a:hover img.over{display:none !important}
+ul.cssMenu li.dis a:hover img.def {display:inline !important}
+ul.cssMenu li:hover > a img.def  {display:none}
+ul.cssMenu li:hover > a img.over {display:inline}
+ul.cssMenu a:hover img.over,ul.cssMenu a:hover ul img.def,ul.cssMenu a:hover a:hover ul img.def,ul.cssMenu a:hover a:hover a:hover ul img.def,ul.cssMenu a:hover a:hover img.over,ul.cssMenu a:hover a:hover a:hover img.over,ul.cssMenu a:hover a:hover a:hover a:hover img.over{display:inline}
+ul.cssMenu a:hover img.def,ul.cssMenu a:hover ul img.over,ul.cssMenu a:hover a:hover ul img.over,ul.cssMenu a:hover a:hover a:hover ul img.over,ul.cssMenu a:hover a:hover img.def,ul.cssMenu a:hover a:hover a:hover img.def,ul.cssMenu a:hover a:hover a:hover a:hover img.def{display:none}
+ul.cssMenu a:hover ul,ul.cssMenu a:hover a:hover ul,ul.cssMenu a:hover a:hover a:hover ul{display:block}
+ul.cssMenu a:hover ul ul,ul.cssMenu a:hover a:hover ul ul{display:none}
+ul.cssMenu span{
+	display:block;
+	background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arrv_blue_2.gif);
+	background-position:right center;
+	background-repeat: no-repeat;
+   padding-right:8px;}
+ul.cssMenu li:hover>a>span{	
+	/*background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arrv_white_2.gif);*/
+	background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arrv_blue_2.gif);
+}
+ul.cssMenu a:hover span{	
+	/*_background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arrv_white_2.gif);*/
+	_background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arrv_blue_2.gif);
+}
+ul.cssMenu ul span,ul.cssMenu a:hover table span {
+	background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arr_blue_2.gif);
+}
+ul.cssMenu ul li:hover > a span{	
+	/*background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arr_white_2.gif);*/
+	background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arr_blue_2.gif);
+}
+ul.cssMenu table a:hover span,ul.cssMenu table a:hover a:hover span,ul.cssMenu table a:hover a:hover a:hover span {
+	/*background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arr_white_2.gif);*/
+	background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arr_blue_2.gif);
+}
+ul.cssMenu table a:hover table span,ul.cssMenu table a:hover a:hover table span {
+	background-image:url(http://purecssmenu.com/ssc-data/templates/clear-2/images/arr_blue_2.gif);
+}
+/*ul.cssMenu li a.cssMenui0{
+	font:n;
+}
+ul.cssMenu li a.cssMenui0:hover{
+	font:o;
+}*/
+
+/******************** My customization ****************/
+ul.cssMenu .cssMenui0 {
+	padding: 13px 12px 13px 12px;
+}
+ul.cssMenu .cssMenui0 a span {
+	text-transform: uppercase;
+}
+
+
+
+
+ul.cssMenu li.cssMenui0>ul {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 1s;
+         -o-transition: height 1s;
+            transition: height 1s;
+}
+ul.cssMenu li.cssMenui0:hover>ul {
+	height: 150px;
+}
