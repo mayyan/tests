@@ -26,18 +26,18 @@ function renderHero() {
 					<article>
                         <a href="brand.php?config={$configIndex}">
                             <div class=info></div>
-                            <img src="images/slide1.jpg" />
+                            <img src="images/Yoplait_Hero1_20130115.png" />
                         </a>
 					</article>
 
 					<article>
 						<div class=info></div>
-						<img src="images/slide2.jpg" />
+						<img src="images/Yoplait_Hero1b_20130115.png" />
 					</article>
 
 					<article>
 						<div class=info></div>
-						<img src="images/slide3.jpg" />
+						<img src="images/Yoplait_Hero3b_20130115.png" />
 					</article>
 
 				</div> <!-- .inner -->

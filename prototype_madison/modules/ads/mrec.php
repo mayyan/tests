@@ -7,7 +7,7 @@ function renderMREC($isFirstPage) {
 
         $html =<<<HTML
 <div data-popup="0" data-inhouse="0" class="mod-ads container-300x250">
-    <a href="brand.php?config={$configIndex}"><img alt="Advertise with us" src="images/mrec.jpg"></a>
+    <a href="brand.php?config={$configIndex}"><img alt="Advertise with us" src="images/Yoplait_300x250_20130115.png"></a>
 </div>
 HTML;
 

@@ -72,7 +72,7 @@ function renderFeaturedTodayDialog() {
     
     $pods = renderFeaturedTodayPods();
 
-    $imgSrc = ($Config["TakeOver"] == 1) ? "" : "http://cdn.cpnscdn.com/static.coupons.com/images/cprimages/743/11743_2_prgId.gif";
+    $imgSrc = ($Config["TakeOver"] == 1) ? "images/Yoplait_FT_Banner_20130115.png" : "http://cdn.cpnscdn.com/static.coupons.com/images/cprimages/743/11743_2_prgId.gif";
 
     $html = <<<HTML
 <div data-program="11743" class="mod-featuredtoday-flyout">
