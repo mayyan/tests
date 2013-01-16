@@ -21,13 +21,13 @@ function renderStalker() {
 
     <div class="discovery-bar">
         <div class="content">
-            <ul class="cssMenu module">
+            <ul class="cssMenu">
                 {$modSiteNav}
-            </ul>
+            
 
-            {$modCategories}
+                {$modCategories}
 
-            <ul class="cssMenu module">
+            
                 {$modSortControl}
             </ul>
 

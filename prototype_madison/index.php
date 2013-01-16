@@ -42,8 +42,10 @@ if ($action == "paginate") {
     <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/leavebehind.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/hero/hero.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/sitenav/sitenav.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/categories/categories.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/sortcontrol/sortcontrol.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/printcontrol/printcontrol.css">
 
 

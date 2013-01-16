@@ -28,8 +28,10 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/leavebehind.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/brandLeavebehind.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/sitenav/sitenav.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/categories/categories.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/sortcontrol/sortcontrol.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/printcontrol/printcontrol.css">
 
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
