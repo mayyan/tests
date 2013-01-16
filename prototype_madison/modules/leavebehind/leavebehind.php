@@ -11,7 +11,7 @@ function renderLeaveBehind() {
 	<div class="mod-leavebehind">
 
 	    <div class="frame">
-	        <a href="brand.php?config={$configIndex}"><img src="images/pushdown.jpeg" width="980" height="90"></a>
+	        <a href="brand.php?config={$configIndex}"><img src="images/pushdown.jpeg" width="100%"></a>
 	    </div>
 
 	</div>

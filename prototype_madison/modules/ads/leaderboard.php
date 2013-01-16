@@ -9,7 +9,7 @@ function renderLeaderBoardAds() {
     if ($Config["TakeOver"] == 1) {
         $html .=<<<HTML
 <div data-popup="0" data-inhouse="0" class="mod-ads container-728x90">
-    <a href="brand.php?config={$configIndex}"><img width="728" hight="90" src="images/leaderboard.jpg"></a>
+    <a href="brand.php?config={$configIndex}"><img width="100%" src="images/leaderboard.jpg"></a>
 </div>
 HTML;
 

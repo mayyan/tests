@@ -1,0 +1,79 @@
+/*  SECTIONS  */
+.row {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.column {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+/*.column:first-child { margin-left: 0; }*/
+/*  GROUPING  */
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+/*And this is the code for the three and four column layout:*/
+
+/*  3 column gallery  */
+@media only screen and (min-width: 980px) {
+    .column:first-child { margin-left: 0; }
+    .gird_3 {
+        width: 100%;
+    }
+    .grid_2 {
+        width: 66.1%;
+    }
+    .grid_2 .grid_2 {
+        width: 100%;
+    }
+    .grid_1 {
+        width: 32.2%;
+    }
+    .grid_2 .grid_1 {
+        width: 49.2%;
+    }
+}
+/*  2 column gallery  */
+@media only screen and (max-width: 979px) and (min-width: 620px) {
+    .column:first-child { margin-left: 0; }
+    .column:last-child { margin-left: 0; }
+    .grid_3 {
+        width: 100%;
+    }
+    .grid_2 {
+        width: 100%;
+    }
+    /*.grid_1 {
+        width: 100%;
+    }*/
+    .grid_2 .grid_1 {
+        width: 49.2%;
+    }
+}
+/*  1 column gallery  */
+@media only screen and (max-width: 619px) {
+    .column { margin-left: 0; }
+    .grid_3 {
+        width: 100%;
+    }
+    .grid_2 {
+        width: 100%;
+    }
+    .grid_1 {
+        width: 100%;
+    }
+}
+
+
+
+

@@ -102,12 +102,12 @@
  */
 .mod-gallery .more {
     text-align: center;
-    width: 940px;
+    width: 95%;
 }
 .mod-gallery .more button {
     margin: 12px auto 20px auto;
     padding: 9px;
-    width: 900px;
+    width: 100%;
     cursor: pointer;
 }
 
