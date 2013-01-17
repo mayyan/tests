@@ -1,10 +1,11 @@
 <?php
 function renderHeader($showNav = true) {
+    global $configIndex;
     $nav = ($showNav) ? renderNav() : "";
 
     $html =<<<HTML
 <div class="mod-header">
-    <a title="Return to the homepage" class="company-logo" href="/">
+    <a title="Return to the homepage" class="company-logo" href="./?config={$configIndex}">
         <img width="173" height="71" src="images/coupons-logo.png" alt="Coupons.com" />
     </a>
 

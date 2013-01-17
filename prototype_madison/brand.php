@@ -34,7 +34,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="modules/couponcarrier/couponcarrier.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/printcontrol/printcontrol.css">
 
-    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/grid.css" >
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/responsive_grid.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/pod.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/gallery.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/gallery/brandgallery.css" >
