@@ -29,7 +29,7 @@ function getStatus() {
         $html =<<<HTML
 <div class="middle takeover">
     <p class="takeover-action">Brought to you by:</p>
-    <img width="188" height="130" src="images/yoplait-logo.jpg">
+    <img width="188" height="130" src="images/yoplait-188x130.png">
 </div>
 HTML;
     } else {

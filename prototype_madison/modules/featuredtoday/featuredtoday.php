@@ -6,7 +6,7 @@ function renderFeaturedToday($size) {
 
     if ($size == ModuleSize_Super || $size == ModuleSize_Double || $size == ModuleSize_Grid) {
         if ($Config["TakeOver"] == 1 && $offset == 0) {
-            $imgSrc = "images/yoplait-logo.jpg";
+            $imgSrc = "images/yoplait-80x100.png";
             $brand = "Yoplait&reg;";
         } else {
             $imgSrc = "http://cdn.cpnscdn.com/static.coupons.com/images/cprimages/743/11743_1_prgId.gif";

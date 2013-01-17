@@ -32,7 +32,7 @@ function renderHero() {
 
 					<article>
 						<div class=info></div>
-						<img src="images/Yoplait_Hero1b_20130115.png" />
+						<img src="images/Recipe_Hero_Banners_20130116.png" />
 					</article>
 
 					<article>
