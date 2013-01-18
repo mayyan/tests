@@ -112,6 +112,9 @@ ul.cssMenu .triangle-down {
 ul.cssMenu .triangle-left {
 	border-width: 4px 6px;
 }
+ul.cssMenu li.cssMenui0:first-child {
+	padding-left: 0;
+}
 
 
 ul.cssMenu li.cssMenui0>ul.cssMenu-sub {

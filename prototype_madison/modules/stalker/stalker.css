@@ -9,7 +9,7 @@
     background-color: #dddad5;
 }
 
-.mod-stalker .discovery-bar .content{
+.mod-stalker .discovery-bar .content {
     margin: auto;
     max-width: 980px;
     position: relative;
@@ -36,8 +36,39 @@
 .toolbarBodyShift.fixed-header .mod-stalker {
     top: 34px; /* toolbar height */
 }
+.mod-stalker .discovery-bar .logo,
+.mod-stalker .discovery-bar .cssMenu {
+    float: left;
+}
 
 
+.mod-stalker .logo-container {
+    height: 50px;
+    width: 55px;
+    overflow: hidden;
+    position: absolute;
+}
+.mod-stalker .cssMenu {
+    margin-left: 0;
+
+    -webkit-transition: margin-left 0.5s linear 0;
+}
+.mod-stalker .logo {
+    position: absolute;
+    top: 50px;
+
+    -webkit-transition: top 0.5s linear 0;
+}
+.fixed-header .mod-stalker .cssMenu {
+    margin-left: 55px;
+
+    /*-webkit-transition: margin-left 0.5s linear 0.5s;*/
+}
+.fixed-header .mod-stalker .logo {
+    top: 0;
+
+    /*-webkit-transition: top 0.5s linear 0;*/
+}
 
 /***************************
  * Module sitenav

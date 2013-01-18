@@ -7,6 +7,8 @@ require_once(APPLICATION_PATH . "modules/couponcarrier/couponcarrier.php");
 require_once(APPLICATION_PATH . "modules/printcontrol/printcontrol.php");
 
 function renderStalker() {
+    global $configIndex;
+    
     $modLeaveBehind  = renderLeaveBehind();
     $modSiteNav      = renderSiteNav();
     $modCategories   = renderCategories();
@@ -21,6 +23,11 @@ function renderStalker() {
 
     <div class="discovery-bar">
         <div class="content">
+
+            <div class="logo-container">
+                <a href="./?config={$configIndex}"><img height="50" width="55" class="logo" src="images/coupons-logo.png" /></a>
+            </div>
+
             <ul class="cssMenu">
                 {$modSiteNav}
             
