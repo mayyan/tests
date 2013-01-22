@@ -17,7 +17,7 @@ APP_COUPONSINC.PodSaveToCard = APP_COUPONSINC.Pod.extend((function ($) {
 	}
 
 	function addToCard() {
-		alert("addToCard " + this.data.podId);
+		alert("You are about to add pod " + this.data.podId);
 
 		var podObject = this;
 

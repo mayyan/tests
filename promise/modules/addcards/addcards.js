@@ -98,6 +98,7 @@ APP_COUPONSINC.addcards = (function ($) {
 				// the pod is NOT available to the new set of user's cards
 				console.log(STATUS_FAIL_NO_COMMON_STORES);
 				def.reject(STATUS_FAIL_NO_COMMON_STORES);
+				APP_COUPONSINC.utils.displayMsg(STATUS_FAIL_NO_COMMON_STORES);
 			}
 
 		} else {

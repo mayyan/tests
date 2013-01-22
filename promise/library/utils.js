@@ -25,9 +25,16 @@ APP_COUPONSINC.utils = (function ($) {
 		return unique;
 
 	}
+
+	function displayMsg(msg) {
+		$(".flyout-inner")
+			.html(msg)
+			.dialog({"modal": true});
+	}
 	
 	return {
 		arrayIntersection: arrayIntersection,
-		arrayUnique: arrayUnique
+		arrayUnique: arrayUnique,
+		displayMsg: displayMsg
 	};
 }(jQuery));

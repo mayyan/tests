@@ -52,7 +52,7 @@ APP_COUPONSINC.contextData = {
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
 
 <script src="library/utils.js"></script>
-<script src="library/classHelper.js"></script>
+<script src="library/classhelper.js"></script>
 <script src="library/pod.js"></script>
 <script src="library/pod_savetocard.js"></script>
 <script src="modules/gallery/gallery.js"></script>
