@@ -40,8 +40,8 @@ echo<<<HTML
 var APP_COUPONSINC = {};
 APP_COUPONSINC.contextData = {
 	"userState": {
-		"loggedIn": true,
-		"stores": ["Safeway"]
+		"loggedIn": false,
+		"stores": []
 	},
 	"gallery": {
 		"podCache" : {$podCacheJSON}
