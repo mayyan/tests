@@ -1,13 +1,16 @@
 .mod-miscellaneous {
-    background: #f3ebe0;
+    /*background: #f3ebe0;
 
     -webkit-box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);
        -moz-box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);
-            box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);
+            box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.2);*/
 }
 .mod-miscellaneous .content {
     margin: 0 auto;
     max-width: 980px;
+}
+.mod-miscellaneous .content-bottom {
+    background-color: #dddad5;
 }
 .mod-miscellaneous .promos li {
     margin-left: 18px;

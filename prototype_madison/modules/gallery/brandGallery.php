@@ -25,17 +25,17 @@ function renderBrandGallery() {
                 </div>
 
                 <div class="column grid_1">
-                    <ul class="horizontal-list">
-                        <li>
+                    <ul class="share-buttons horizontal-list">
+                        <li class="fb">
                             <fb:like send="false" layout="button_count" width="450" show_faces="false" font="arial" action="recommend" href="http://www.coupons.com"></fb:like>
                         </li>
 
-                        <li>
+                        <li class="tw">
                             <a href="http://t.co/SZ4bWq3h" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </li>
 
-                        <li>
+                        <li class="pin">
                             <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Ft.co%2FSZ4bWq3h&media=http%3A%2F%2Fcdn.cpnscdn.com%2Finsight.coupons.com%2FCOS20%2F_Cache%2F_ImageCache%2F381%2F17608381.gif&description=Love%20Yoplait" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
                             <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
                         </li>

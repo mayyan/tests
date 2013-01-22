@@ -8,8 +8,12 @@ function renderMisc($bottomOnly = false) {
 <div class="mod-miscellaneous">
     <div class="content">
         {$top}
+    </div>
 
-        {$bottom}
+    <div class="content-bottom">
+        <div class="content">
+            {$bottom}
+        </div>
     </div>
 </div>
 HTML;

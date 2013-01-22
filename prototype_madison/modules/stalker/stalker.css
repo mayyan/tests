@@ -49,9 +49,9 @@
     position: absolute;
 }
 .mod-stalker .cssMenu {
-    margin-left: 0;
+   margin-left: 55px;
 
-    -webkit-transition: margin-left 0.5s linear 0;
+    /*-webkit-transition: margin-left 0.5s linear 0;*/
 }
 .mod-stalker .logo {
     position: absolute;
@@ -60,7 +60,7 @@
     -webkit-transition: top 0.5s linear 0;
 }
 .fixed-header .mod-stalker .cssMenu {
-    margin-left: 55px;
+    /*margin-left: 55px;*/
 
     /*-webkit-transition: margin-left 0.5s linear 0.5s;*/
 }
@@ -69,34 +69,3 @@
 
     /*-webkit-transition: top 0.5s linear 0;*/
 }
-
-/***************************
- * Module sitenav
- ***************************/
-/*.mod-sitenav {
-    margin-top: 15px;
-}
-.mod-sitenav .triangle-down {
-    bottom: 15px;
-}
-
-.mod-sortcontrol .curr-sort {
-    color: #666666;
-    font-family: "helvetica neue";
-    font-size: 10px;
-    font-weight: bold;
-    padding: 20px 0;
-    text-transform: uppercase;
-}
-.mod-sortcontrol .triangle-down {
-    bottom: 1px;
-    margin-left: 10px;
-}
-
-.mod-zipcode .curr-zip {
-    padding: 20px 0;
-}
-.mod-zipcode .triangle-down {
-    bottom: 0;
-    margin-left: 10px;
-}*/

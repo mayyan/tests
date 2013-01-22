@@ -14,3 +14,10 @@
 	font-weight: bold;
 	padding-bottom: 25px;
 }
+
+.mod-gallery .share-buttons li {
+	vertical-align: top;
+}
+.mod-gallery .share-buttons li.tw {
+	width: 77px !important; /* reduce the space in between. faking it for the demo */
+}
