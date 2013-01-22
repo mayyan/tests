@@ -1,0 +1,21 @@
+.pod {
+	width: 300px;
+	height: 125px;
+	border: 1px solid #000;
+	margin: 5px;
+}
+.pod.clipped {
+	background: green;
+}
+
+.ui-dialog {
+	border: 1px solid #000;
+	background: #fff;
+}
+.ui-widget-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.3;
+}
