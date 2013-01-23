@@ -25,7 +25,7 @@ function renderStalker() {
         <div class="content">
 
             <div class="logo-container">
-                <a href="./?config={$configIndex}"><img height="50" width="55" class="logo" src="images/coupons-logo.png" /></a>
+                <a href="./?config={$configIndex}"><img height="50" width="55" class="logo" src="images/mini-coupons-logo.png" /></a>
             </div>
 
             <ul class="cssMenu">
