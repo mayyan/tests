@@ -58,6 +58,7 @@ APP_COUPONSINC.contextData = {
 <script src="modules/gallery/gallery.js"></script>
 
 <script src="modules/signin/signin.js"></script>
+<script src="modules/addcards/addcardsConfirm.js"></script>
 <script src="modules/addcards/addcards.js"></script>
 <script src="modules/addtocard/addtocard.js"></script>
 </body>

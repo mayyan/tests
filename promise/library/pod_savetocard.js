@@ -35,7 +35,6 @@ APP_COUPONSINC.PodSaveToCard = APP_COUPONSINC.Pod.extend((function ($) {
 	function handleAddToCardSuccess() {
 		console.log('handleAddToCardSuccess pod ' + this.data.podId + ' has been added.');
 		this.pod.addClass("clipped");
-
 	}
 
     return {

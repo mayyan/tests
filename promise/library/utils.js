@@ -31,10 +31,23 @@ APP_COUPONSINC.utils = (function ($) {
 			.html(msg)
 			.dialog({"modal": true});
 	}
+
+	function getCommonStores(podObject) {
+		if (podObject) {
+			var userStores = APP_COUPONSINC.contextData.userState.stores,
+				podStores = podObject.data.atStores,
+				commonStores = APP_COUPONSINC.utils.arrayIntersection(userStores, podStores);
+
+			return commonStores;
+		} else {
+			return [];
+		}
+	}
 	
 	return {
 		arrayIntersection: arrayIntersection,
 		arrayUnique: arrayUnique,
-		displayMsg: displayMsg
+		displayMsg: displayMsg,
+		getCommonStores: getCommonStores
 	};
 }(jQuery));

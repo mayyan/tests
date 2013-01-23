@@ -1,13 +1,28 @@
 APP_COUPONSINC.addcards = (function ($) {
-	var def,
+	var 
+		/**
+		 * Master transaction's Promise
+		 * It includes 
+		 * 1) the dialog rendering,  
+		 * 2) wait for user's response in the dialog
+		 * 3) submit user's response
+		 * 4) submission success
+		 * 5) After all these, the master promise is resolved.
+		 */
+		def,
+
 		podObject = null,
 
+		/**
+		 * all transaction's status codes
+		 */
 		STATUS_DONE                  = "addcards.STATUS_DONE", //unused. When successful, resolve with store array
 		STATUS_CANCEL                = "addcards.STATUS_CANCEL",
 		STATUS_FAIL_GETDIALOGHTML    = "addcards.STATUS_FAIL_GETDIALOGHTML",
 		STATUS_FAIL_DOADDCARDS       = "addcards.STATUS_FAIL_DOADDCARDS",
 		STATUS_FAIL_NO_COMMON_STORES = "addcards.STATUS_FAIL_NO_COMMON_STORES";
 
+	/****** Display and handling disloag *************/
 	function getDialogHtml() {
 		$.ajax({
 			url: "modules/addcards/addcards.php",
@@ -23,6 +38,31 @@ APP_COUPONSINC.addcards = (function ($) {
 		});
 	}
 
+	function cancel() {
+		$(".flyout-inner").dialog("destroy");
+		console.log(STATUS_CANCEL);
+		def.reject(STATUS_CANCEL);
+	}
+
+	function onOpen() {
+		var dialogBody = $(".mod-addcards-flyout");
+
+		$(".submit", dialogBody).click(doAddCards); // hook up with next transaction
+
+		$(".cancel", dialogBody).click(cancel);
+	}
+
+
+	function handleGetDialogHtmlDone(html) {
+		$(".flyout-inner")
+			.html(html)
+			.dialog({
+				"modal": true,
+				"open": onOpen
+			});
+	}
+
+	/************** Submitting dialog *******************/
 	function doAddCards() {
 		var dialogBody = $(".mod-addcards-flyout"),
 			checkboxes = $("input[type=checkbox]:checked", dialogBody),
@@ -46,31 +86,6 @@ APP_COUPONSINC.addcards = (function ($) {
 			def.reject(STATUS_FAIL_DOADDCARDS);
 		});
 	}
-
-	function cancel() {
-		$(".flyout-inner").dialog("destroy");
-		console.log(STATUS_CANCEL);
-		def.reject(STATUS_CANCEL);
-	}
-
-	function onOpen() {
-		var dialogBody = $(".mod-addcards-flyout");
-
-		$(".submit", dialogBody).click(doAddCards);
-
-		$(".cancel", dialogBody).click(cancel);
-	}
-
-
-	function handleGetDialogHtmlDone(html) {
-		$(".flyout-inner")
-			.html(html)
-			.dialog({
-				"modal": true,
-				"open": onOpen
-			});
-	}
-
 	/**
 	 * If we want to refresh the page in this function, no need to resolve/reject here.
 	 * At refresh, server should be able to inform frontend with correct userState, and user's updated cards.
@@ -88,7 +103,7 @@ APP_COUPONSINC.addcards = (function ($) {
 
 		if (podObject) {
 			// triggered by adding a pod to card
-			var commonStores = getCommonStores();
+			var commonStores = APP_COUPONSINC.utils.getCommonStores(podObject);
 			if (commonStores.length > 0) {
 				// the pod is available to the new set of user's cards
 				console.log("addcards " + commonStores.join(","));
@@ -108,18 +123,12 @@ APP_COUPONSINC.addcards = (function ($) {
 		}
 	}
 
-	function getCommonStores() {
-		var userStores = APP_COUPONSINC.contextData.userState.stores,
-			podStores  = podObject.data.atStores,
-			commonStores = APP_COUPONSINC.utils.arrayIntersection(userStores, podStores);
-
-		return commonStores;
-	}
-
+	/****************** Matser transaction **********************/
 	function show() {
 		var shouldOpenDialog = true,
 			commonStores;
 
+		// Initial Promise
 		def = $.Deferred();
 
 		if (arguments[0].type === "click") {
@@ -129,7 +138,7 @@ APP_COUPONSINC.addcards = (function ($) {
 		} else {
 			podObject = arguments[0];
 
-			commonStores = getCommonStores();
+			commonStores = APP_COUPONSINC.utils.getCommonStores(podObject);
 
 			if (commonStores.length > 0) {
 				console.log("addcards " + commonStores.join(","));
@@ -139,14 +148,19 @@ APP_COUPONSINC.addcards = (function ($) {
 		} 
 
 		if (shouldOpenDialog) {
+
 			$.when(
-				APP_COUPONSINC.signin.show()
+				// APP_COUPONSINC.addcardsConfirm.show is resolve by either
+				// User's confirmation to add a card (need to confirm when the selected pod is not avaialble to user's card)
+				// No need to confirm (when the selected pod is already avaialble to user's card)
+				APP_COUPONSINC.addcardsConfirm.show(podObject)
 			).then(
 				// signin is resolved, we can show the dialog
 				getDialogHtml
 			);
 		}
 
+		// Important to return the promise, so later tranaction can be chained after this promise is resolved
 	   	return def.promise();
 	}
 

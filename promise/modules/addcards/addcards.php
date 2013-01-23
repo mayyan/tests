@@ -3,10 +3,32 @@
 $action = $_REQUEST['action'];
 
 if ($action == "render") {
+
 	echo renderAddCardsDialog();
+
 } elseif ($action == "submit") {
+
 	header('Content-type: application/json');
 	echo json_encode($_REQUEST['cards']);
+
+} elseif ($action == "renderConfirm") {
+
+	echo renderAddCardsConfirmationDialog();
+
+}
+
+function renderAddCardsConfirmationDialog() {
+
+	$html =<<<HTML
+<div class="mod-addcards-confirm">
+	This offer is not available for your stores. 
+
+	<button type=button class="addcards">Add Cards</button>
+	<button type=button class="cancel">Cancel</button>
+</div>
+HTML;
+
+	echo $html;
 }
 
 function renderAddCardsDialog() {
