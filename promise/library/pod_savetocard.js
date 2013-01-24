@@ -22,7 +22,7 @@ APP_COUPONSINC.PodSaveToCard = APP_COUPONSINC.Pod.extend((function ($) {
 		var podObject = this;
 
 		$.when(
-			APP_COUPONSINC.addtocard.add(podObject)
+			APP_COUPONSINC.addtocard.trx(podObject)
 		).then(
 			// when addtocard is resolved
 			function() {	

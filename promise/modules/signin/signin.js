@@ -69,7 +69,7 @@ APP_COUPONSINC.signin = (function ($) {
 	}
 
 	
-	function show() {
+	function trx() {
 		var isLoggedIn = APP_COUPONSINC.contextData.userState.loggedIn;
 
 		def = $.Deferred();
@@ -90,11 +90,11 @@ APP_COUPONSINC.signin = (function ($) {
 	function onReady() {
 		var moduleBody = $(".mod-signin");
 
-		$(".signin", moduleBody).click(show);
+		$(".signin", moduleBody).click(trx);
 	}
 
 	return {
-		show: show,
+		trx: trx,
 		onReady: onReady
 	};
 

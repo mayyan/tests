@@ -33,14 +33,14 @@ APP_COUPONSINC.addtocard = (function ($) {
 		def.resolve(STATUS_DONE);
 	}
 
-	function add(podObj) {
+	function trx(podObj) {
 		podObject = podObj ? podObj : null;
 
 		// Initiate mater promise
 		def = $.Deferred();
 
 		$.when(
-			APP_COUPONSINC.addcards.show(podObject)
+			APP_COUPONSINC.addcards.trx(podObject)
 		).then(
 			// when addcards is resolved, we can add the pod to card
 			addPodToCard
@@ -51,7 +51,7 @@ APP_COUPONSINC.addtocard = (function ($) {
 	}
 
 	return {
-		add: add
+		trx: trx
 	};
 
 }(jQuery));

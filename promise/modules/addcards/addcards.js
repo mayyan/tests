@@ -117,14 +117,14 @@ APP_COUPONSINC.addcards = (function ($) {
 	}
 
 	/****************** Matser transaction **********************/
-	function show() {
+	function trx() {
 		var shouldOpenDialog = true,
 			commonStores;
 
 		// Initial Promise
 		def = $.Deferred();
 
-		if (arguments[0].type === "click") {
+		if (arguments.length === 0 || arguments[0].type === "click") {
 
 			podObject = null;
 
@@ -143,10 +143,10 @@ APP_COUPONSINC.addcards = (function ($) {
 		if (shouldOpenDialog) {
 
 			$.when(
-				// APP_COUPONSINC.addcardsConfirm.show is resolve by either
+				// APP_COUPONSINC.addcardsConfirm.trx is resolve by either
 				// User's confirmation to add a card (need to confirm when the selected pod is not avaialble to user's card)
 				// No need to confirm (when the selected pod is already avaialble to user's card)
-				APP_COUPONSINC.addcardsConfirm.show(podObject)
+				APP_COUPONSINC.addcardsConfirm.trx(podObject)
 			).then(
 				// signin is resolved, we can show the dialog
 				getDialogHtml
@@ -160,11 +160,11 @@ APP_COUPONSINC.addcards = (function ($) {
 	function onReady() {
 		var moduleBody = $(".mod-addcards");
 
-		$(".addcards", moduleBody).click(show);
+		$(".addcards", moduleBody).click(trx);
 	}
 
 	return {
-		show: show,
+		trx: trx,
 		onReady: onReady
 	};
 

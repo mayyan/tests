@@ -62,45 +62,39 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 		def.reject(STATUS_FAIL_CANCEL);
 	}
 
-	function show(podObj) {
+	function trx(podObj) {
 		podObject = podObj ? podObj : null;
 
 		var commonStores = APP_COUPONSINC.utils.getCommonStores(podObj);
 
 		// Initiate mater promise
 		def = $.Deferred();
-
-		if (podObject && commonStores.length == 0 && APP_COUPONSINC.contextData.userState.stores.length > 0) {
-			// the pod is not avaliable to user's cards
-			// should show confirmation dialog
-			$.when(
-				// User has to be signed-in in order to add cards
-				APP_COUPONSINC.signin.show()
-			).then(
-				confirmToAdd
-			);
 			
-		} else {			
-
-			// the pod is avaliable to user's cards
-			// Do not show confirmation dialog.
-			// This is implicit confirmation
-			$.when(
-				// User has to be signed-in in order to add cards
-				APP_COUPONSINC.signin.show()
-			).then(
-				function() {
+		$.when(
+			// User has to be signed-in in order to add cards
+			APP_COUPONSINC.signin.trx()
+		).then(
+			function() {
+				if (podObject && commonStores.length == 0 && APP_COUPONSINC.contextData.userState.stores.length > 0) {
+					// the pod is not avaliable to user's cards
+					// should show confirmation dialog
+					confirmToAdd();
+				} else {
+					// the pod is avaliable to user's cards
+					// Do not show confirmation dialog.
+					// This is implicit confirmation
 					console.log(STATUS_DONE);
 					def.resolve(STATUS_DONE);
 				}
-			);
-		}
+			}
+		);
+		
 
 		// Important to return the promise, so later tranaction can be chained after this promise is resolved
 		return def.promise();
 	}
 
 	return {
-		show: show
+		trx: trx
 	};
 }(jQuery));
