@@ -86,14 +86,7 @@ APP_COUPONSINC.addcards = (function ($) {
 			def.reject(STATUS_FAIL_DOADDCARDS);
 		});
 	}
-	/**
-	 * If we want to refresh the page in this function, no need to resolve/reject here.
-	 * At refresh, server should be able to inform frontend with correct userState, and user's updated cards.
-	 * Front-end needs to
-	 * 1) Before refresh, addtocard saves the pending podObject in localStorage.
-	 * 2) addtocard implements onReady(). It calls addtocard.add(podObject) where podObject is from localStorage.
-	 * 3) After refresh, addtocard.onReady() is called.
-	 */
+
 	function handleAddCardsDone(newCards) {
 		$(".flyout-inner").dialog("destroy");
 
