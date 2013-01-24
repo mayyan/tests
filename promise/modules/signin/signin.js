@@ -3,7 +3,9 @@ APP_COUPONSINC.signin = (function ($) {
 		STATUS_DONE                 = "sigin.STATUS_DONE",
 		STATUS_CANCEL               = "sigin.STATUS_CANCEL",
 		STATUS_FAIL_GETDIALOGHTML   = "sigin.STATUS_FAIL_GETDIALOGHTML",
-		STATUS_FAIL_DOSIGNIN        = "sigin.STATUS_FAIL_DOSIGNIN";
+		STATUS_FAIL_DOSIGNIN        = "sigin.STATUS_FAIL_DOSIGNIN",
+
+		immediateRefresh = false;
 
 	function getDialogHtml() {
 		$.ajax({
@@ -66,6 +68,11 @@ APP_COUPONSINC.signin = (function ($) {
 
 		console.log(STATUS_DONE);
 		def.resolve(STATUS_DONE);
+		
+		APP_COUPONSINC.utils.setRefreshPending(true);
+		if (immediateRefresh) {
+			APP_COUPONSINC.utils.refreshPageIfNeeded();
+		}
 	}
 
 	
@@ -73,6 +80,11 @@ APP_COUPONSINC.signin = (function ($) {
 		var isLoggedIn = APP_COUPONSINC.contextData.userState.loggedIn;
 
 		def = $.Deferred();
+		
+		if (arguments.length == 1 &&  arguments[0].type  && arguments[0].type === "click") {
+			// is a direct click on Sign In button
+			immediateRefresh = true;
+		}
 
 		if (isLoggedIn) {
 

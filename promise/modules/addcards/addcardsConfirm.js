@@ -69,11 +69,12 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 
 		// Initiate mater promise
 		def = $.Deferred();
-			
+
 		$.when(
 			// User has to be signed-in in order to add cards
 			APP_COUPONSINC.signin.trx()
 		).then(
+			// when sigin is resolved
 			function() {
 				if (podObject && commonStores.length == 0 && APP_COUPONSINC.contextData.userState.stores.length > 0) {
 					// the pod is not avaliable to user's cards
@@ -86,9 +87,13 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 					console.log(STATUS_DONE);
 					def.resolve(STATUS_DONE);
 				}
+			},
+			// when sigin is rejected
+			function(status) {
+				console.log("addcardsConfirm is failed because " + status);
+				APP_COUPONSINC.util.refreshPageIfNeeded();
 			}
-		);
-		
+		);	
 
 		// Important to return the promise, so later tranaction can be chained after this promise is resolved
 		return def.promise();

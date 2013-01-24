@@ -24,7 +24,7 @@ echo<<<HTML
 	</div>
 
 	<div class="mod-addcards">
-		<button class="addcards">Add Card</button>
+		<button class="addcards">Add Cards</button>
 	</div>
 
 	<div class="mod-gallery">

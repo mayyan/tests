@@ -7,8 +7,10 @@
  * @static
  */
 APP_COUPONSINC.PodSaveToCard = APP_COUPONSINC.Pod.extend((function ($) {
+
 	
 	function handleClick(event) {
+
 		var target = $(event.target);
 
 		if (target.hasClass("add-to-card")) {
@@ -27,6 +29,12 @@ APP_COUPONSINC.PodSaveToCard = APP_COUPONSINC.Pod.extend((function ($) {
 			// when addtocard is resolved
 			function() {	
 				handleAddToCardSuccess.call(podObject);
+				APP_COUPONSINC.utils.refreshPageIfNeeded();
+			},
+			// when addtocard is rejected
+			function(status) {
+				console.log("PodSaveToCard.addToCard is failed because " + status);
+				APP_COUPONSINC.utils.refreshPageIfNeeded();
 			}
 		);
 

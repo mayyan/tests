@@ -1,4 +1,6 @@
 APP_COUPONSINC.utils = (function ($) {
+	var refreshPending = false;
+
 	/**
 	 * Return the common elements of two array
 	 */
@@ -43,11 +45,24 @@ APP_COUPONSINC.utils = (function ($) {
 			return [];
 		}
 	}
+
+	function setRefreshPending(flag) {
+		refreshPending = flag;
+	}
+
+	function refreshPageIfNeeded() {
+		if (refreshPending) {
+			window.location.reload();
+		}
+	}
 	
 	return {
 		arrayIntersection: arrayIntersection,
 		arrayUnique: arrayUnique,
 		displayMsg: displayMsg,
-		getCommonStores: getCommonStores
+		getCommonStores: getCommonStores,
+		setRefreshPending: setRefreshPending,
+		refreshPageIfNeeded: refreshPageIfNeeded
+
 	};
 }(jQuery));

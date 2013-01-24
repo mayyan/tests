@@ -43,7 +43,12 @@ APP_COUPONSINC.addtocard = (function ($) {
 			APP_COUPONSINC.addcards.trx(podObject)
 		).then(
 			// when addcards is resolved, we can add the pod to card
-			addPodToCard
+			addPodToCard,
+			// when addcards is rejected
+			function(status) {
+				console.log("addtocard is failed because " + status);
+				APP_COUPONSINC.utils.refreshPageIfNeeded();
+			} 
 		);
 
 		// Important to return the promise, so later tranaction can be chained after this promise is resolved

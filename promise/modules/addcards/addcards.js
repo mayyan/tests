@@ -20,7 +20,9 @@ APP_COUPONSINC.addcards = (function ($) {
 		STATUS_CANCEL                = "addcards.STATUS_CANCEL",
 		STATUS_FAIL_GETDIALOGHTML    = "addcards.STATUS_FAIL_GETDIALOGHTML",
 		STATUS_FAIL_DOADDCARDS       = "addcards.STATUS_FAIL_DOADDCARDS",
-		STATUS_FAIL_NO_COMMON_STORES = "addcards.STATUS_FAIL_NO_COMMON_STORES";
+		STATUS_FAIL_NO_COMMON_STORES = "addcards.STATUS_FAIL_NO_COMMON_STORES",
+
+		immediateRefresh = false;
 
 	/****** Display and handling disloag *************/
 	function getDialogHtml() {
@@ -42,6 +44,10 @@ APP_COUPONSINC.addcards = (function ($) {
 		$(".flyout-inner").dialog("destroy");
 		console.log(STATUS_CANCEL);
 		def.reject(STATUS_CANCEL);
+
+		if (immediateRefresh) {
+			APP_COUPONSINC.utils.refreshPageIfNeeded();
+		}
 	}
 
 	function onOpen() {
@@ -114,6 +120,10 @@ APP_COUPONSINC.addcards = (function ($) {
 			console.log("addcards " + APP_COUPONSINC.contextData.userState.stores.join(","));
 			def.resolve(APP_COUPONSINC.contextData.userState.stores);
 		}
+		APP_COUPONSINC.utils.setRefreshPending(true);
+		if (immediateRefresh) {
+			APP_COUPONSINC.utils.refreshPageIfNeeded();
+		}
 	}
 
 	/****************** Matser transaction **********************/
@@ -124,9 +134,14 @@ APP_COUPONSINC.addcards = (function ($) {
 		// Initial Promise
 		def = $.Deferred();
 
-		if (arguments.length === 0 || arguments[0].type === "click") {
+		if (arguments.length === 0) {
 
 			podObject = null;
+
+		} else if (arguments.length == 1 &&  arguments[0].type  && arguments[0].type === "click") {
+			// is a direct click on Add Cards button
+			podObject = null;
+			immediateRefresh = true;
 
 		} else {
 			podObject = arguments[0];
@@ -148,9 +163,15 @@ APP_COUPONSINC.addcards = (function ($) {
 				// No need to confirm (when the selected pod is already avaialble to user's card)
 				APP_COUPONSINC.addcardsConfirm.trx(podObject)
 			).then(
-				// signin is resolved, we can show the dialog
-				getDialogHtml
+				// when signin is resolved, we can show the dialog
+				getDialogHtml,
+				// when signin is rejected
+				function(status) {
+					console.log("addcards is failed because " + status);
+					APP_COUPONSINC.util.refreshPageIfNeeded();
+				}
 			);
+
 		}
 
 		// Important to return the promise, so later tranaction can be chained after this promise is resolved
