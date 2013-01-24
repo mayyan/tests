@@ -90,7 +90,7 @@ APP_COUPONSINC.gallery = (function ($) {
      * @param scope The scope to seach for, Can be the whole doc, the module, or a page
      */
     function getPodCount(scope) {
-        return $(".pod-shadow", scope).length;
+        return $(".pod", scope).length;
     }
     /**
      * A page is considered in view is its page top is within viewport

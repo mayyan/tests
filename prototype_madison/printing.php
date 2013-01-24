@@ -54,7 +54,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     APP_COUPONSINC.contextData = {
         "gallery" : {
             "podsPerPage": 21,
-            "totalPods": 298
+            "totalPods": 265
         },
         "catid"  : "<?php echo $catid ?>",
         "config" : <?php echo $configIndex ?>
