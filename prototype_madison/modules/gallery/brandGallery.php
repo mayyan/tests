@@ -78,7 +78,7 @@ function renderBrandGallery() {
                         </div>
 
                         <div class="column grid_1">
-                            {$podHTML[4]}
+                            {$podHTML[5]}
                         </div>
                     </div>
                 </div>

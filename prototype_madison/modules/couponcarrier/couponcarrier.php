@@ -41,7 +41,7 @@ HTML;
         <div class="cart">
             <div class="progress">
                 <div class="bar">
-                    <div class="savings-bar" style="width: 45.3px;">$1.30</div>
+                    <div class="savings-bar" style="width: 0px;">$0</div>
                 </div>
                 <h3>Available <span class="value">$416.20</span></h3>
             </div>
