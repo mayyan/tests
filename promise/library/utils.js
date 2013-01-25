@@ -50,9 +50,19 @@ APP_COUPONSINC.utils = (function ($) {
 		refreshPending = flag;
 	}
 
+	function getRefreshPending() {
+		return refreshPending;
+	}
+
 	function refreshPageIfNeeded() {
 		if (refreshPending) {
-			window.location.reload();
+			console.log("refreshing page....");
+
+			// In production code, page refresh will send back the updated contextData.userState.
+			// After real page refresh refreshPending should set be to its initial value (false).
+			// Here, I'm keep the userState as if the state is up-to-date, but manually reset refreshPending to false.
+			/*window.location.reload();*/
+			refreshPending = false;
 		}
 	}
 	
@@ -62,6 +72,7 @@ APP_COUPONSINC.utils = (function ($) {
 		displayMsg: displayMsg,
 		getCommonStores: getCommonStores,
 		setRefreshPending: setRefreshPending,
+		getRefreshPending: getRefreshPending,
 		refreshPageIfNeeded: refreshPageIfNeeded
 
 	};

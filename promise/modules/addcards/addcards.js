@@ -100,6 +100,9 @@ APP_COUPONSINC.addcards = (function ($) {
 
 		APP_COUPONSINC.contextData.userState.stores = APP_COUPONSINC.utils.arrayUnique($.merge(exsitingStores, newCards));
 
+		// set refreshing flag before any resolve/reject
+		APP_COUPONSINC.utils.setRefreshPending(true);
+
 		if (podObject) {
 			// triggered by adding a pod to card
 			var commonStores = APP_COUPONSINC.utils.getCommonStores(podObject);
@@ -110,9 +113,10 @@ APP_COUPONSINC.addcards = (function ($) {
 
 			} else {
 				// the pod is NOT available to the new set of user's cards
+				APP_COUPONSINC.utils.displayMsg(STATUS_FAIL_NO_COMMON_STORES);
 				console.log(STATUS_FAIL_NO_COMMON_STORES);
 				def.reject(STATUS_FAIL_NO_COMMON_STORES);
-				APP_COUPONSINC.utils.displayMsg(STATUS_FAIL_NO_COMMON_STORES);
+							
 			}
 
 		} else {
@@ -120,7 +124,7 @@ APP_COUPONSINC.addcards = (function ($) {
 			console.log("addcards " + APP_COUPONSINC.contextData.userState.stores.join(","));
 			def.resolve(APP_COUPONSINC.contextData.userState.stores);
 		}
-		APP_COUPONSINC.utils.setRefreshPending(true);
+		
 		if (immediateRefresh) {
 			APP_COUPONSINC.utils.refreshPageIfNeeded();
 		}
@@ -168,7 +172,6 @@ APP_COUPONSINC.addcards = (function ($) {
 				// when signin is rejected
 				function(status) {
 					console.log("addcards is failed because " + status);
-					APP_COUPONSINC.util.refreshPageIfNeeded();
 				}
 			);
 

@@ -3,9 +3,16 @@
 $action = $_REQUEST['action'];
 
 if ($action == "render") {
+
 	echo renderSigninDialog();
+
 } elseif ($action == "submit") {
-	echo "OK";
+
+	$userState = array("loggedIn" => true);
+
+	echo header('Content-type: application/json');
+	echo json_encode($userState);
+	
 }
 
 function renderSigninDialog() {

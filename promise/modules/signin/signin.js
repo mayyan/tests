@@ -61,10 +61,10 @@ APP_COUPONSINC.signin = (function ($) {
 			});
 	}
 
-	function handleSignInDone() {
+	function handleSignInDone(resp) {
 		$(".flyout-inner").dialog("destroy");
 
-		APP_COUPONSINC.contextData.userState.loggedIn = true;
+		APP_COUPONSINC.contextData.userState.loggedIn = resp.loggedIn;
 
 		console.log(STATUS_DONE);
 		def.resolve(STATUS_DONE);
