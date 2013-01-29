@@ -21,6 +21,8 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/printstatus/printstatus.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/footer/footer.css" >
+
+    <link media="screen" rel="stylesheet" type="text/css" href="library/printing.css" >
 </head>
 <body>
     <div class="wrapper">

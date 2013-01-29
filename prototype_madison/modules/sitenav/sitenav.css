@@ -1,9 +1,9 @@
 .mod-sitenav {
-	visibility: hidden;
+	display: none;
 }
 .fixed-header .mod-sitenav {
-	visibility: visible;
+	display: block;
 }
 ul.cssMenu li.cssMenui0.mod-sitenav:hover>ul.cssMenu-sub {
-	height: 125px;
+	height: 132px;
 }

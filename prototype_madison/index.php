@@ -38,10 +38,15 @@ if ($action == "paginate") {
     <link media="screen" rel="stylesheet" type="text/css" href="library/menu.css" >
 
 
+
+
     <link media="screen" rel="stylesheet" type="text/css" href="modules/header/header.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/leavebehind/leavebehind.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/hero/hero.css" >
+
+    <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/animate.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/stalker/stalker.css" >
+
     <link media="screen" rel="stylesheet" type="text/css" href="modules/sitenav/sitenav.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/categories/categories.css">
     <link media="screen" rel="stylesheet" type="text/css" href="modules/sortcontrol/sortcontrol.css" >
@@ -66,19 +71,18 @@ if ($action == "paginate") {
     <div id="header">
         <?php echo renderHeader() ?>
 
-        <?php if ($Config["TakeOver"] == 1) { ?>
-            <?php //echo renderTakeover(); ?>
-        <?php } ?>
-
         <?php echo renderHero(); ?>
 
-        <?php echo renderStalker(); ?>
     </div> <!-- #header -->
 
     <div class="wrapper">
+        
+        <?php echo renderStalker(); ?>
+
         <div id="content">
 
             <div id="main">
+
 
                 <?php echo renderGallery(); ?>
 

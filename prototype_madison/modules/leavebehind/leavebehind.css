@@ -4,12 +4,12 @@
     height: 0;
     overflow: hidden;
 
-    -webkit-transition: height 1s; /* Safari and Chrome */
-       -moz-transition: height 2s;  
-         -o-transition: height 1s; /* Opera */
-            transition: height 1s;
+    -webkit-transition: height 200ms; /* Safari and Chrome */
+       -moz-transition: height 200ms;
+         -o-transition: height 200ms; /* Opera */
+            transition: height 200ms;
 }
-.fixed-header .mod-leavebehind {
+.fixed-header .pushed .mod-leavebehind {
 	height: 100px;
 }
 .mod-leavebehind .frame {

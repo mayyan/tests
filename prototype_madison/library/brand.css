@@ -1,3 +1,9 @@
+#header {
+    position: static;
+}
 .wrapper {
 	background: url("../images/Yoplait_Brand_BG_20130115.png") no-repeat scroll center 0 #fff6ed;
+}
+.mod-stalker {
+    margin-top: 0;
 }

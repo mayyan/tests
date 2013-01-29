@@ -3,7 +3,9 @@
 function renderSiteNav() {
 	$html =<<<HTML
 <li class="cssMenui0 mod-sitenav">
-	<a class="cssMenu-title"><span>Coupons&nbsp;<strong class="triangle triangle-down"></strong></span></a>
+	<a class="cssMenu-title">
+        <span>Coupons&nbsp;<strong class="triangle triangle-down"></strong></span>
+    </a>
 
     <ul class="cssMenu-sub">
     	<li class="cssMenu-item"><a href="#">Coupons</a></li>

@@ -1,9 +1,9 @@
 .mod-stalker {
-    
-    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);*/
     width: 100%;
     border-bottom: 1px solid #CCCBCB;
     box-shadow: 1px 0 #FFFFFF;
+
+    margin-top: 336px;
 }
 .mod-stalker .discovery-bar {
     background-color: #dddad5;
@@ -30,13 +30,14 @@
 }
 .fixed-header .mod-stalker {
     position: fixed;
-    z-index: 2; /* above gallery */
+    z-index: 1; /* above gallery */
     top: 0;
+    margin-top: 0;
 }
 .toolbarBodyShift.fixed-header .mod-stalker {
     top: 34px; /* toolbar height */
 }
-.mod-stalker .discovery-bar .logo,
+.mod-stalker .discovery-bar .logo-container,
 .mod-stalker .discovery-bar .cssMenu {
     float: left;
 }
@@ -45,27 +46,25 @@
 .mod-stalker .logo-container {
     height: 50px;
     width: 55px;
-    overflow: hidden;
-    position: absolute;
 }
-.mod-stalker .cssMenu {
-   margin-left: 55px;
 
-    /*-webkit-transition: margin-left 0.5s linear 0;*/
-}
 .mod-stalker .logo {
-    position: absolute;
-    top: 50px;
+    opacity: 0;
+    /*position: absolute;
+    top: -50px;
 
-    -webkit-transition: top 0.5s linear 0;
+    -webkit-transition: top 300ms;
+       -moz-transition: top 300ms;
+         -o-transition: top 300ms;
+            transition: top 300ms;*/
 }
-.fixed-header .mod-stalker .cssMenu {
-    /*margin-left: 55px;*/
-
-    /*-webkit-transition: margin-left 0.5s linear 0.5s;*/
+.mod-stalker .logo.show {
+    /*top: 0;*/
 }
-.fixed-header .mod-stalker .logo {
-    top: 0;
 
-    /*-webkit-transition: top 0.5s linear 0;*/
+.mod-stalker .discovery-bar .cssMenu {
+    margin-left: -55px;
+}
+.fixed-header .mod-stalker .discovery-bar .cssMenu {
+    margin-left: 0;
 }

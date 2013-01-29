@@ -42,7 +42,7 @@ ul.cssMenu li.cssMenu-items {
 	   -moz-box-shadow: 0px 1px 1px #fff;
             box-shadow: 0px 1px 1px #fff;
 }
-ul.cssMenu a:active, 
+ul.cssMenu a:active,
 ul.cssMenu a:focus {
 	outline-style: none;
 }
@@ -121,8 +121,9 @@ ul.cssMenu li.cssMenui0>ul.cssMenu-sub {
 	display: block;
 	height: 0;
 	overflow: hidden;
-	-webkit-transition: height 1s 0.25s;
-         -o-transition: height 1s 0.25s;
-            transition: height 1s 0.25s;
+    z-index: 1;
+	-webkit-transition: height 300ms 0.25s;
+         -o-transition: height 300ms 0.25s;
+            transition: height 300ms 0.25s;
 }
 

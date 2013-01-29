@@ -13,12 +13,14 @@ APP_COUPONSINC.layout = (function ($) {
         win               = $(window),
         doc               = $(document),
         body              = $("body"),
+        headerRegion      = $("#header"),
         mainRegion        = $("#main"),
 
         modIntronagbar   = $("mod-intronagbar"),
         modStalker       = $(".mod-stalker"),
-        modBelowStalker  = $(".wrapper"),
+        modBelowStalker  = $(".mod-gallery"),
         stalkerOffsetTop = modStalker.offset().top,
+        headerRegionHeight = headerRegion.outerHeight(true),
 
         didScroll = false,
         lastScrollTop = 0;
@@ -31,9 +33,18 @@ APP_COUPONSINC.layout = (function ($) {
     function changeStalker(toState) {
         if (toState === "fixed") {
 
+
+            $(".logo", modStalker)
+                .addClass("fadeInDownBig")
+                .removeClass("fadeOutUpBig");
+
             body.addClass("fixed-header");
 
         } else { /* toState === "static" */
+
+            $(".logo", modStalker)
+                .addClass("fadeOutUpBig")
+                .removeClass("fadeInDownBig");
 
             body.removeClass("fixed-header");
 
@@ -49,7 +60,8 @@ APP_COUPONSINC.layout = (function ($) {
 
         if (toState === "fixed") {
             stalkerHeight = modStalker.outerHeight(true);
-            modBelowStalker.css("margin-top", stalkerHeight + "px");
+            console.log("headerRegionHeight=" + headerRegionHeight);
+            modBelowStalker.css("margin-top", (headerRegionHeight + stalkerHeight) + "px");
 
         } else { /* toState === "static" */
 
@@ -87,13 +99,22 @@ APP_COUPONSINC.layout = (function ($) {
     function processScroll() {
         var windowScrollTop  = win.scrollTop();
 
-        if (windowScrollTop > stalkerOffsetTop) {
-            changeStalker("fixed");
-            changeGallery("fixed");
-        } else {
+        console.log("windowScrollTop=" + windowScrollTop + ", stalkerOffsetTop=" + stalkerOffsetTop);
+
+        if (windowScrollTop < stalkerOffsetTop) {
             changeStalker("static");
             changeGallery("static");
+            modStalker.removeClass("pushed");
+        } else if ((windowScrollTop > stalkerOffsetTop) && (windowScrollTop < (stalkerOffsetTop + 320))) {
+            changeStalker("fixed");
+            changeGallery("fixed");
+            modStalker.removeClass("pushed");
+        } else if (windowScrollTop > (stalkerOffsetTop + 320)) {
+            changeStalker("fixed");
+            changeGallery("fixed");
+            modStalker.addClass("pushed");
         }
+
 
         // Remember last scroll position, so later I'll know scroll direction
         lastScrollTop = windowScrollTop;

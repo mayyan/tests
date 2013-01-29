@@ -113,6 +113,6 @@
 
 /* Pod spacing */
 .mod-gallery .pod {
-    position: relative;
+    /*position: relative;*/
     margin: 3px 15px 15px 3px;
 }

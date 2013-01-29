@@ -51,7 +51,7 @@ function renderBrandGallery() {
                 </div>
 
                 <div class="column grid_2">
-                    
+
                     <div class="row">
                         <div class="column grid_1">
                             {$podHTML[0]}
@@ -96,7 +96,6 @@ function renderBrandGallery() {
     </div>
 
 </div> <!--mod-gallery -->
-HTML;
 HTML;
 
     return $html;

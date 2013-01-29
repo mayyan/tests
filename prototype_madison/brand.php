@@ -1,6 +1,8 @@
 <?php
 const APPLICATION_PATH = "./";
 
+$offset = empty($_GET["offset"]) ? 0 : $_GET["offset"];
+$action = empty($_GET["action"]) ? "" : $_GET["action"];
 $catid  = empty($_GET["catid"]) ? "" : $_GET["catid"];
 
 require_once(APPLICATION_PATH . "library/constants.php");
@@ -20,7 +22,7 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css">
     <link media="screen" rel="stylesheet" type="text/css" href="library/common.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/one-column-layout.css" >
-    <link media="screen" rel="stylesheet" type="text/css" href="library/brand.css" >
+
     <link media="screen" rel="stylesheet" type="text/css" href="library/promo.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="library/menu.css" >
 
@@ -42,20 +44,23 @@ require_once(APPLICATION_PATH . "modules/footer/footer.php");
     <link media="screen" rel="stylesheet" type="text/css" href="modules/misc/misc.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/ads/ads.css" >
     <link media="screen" rel="stylesheet" type="text/css" href="modules/footer/footer.css" >
+
+
+    <link media="screen" rel="stylesheet" type="text/css" href="library/brand.css" >
 </head>
 <body>
 
     <div id="header">
         <?php echo renderHeader() ?>
 
-        <?php if ($Config["TakeOver"] == 1) { ?>
-            <?php //echo renderTakeover(); ?>
-        <?php } ?>
-
         <?php echo renderStalker(); ?>
+
     </div> <!-- #header -->
 
     <div class="wrapper">
+
+
+
         <div id="content">
 
             <div id="main">
