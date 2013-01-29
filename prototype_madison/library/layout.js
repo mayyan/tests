@@ -105,11 +105,11 @@ APP_COUPONSINC.layout = (function ($) {
             changeStalker("static");
             changeGallery("static");
             modStalker.removeClass("pushed");
-        } else if ((windowScrollTop > stalkerOffsetTop) && (windowScrollTop < (stalkerOffsetTop + 320))) {
+        } else if ((windowScrollTop > stalkerOffsetTop) && (windowScrollTop < (stalkerOffsetTop + 280))) {
             changeStalker("fixed");
             changeGallery("fixed");
             modStalker.removeClass("pushed");
-        } else if (windowScrollTop > (stalkerOffsetTop + 320)) {
+        } else if (windowScrollTop > (stalkerOffsetTop + 280)) {
             changeStalker("fixed");
             changeGallery("fixed");
             modStalker.addClass("pushed");
