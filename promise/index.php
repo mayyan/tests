@@ -41,7 +41,7 @@ var APP_COUPONSINC = {};
 APP_COUPONSINC.contextData = {
 	"userState": {
 		"loggedIn": false,
-		"stores": []
+		"stores": []//["Safeway", "Meijer", "Kroger"]
 	},
 	"gallery": {
 		"podCache" : {$podCacheJSON}

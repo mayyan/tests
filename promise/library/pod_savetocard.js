@@ -8,36 +8,43 @@
  */
 APP_COUPONSINC.PodSaveToCard = APP_COUPONSINC.Pod.extend((function ($) {
 
-	
 	function handleClick(event) {
 
-		var target = $(event.target);
-
+		var target = $(event.target),
+			podObject = this;
+			
 		if (target.hasClass("add-to-card")) {
-			addToCard.call(this);
+
+			addToCard.call(podObject);
+
 		}
 	}
 
 	function addToCard() {
-		alert("You are about to add pod " + this.data.podId);
-
+		
 		var podObject = this;
-
+		
 		$.when(
-			APP_COUPONSINC.addtocard.trx(podObject)
+			APP_COUPONSINC.addtocard.trx(this)
 		).then(
 			// when addtocard is resolved
-			function() {	
-				handleAddToCardSuccess.call(podObject);
+			function() {
+				console.log("calling handleAddToCardSuccess. podid=" + this.data.podId);
+				handleAddToCardSuccess.call(this);
 				APP_COUPONSINC.utils.refreshPageIfNeeded();
 			},
 			// when addtocard is rejected
 			function(status) {
-				console.log("PodSaveToCard.addToCard is failed because " + status);
-				APP_COUPONSINC.utils.refreshPageIfNeeded();
+				if( status == "addtocard.STATUS_PENDING") {
+				} else {
+					console.log("PodSaveToCard.addToCard is failed. podid " + this.data.podId);
+					APP_COUPONSINC.utils.refreshPageIfNeeded();
+				}
 			}
 		);
 
+		
+		
 	}
 
 	function handleAddToCardSuccess() {

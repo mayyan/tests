@@ -79,7 +79,7 @@ APP_COUPONSINC.signin = (function ($) {
 	function trx() {
 		var isLoggedIn = APP_COUPONSINC.contextData.userState.loggedIn;
 
-		def = $.Deferred();
+		def = new $.Deferred();
 		
 		if (arguments.length == 1 &&  arguments[0].type  && arguments[0].type === "click") {
 			// is a direct click on Sign In button

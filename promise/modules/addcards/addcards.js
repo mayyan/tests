@@ -136,7 +136,7 @@ APP_COUPONSINC.addcards = (function ($) {
 			commonStores;
 
 		// Initial Promise
-		def = $.Deferred();
+		def = new $.Deferred();
 
 		if (arguments.length === 0) {
 

@@ -19,9 +19,11 @@ if ($action == "render") {
 
 function renderAddCardsConfirmationDialog() {
 
+	$podId = $_REQUEST['podId'];
+
 	$html =<<<HTML
 <div class="mod-addcards-confirm">
-	This offer is not available for your stores. 
+	Pod {$podId} is not available for your stores. 
 
 	<button type=button class="addcards">Add Cards</button>
 	<button type=button class="cancel">Cancel</button>

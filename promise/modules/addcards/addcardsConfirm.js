@@ -62,13 +62,14 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 		def.reject(STATUS_FAIL_CANCEL);
 	}
 
+
 	function trx(podObj) {
 		podObject = podObj ? podObj : null;
 
 		var commonStores = APP_COUPONSINC.utils.getCommonStores(podObj);
 
 		// Initiate mater promise
-		def = $.Deferred();
+		def = new $.Deferred();
 
 		$.when(
 			// User has to be signed-in in order to add cards
