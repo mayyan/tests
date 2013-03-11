@@ -71,6 +71,7 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 		$.when(
 			// User has to be signed-in in order to add cards
 			APP_COUPONSINC.signin.trx()
+			
 		).then(
 			// when sigin is resolved
 			function() {

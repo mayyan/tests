@@ -78,7 +78,7 @@ APP_COUPONSINC.signin = (function ($) {
 	function trx() {
 		var isLoggedIn = APP_COUPONSINC.contextData.userState.loggedIn;
 
-		def = new $.Deferred();
+		def = def || APP_COUPONSINC.signup.getDeferred() || new $.Deferred();
 		
 		if (arguments.length == 1 &&  arguments[0].type  && arguments[0].type === "click") {
 			// is a direct click on Sign In button
@@ -98,7 +98,12 @@ APP_COUPONSINC.signin = (function ($) {
 	   return def.promise();
 	}
 
+	function getDeferred() {
+		return def;
+	}
+
 	return {
+		getDeferred: getDeferred,
 		trx: trx
 	};
 

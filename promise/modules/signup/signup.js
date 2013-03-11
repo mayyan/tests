@@ -78,7 +78,7 @@ APP_COUPONSINC.signup = (function ($) {
 	function trx() {
 		var isLoggedIn = APP_COUPONSINC.contextData.userState.loggedIn;
 		
-		def = new $.Deferred();
+		def = def || APP_COUPONSINC.signin.getDeferred() || new $.Deferred();
 	
 		if (isLoggedIn) {
 
@@ -93,7 +93,12 @@ APP_COUPONSINC.signup = (function ($) {
 		return def.promise();
 	}
 
+	function getDeferred() {
+		return def;
+	}
+
 	return {
+		getDeferred: getDeferred,
 		trx: trx
 	};
 
