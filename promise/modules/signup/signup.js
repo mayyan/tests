@@ -1,15 +1,15 @@
-APP_COUPONSINC.signin = (function ($) {
+APP_COUPONSINC.signup = (function ($) {
 	var def,
-		STATUS_DONE                 = "sigin.STATUS_DONE",
-		STATUS_CANCEL               = "sigin.STATUS_CANCEL",
-		STATUS_FAIL_GETDIALOGHTML   = "sigin.STATUS_FAIL_GETDIALOGHTML",
-		STATUS_FAIL_DOSIGNIN        = "sigin.STATUS_FAIL_DOSIGNIN",
+		STATUS_DONE                 = "sigup.STATUS_DONE",
+		STATUS_CANCEL               = "sigup.STATUS_CANCEL",
+		STATUS_FAIL_GETDIALOGHTML   = "sigup.STATUS_FAIL_GETDIALOGHTML",
+		STATUS_FAIL_DOSIGNUP        = "sigup.STATUS_FAIL_DOSIGNUP",
 
 		immediateRefresh = false;
 
 	function getDialogHtml() {
 		$.ajax({
-			url: "modules/signin/signin.php",
+			url: "modules/signup/signup.php",
 			cache: false,
 			data: {
 				"action": "render"
@@ -22,18 +22,18 @@ APP_COUPONSINC.signin = (function ($) {
 		});
 	}
 
-	function doSignin() {
+	function doSignup() {
 		$.ajax({
-			url: "modules/signin/signin.php",
+			url: "modules/signup/signup.php",
 			cache: false,
 			data: {
 				"action": "submit"
 			}
 		})
-		.done(handleSignInDone)
+		.done(handleSignUpDone)
 		.fail(function() {
-			console.log(STATUS_FAIL_DOSIGNIN);
-			def.reject(STATUS_FAIL_DOSIGNIN);
+			console.log(STATUS_FAIL_DOSIGNUP);
+			def.reject(STATUS_FAIL_DOSIGNUP);
 		});
 	}
 
@@ -44,13 +44,13 @@ APP_COUPONSINC.signin = (function ($) {
 	}
 
 	function onOpen() {
-		var dialogBody = $(".mod-signin-flyout");
+		var dialogBody = $(".mod-signup-flyout");
 
-		$(".submit", dialogBody).click(doSignin);
+		$(".submit", dialogBody).click(doSignup);
 
 		$(".cancel", dialogBody).click(cancel);
 
-		$(".signup", dialogBody).click(APP_COUPONSINC.signup.trx);
+		$(".signin", dialogBody).click(APP_COUPONSINC.signin.trx);
 	}
 
 
@@ -60,7 +60,7 @@ APP_COUPONSINC.signin = (function ($) {
 		});
 	}
 
-	function handleSignInDone(resp) {
+	function handleSignUpDone(resp) {
 		APP_COUPONSINC.dialog.close();
 
 		APP_COUPONSINC.contextData.userState.loggedIn = resp.loggedIn;
@@ -77,14 +77,9 @@ APP_COUPONSINC.signin = (function ($) {
 	
 	function trx() {
 		var isLoggedIn = APP_COUPONSINC.contextData.userState.loggedIn;
-
-		def = new $.Deferred();
 		
-		if (arguments.length == 1 &&  arguments[0].type  && arguments[0].type === "click") {
-			// is a direct click on Sign In button
-			immediateRefresh = true;
-		}
-
+		def = new $.Deferred();
+	
 		if (isLoggedIn) {
 
 			console.log(STATUS_DONE);
@@ -95,7 +90,7 @@ APP_COUPONSINC.signin = (function ($) {
 		   	getDialogHtml();
 		}
 
-	   return def.promise();
+		return def.promise();
 	}
 
 	return {

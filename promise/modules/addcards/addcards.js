@@ -41,7 +41,7 @@ APP_COUPONSINC.addcards = (function ($) {
 	}
 
 	function cancel() {
-		$(".flyout-inner").dialog("destroy");
+		APP_COUPONSINC.dialog.close();
 		console.log(STATUS_CANCEL);
 		def.reject(STATUS_CANCEL);
 
@@ -60,12 +60,9 @@ APP_COUPONSINC.addcards = (function ($) {
 
 
 	function handleGetDialogHtmlDone(html) {
-		$(".flyout-inner")
-			.html(html)
-			.dialog({
-				"modal": true,
-				"open": onOpen
-			});
+		APP_COUPONSINC.dialog.open(html, {
+			"open": onOpen
+		});
 	}
 
 	/************** Submitting dialog *******************/
@@ -94,7 +91,7 @@ APP_COUPONSINC.addcards = (function ($) {
 	}
 
 	function handleAddCardsDone(newCards) {
-		$(".flyout-inner").dialog("destroy");
+		APP_COUPONSINC.dialog.close();
 
 		var exsitingStores = APP_COUPONSINC.contextData.userState.stores;
 

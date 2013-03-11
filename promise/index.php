@@ -19,8 +19,9 @@ echo<<<HTML
 </head>
 <body>
 
-	<div class="mod-signin">
+	<div class="mod-signinsignuplinks">
 		<button class="signin">Sign in</button>
+        <button class="signup">Sign up</button>
 	</div>
 
 	<div class="mod-addcards">
@@ -35,7 +36,7 @@ echo<<<HTML
 	</div>
 
 	<div class="flyout-inner"></div>
-	
+
 <script>
 var APP_COUPONSINC = {};
 APP_COUPONSINC.contextData = {
@@ -51,13 +52,16 @@ APP_COUPONSINC.contextData = {
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
 
+<script src="modules/signinsignuplinks/signinsignuplinks.js"></script>
 <script src="library/utils.js"></script>
 <script src="library/classhelper.js"></script>
 <script src="library/pod.js"></script>
 <script src="library/pod_savetocard.js"></script>
 <script src="modules/gallery/gallery.js"></script>
 
+<script src="library/dialog.js"></script>
 <script src="modules/signin/signin.js"></script>
+<script src="modules/signup/signup.js"></script>
 <script src="modules/addcards/addcardsConfirm.js"></script>
 <script src="modules/addcards/addcards.js"></script>
 <script src="modules/addtocard/addtocard.js"></script>

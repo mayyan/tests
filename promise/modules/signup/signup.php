@@ -4,7 +4,7 @@ $action = $_REQUEST['action'];
 
 if ($action == "render") {
 
-	echo renderSigninDialog();
+	echo renderSignupDialog();
 
 } elseif ($action == "submit") {
 
@@ -15,16 +15,16 @@ if ($action == "render") {
 	
 }
 
-function renderSigninDialog() {
+function renderSignupDialog() {
 
 	$html =<<<HTML
-<div class="mod-signin-flyout">
-	<button class="signup">Sign up</button>
+<div class="mod-signup-flyout">
+	<button class="signin">Sign in</button>
 
 	<form>
 		Email: <input name="email">
 
-		<button type="button" class="submit">Sign In</button>
+		<button type="button" class="submit">Sign Up</button>
 		<button type="button" class="cancel">Cancel</button>
 	</form>
 </div>

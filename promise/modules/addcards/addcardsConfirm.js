@@ -34,12 +34,9 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 	}
 
 	function handleRenderConfirmDone(html) {
-		$(".flyout-inner")
-			.html(html)
-			.dialog({
-				"modal": true,
-				"open": onConfirmOpen
-			});
+		APP_COUPONSINC.dialog.open(html, {
+			"open": onConfirmOpen
+		});
 	}
 
 	function onConfirmOpen() {
@@ -51,13 +48,13 @@ APP_COUPONSINC.addcardsConfirm = (function ($) {
 	}
 
 	function okConfirm() {
-		$(".flyout-inner").dialog("destroy");
+		APP_COUPONSINC.dialog.close();
 		console.log(STATUS_DONE);
 		def.resolve(STATUS_DONE);
 	}
 
 	function cancelConfirm() {
-		$(".flyout-inner").dialog("destroy");
+		APP_COUPONSINC.dialog.close();
 		console.log(STATUS_FAIL_CANCEL);
 		def.reject(STATUS_FAIL_CANCEL);
 	}
