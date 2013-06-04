@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Dialog - autofocus</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="dialog" title="Basic dialog">
+    <button type="button" class="close-btn">&times;</button>
+
+    <p>The first input box should have focus.</p>
+    <input type="text" />
+</div>
+
+<script src="../../jquery-1.7.2.min.js"></script>
+<script src="../../1.8.16/jquery-ui-1.8.16.custom.min.js"></script>
+<script>
+$(function() {
+    $( "#dialog" ).dialog({
+        modal: true,
+        dialogClass: "flyout-outer"
+    });
+});
+</script>
+</body>
+</html>
