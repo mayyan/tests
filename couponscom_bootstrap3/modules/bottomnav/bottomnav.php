@@ -1,25 +1,20 @@
 <div class="navbar navbar-fixed-bottom bottom-nav">
     <div class="container ">
-        <div class="btn-toolbar">
-            <div class="btn-group">
-                <a class="btn" href="#printModal" data-toggle="modal" data-remote="modules/printprogress/printProgress.php">
-                    <i class="glyphicon glyphicon-print"></i>
-                    <span class="badge badge-success">12</span>
-                </a>
+        <div class="btn-toolbar col col-lg-4 col-offset-4">
 
-                <button class="btn couponcart">
-                    <i class="glyphicon glyphicon-shopping-cart"></i>
-                    <span class="caret"></span>
-                </button>
+            <button class="btn btn-default" href="#printModal" data-toggle="modal" data-remote="modules/printprogress/printProgress.php">
+                <i class="glyphicon glyphicon-print"></i>
+                <span class="badge">12</span>
+            </button>
 
-                <button class="btn btn-search">
-                    <i class="glyphicon glyphicon-search"></i>
-                </button>
+            <button class="btn btn-default couponcart">
+                <i class="glyphicon glyphicon-shopping-cart"></i>
+                <span class="caret"></span>
+            </button>
 
-                <button class="btn" id="goto-top">
-                    <i class="glyphicon glyphicon-arrow-up"></i>Top
-                </button>
-            </div> <!-- btn-group -->
+            <button class="btn btn-default" id="goto-top">
+                <i class="glyphicon glyphicon-arrow-up"></i>Top
+            </button>
         </div> <!-- btn-toolbar -->
     </div> <!-- container -->
 </div> <!-- .navbar -->

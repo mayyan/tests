@@ -85,7 +85,8 @@
     left: 10%;
     position: relative;
     top: 22%;
-    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);;
+            transform: rotate(-7deg);
     width: 80%;
 }
 .pod .hover-view .click-text {
@@ -141,9 +142,11 @@
 .shortstack .pod {
     margin-top: 0;
 }
-@media screen and (min-width: 768px) {
+
+
+@media screen and (min-width: 992px) {
     .pod {
-        margin: 3% 0;
+        margin: 4% 0;
     }
 }
 

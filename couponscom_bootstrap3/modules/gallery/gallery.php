@@ -51,8 +51,10 @@ HTML;
 }
 ?>
     <div class="row">
-        <div class="col col-lg-4 col-offset-4">
+        <div class="col col-lg-4"></div>
+        <div class="col col-lg-4">
             <button class="more-btn btn btn-primary">Show More Coupons</button>
         </div>
+        <div class="col col-lg-4"></div>
     </div>
 </div> <!-- mod-gallery -->

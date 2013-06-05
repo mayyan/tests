@@ -30,9 +30,9 @@
 
     function positionNevbar() {
         var body = $("body"),
-            navbar = $(".mod-navbar");
+            navbar = $(".mod-top-navbar");
 
-        if (window.matchMedia('only screen and (min-width : 321px)').matches) {
+        if (window.matchMedia('only screen and (max-width : 321px)').matches) {
             // Smartphones (landscape)
             // screen is too short to show the whole expanded nav, 
             // so better not to fixed to top
@@ -56,25 +56,12 @@
             html: true,
             placement: "top",
             trigger: 'click',
-            container: '.bottom-nav .nav',
+            container: '.bottom-nav',
             title: "My Savings",
             content: '<div class="progress progress-striped active">' +
                     '<div class="bar" style="width: 50%;">$15.35</div>' +
                     '<span class="bold pull-right muted">$300</span>' +
                     '</div>'
-        });
-
-        $('.btn-search').popover({
-            html: true,
-            placement: "top",
-            trigger: 'click',
-            container: '.bottom-nav .nav',
-            content: '<form class="form-search">' +
-                        '<div class="input-append">' +
-                            '<input class="span2" id="appendedInput" type="text" placeholder="Search ...">' +
-                            '<span class="add-on"><i class="icon-search"></i></span>' +
-                        '</div>' +
-                    '</form>'
         });
 
         $('.pod').click(function(e){

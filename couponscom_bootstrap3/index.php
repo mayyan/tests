@@ -15,7 +15,12 @@ $podCache = json_decode($podJSON, true);
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/app.css" rel="stylesheet">
+
+    <link href="modules/topnav/topnav.css" rel="stylesheet">
     <link href="modules/pod/pod.css" rel="stylesheet">
+    <link href="modules/gallery/gallery.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -36,10 +41,9 @@ $podCache = json_decode($podJSON, true);
         <?php include "modules/bottomnav/bottomnav.php" ?>
     </div> <!-- #footer -->
 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="js/app.js"></script>
-
 
 </body>
 </html>
