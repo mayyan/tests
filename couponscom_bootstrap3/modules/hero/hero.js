@@ -1,5 +1,14 @@
-define(["jquery", "bootstrap"], function($, bootstrap) {
+define(["jquery", "bootstrap", "jquery.event.swipe"], function($, bootstrap, swipe) {
+	var carousel = $('.mod-hero .carousel');
+
     $(document).ready(function () {
-        $('.mod-hero .carousel').carousel();
+        carousel.carousel();
     });
+
+    if (Modernizr.touch) {
+		requirejs(['heroTouch']);
+	}
 });
+
+
+

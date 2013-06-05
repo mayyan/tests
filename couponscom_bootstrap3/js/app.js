@@ -10,6 +10,7 @@ requirejs.config({
         bootstrap: '../../bootstrap/js/bootstrap',
         topnav:    '../../modules/topnav/topnav',
         hero:      '../../modules/hero/hero',
+        heroTouch: '../../modules/hero/hero.touch',
         pod:       '../../modules/pod/pod',
         gallery:   '../../modules/gallery/gallery',
         bottomnav: '../../modules/bottomnav/bottomnav'
@@ -17,7 +18,9 @@ requirejs.config({
 
     // Use shim for plugins that does not support ADM
     shim: {
-        'bootstrap': ['jquery']
+        'bootstrap': ['jquery'],
+        'jquery.event.move': ['jquery'],
+        'jquery.event.swipe': ['jquery.event.move']
     }
 });
 
