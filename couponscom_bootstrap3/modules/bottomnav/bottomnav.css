@@ -1,0 +1,10 @@
+.mod-bottom-nav.navbar {
+	background-color: transparent;
+}
+.mod-bottom-nav .popover .progress {
+    width: 200px;
+}
+.mod-bottom-nav .popover .progress span {
+    font-size: 12px;
+    margin-right: 2.5%;
+}

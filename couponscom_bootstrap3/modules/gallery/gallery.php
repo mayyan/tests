@@ -1,25 +1,18 @@
 <div class="mod-gallery">
-    <div class="row hero">
+    <div class="row shortstack">
 
-        <div class="col col-lg-12">
-            <?php include "modules/hero/hero.php" ?>
-        </div>
-        </div>
+        <div class="col col-lg-8">
 
-        <div class="row shortstack">
-
-            <div class="col col-lg-8">
-
-                <?php include "modules/offeroftheweek/offeroftheweek.php" ?>
-                <?php include "modules/shortstackpromo/shortstackpromo.php" ?>
-
-            </div>
-
-            <div class="col col-lg-4 mrec">
-                <?php include "modules/mrec/mrec.php" ?>
-            </div>
+            <?php include "modules/offeroftheweek/offeroftheweek.php" ?>
+            <?php include "modules/shortstackpromo/shortstackpromo.php" ?>
 
         </div>
+
+        <div class="col col-lg-4 mrec">
+            <?php include "modules/mrec/mrec.php" ?>
+        </div>
+
+    </div>
 
 <?php
 $index = 0;

@@ -1,12 +1,5 @@
-@font-face {
-    font-family: "SpriteFont";
-    font-style: normal;
-    font-weight: normal;
-    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.eot");
-    src: url("//www.coupons.com/layouts/urban/fonts/icomoon.eot#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
-         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.woff") format("woff"),
-         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.ttf") format("truetype"),
-         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.svg#RockSaltRegular") format("svg");
+.sprite-pod {
+    background: transparent url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_pod_2.png") no-repeat;
 }
 .pod {
     background-color: #FFFFFF;
@@ -41,28 +34,40 @@
 .pod .clipped-hover-view {
     visibility: hidden;
 }
-/* hover state */
-.pod:hover .hover-view {
-    visibility: visible;
-}
-.pod:hover .clipped-view, 
-.pod:hover .clipped-hover-view {
-    visibility: hidden;
-}
-/* clipped state */
-.pod.clipped .clipped-view {
+
+/* clipped state on touch device */
+.pod.clipped .clipped-hover-view {
     visibility: visible;
 }
 .pod.clipped .hover-view, 
-.pod.clipped .clipped-hover-view {
+.pod.clipped .clipped-view {
+    visibility: hidden;
+}
+
+
+/** states on no-touch device **/
+/* hover state */
+.no-touch .pod:hover .hover-view {
+    visibility: visible;
+}
+.no-touch .pod:hover .clipped-view, 
+.no-touch .pod:hover .clipped-hover-view {
+    visibility: hidden;
+}
+/* clipped state */
+.no-touch .pod.clipped .clipped-view {
+    visibility: visible;
+}
+.no-touch .pod.clipped .hover-view, 
+.no-touch .pod.clipped .clipped-hover-view {
     visibility: hidden;
 }
 /* clipped hover state */
-.pod.clipped:hover .clipped-hover-view {
+.no-touch .pod.clipped:hover .clipped-hover-view {
     visibility: visible;
 }
-.pod.clipped:hover .hover-view, 
-.pod.clipped:hover .clipped-view {
+.no-touch .pod.clipped:hover .hover-view, 
+.no-touch .pod.clipped:hover .clipped-view {
     visibility: hidden;
 }
 

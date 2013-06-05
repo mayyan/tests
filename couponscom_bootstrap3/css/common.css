@@ -1,0 +1,49 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+/*.navbar-brand {
+    max-width: none;
+    text-align: inherit;
+}*/
+.container {
+    max-width: 980px;
+}
+.carousel-indicators {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+}
+
+
+@font-face {
+    font-family: "RockSaltRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.eot");
+    src: url("//www.coupons.com/layouts/urban/fonts/RockSalt-webfont.eot?#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.woff") format("woff"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.ttf") format("truetype"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.svg#RockSaltRegular") format("svg");
+}
+@font-face {
+    font-family: "SpriteFont";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.eot");
+    src: url("//www.coupons.com/layouts/urban/fonts/icomoon.eot#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.woff") format("woff"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.ttf") format("truetype"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.svg#RockSaltRegular") format("svg");
+}
+
+@media screen and (max-width: 400px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+}

@@ -1,6 +1,6 @@
-<div class="navbar navbar-fixed-bottom bottom-nav">
+<div class="navbar navbar-fixed-bottom mod-bottom-nav">
     <div class="container ">
-        <div class="btn-toolbar col col-lg-4 col-offset-4">
+        <div class="btn-toolbar pull-right">
 
             <button class="btn btn-default" href="#printModal" data-toggle="modal" data-remote="modules/printprogress/printProgress.php">
                 <i class="glyphicon glyphicon-print"></i>
@@ -24,7 +24,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Pring Progress</h4>
+                <h4 class="modal-title">Print Progress</h4>
             </div>
 
             <div class="modal-body">
