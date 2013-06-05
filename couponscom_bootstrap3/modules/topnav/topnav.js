@@ -1,4 +1,4 @@
-(function () {
+define(["jquery"], function($) {
     function positionNevbar() {
         var body = $("body"),
             navbar = $(".mod-top-navbar");
@@ -15,11 +15,11 @@
         }
     }
 
-	$(window).resize(function () {
+    $(window).resize(function () {
         positionNevbar();
     });
 
     $(window).load(function () {
         positionNevbar();
     });
-}());
+});

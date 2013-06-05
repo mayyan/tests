@@ -1,0 +1,25 @@
+requirejs.config({
+    //By default load any module IDs from js/lib
+    baseUrl: 'js/lib',
+    //except, if the module ID starts with "app",
+    //load it from the js/app directory. paths
+    //config is relative to the baseUrl, and
+    //never includes a ".js" extension since
+    //the paths config could be for a directory.
+    paths: {
+        bootstrap: '../../bootstrap/js/bootstrap',
+        topnav:    '../../modules/topnav/topnav',
+        hero:      '../../modules/hero/hero',
+        pod:       '../../modules/pod/pod',
+        gallery:   '../../modules/gallery/gallery',
+        bottomnav: '../../modules/bottomnav/bottomnav'
+    },
+
+    // Use shim for plugins that does not support ADM
+    shim: {
+        'bootstrap': ['jquery']
+    }
+});
+
+// Start the main app logic.
+requirejs(['topnav', 'hero', 'pod', 'gallery', 'bottomnav']);

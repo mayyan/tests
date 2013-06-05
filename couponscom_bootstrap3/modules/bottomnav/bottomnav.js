@@ -1,4 +1,4 @@
-(function () {
+define(["jquery", "bootstrap"], function($) {
     $(document).ready(function () {
         $("#goto-top").click(function (e) {
             e.preventDefault();
@@ -18,4 +18,4 @@
         });
     
     });
-}());
+});

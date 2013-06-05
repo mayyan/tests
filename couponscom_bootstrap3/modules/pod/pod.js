@@ -1,4 +1,4 @@
-(function () {
+define(["jquery"], function($) {
     $(document).ready(function () {
         $('.pod').click(function(e){
             $(this).addClass("clipped");
@@ -9,4 +9,4 @@
             $(this).parents(".pod").removeClass("clipped");
         });
     });
-}());
+});

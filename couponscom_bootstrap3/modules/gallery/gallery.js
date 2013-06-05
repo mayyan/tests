@@ -1,4 +1,4 @@
-(function () {
+define(["jquery"], function($) {
     function unifyRowHeight() {
     	if (Modernizr.mq('screen and (min-width: 768px)')) {
             var rows = $(".dyn-row-height");
@@ -35,4 +35,4 @@
     $(window).load(function () {
         unifyRowHeight();
     });
-}());
+});

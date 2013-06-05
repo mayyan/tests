@@ -23,7 +23,7 @@ $podCache = json_decode($podJSON, true);
     <link href="modules/misc/misc.css" rel="stylesheet">
     <link href="modules/bottomnav/bottomnav.css" rel="stylesheet">
 
-    <script src="js/modernizr.js"></script>
+    <script src="js/lib/modernizr.js"></script>
 
 </head>
 
@@ -50,13 +50,6 @@ $podCache = json_decode($podJSON, true);
         <?php include "modules/bottomnav/bottomnav.php" ?>
     </div> <!-- #footer -->
 
-<script src="js/jquery-1.9.1.js"></script>
-<script src="bootstrap/js/bootstrap.js"></script>
-<script src="js/app.js"></script>
-<script src="modules/topnav/topnav.js"></script>
-<script src="modules/hero/hero.js"></script>
-<script src="modules/pod/pod.js"></script>
-<script src="modules/gallery/gallery.js"></script>
-<script src="modules/bottomnav/bottomnav.js"></script>
+<script data-main="js/app.js" src="js/require.js"></script>
 </body>
 </html>
