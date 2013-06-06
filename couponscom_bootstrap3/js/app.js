@@ -18,7 +18,7 @@ requirejs.config({
 
     // Use shim for plugins that does not support ADM
     shim: {
-        'bootstrap': ['jquery'],
+        'bootstrap': ['jquery'], //(Modernizr.mq('only all')) ? ['jquery'] : ['jquery', 'css3-mediaqueries'],
         'jquery.event.move': ['jquery'],
         'jquery.event.swipe': ['jquery.event.move']
     }
