@@ -14,15 +14,17 @@ $podCache = json_decode($podJSON, true);
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap_overrides.css" rel="stylesheet" media="screen">
     
     <link href="css/common.css" rel="stylesheet">
-
     <link href="modules/topnav/topnav.css" rel="stylesheet">
     <link href="modules/hero/hero.css" rel="stylesheet">
-    <link href="modules/pod/pod.css" rel="stylesheet">
+    <!--link href="modules/pod/pod.css" rel="stylesheet"-->
     <link href="modules/gallery/gallery.css" rel="stylesheet">
-    <link href="modules/misc/misc.css" rel="stylesheet">
+    <!--link href="modules/misc/misc.css" rel="stylesheet"-->
     <link href="modules/bottomnav/bottomnav.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet" media="screen">
 
     <script src="js/lib/modernizr.js"></script>
 

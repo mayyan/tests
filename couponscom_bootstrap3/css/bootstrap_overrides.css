@@ -1,0 +1,20 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+/*.navbar-brand {
+    max-width: none;
+    text-align: inherit;
+}*/
+.container {
+    max-width: 980px;
+}
+.carousel-indicators {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+}

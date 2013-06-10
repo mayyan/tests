@@ -1,0 +1,159 @@
+@import "../../css/variables.less";
+
+.sprite-pod {
+    background: transparent url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_pod_2.png") no-repeat;
+}
+.pod {
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 1px solid #CDCDCD;
+    border-radius: 6px;
+    position: relative;
+    margin: 1% 0;
+    padding: 1%;
+}
+
+.pod .hover-view {
+    background-color: rgba(255, 255, 255, 0.75);
+    font-family: 'RockSaltRegular';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-transform: lowercase;
+    overflow: hidden;
+}
+.pod .clipped-views {
+    position: absolute;
+    bottom: 0;
+}
+.pod .clipped-view {
+    position: absolute;
+}
+/* normal state */
+.pod .hover-view, 
+.pod .clipped-view, 
+.pod .clipped-hover-view {
+    visibility: hidden;
+}
+
+/* clipped state on touch device */
+.pod.clipped .clipped-hover-view {
+    visibility: visible;
+}
+.pod.clipped .hover-view, 
+.pod.clipped .clipped-view {
+    visibility: hidden;
+}
+
+
+/** states on no-touch device **/
+/* hover state */
+.no-touch .pod:hover .hover-view {
+    visibility: visible;
+}
+.no-touch .pod:hover .clipped-view, 
+.no-touch .pod:hover .clipped-hover-view {
+    visibility: hidden;
+}
+/* clipped state */
+.no-touch .pod.clipped .clipped-view {
+    visibility: visible;
+}
+.no-touch .pod.clipped .hover-view, 
+.no-touch .pod.clipped .clipped-hover-view {
+    visibility: hidden;
+}
+/* clipped hover state */
+.no-touch .pod.clipped:hover .clipped-hover-view {
+    visibility: visible;
+}
+.no-touch .pod.clipped:hover .hover-view, 
+.no-touch .pod.clipped:hover .clipped-view {
+    visibility: hidden;
+}
+
+.pod .summary {
+    color: @coupon-color;
+    font-size: @font-size-large;
+}
+.pod .brand {
+    color: @dark-text-color;
+    font-size: @font-size-large;
+}
+.pod .details {
+    color: @base-text-color;
+    font-size: @font-size-medium;
+}
+.pod .oval {
+    border: 3px solid #000000;
+    border-radius: 50% 50% 50% 50%;
+    height: 56%;
+    left: 10%;
+    position: relative;
+    top: 22%;
+    -webkit-transform: rotate(-7deg);;
+            transform: rotate(-7deg);
+    width: 80%;
+}
+.pod .hover-view .click-text {
+    position: relative;
+    text-align: center;
+    top: 38%;
+}
+.pod i {
+    font-family: SpriteFont;
+    font-size: 11px;
+    margin-right: 4px;
+    font-style: normal;
+}
+.pod .dropdown-menu {
+    margin: 0;
+}
+.pod .dropdown-menu li.share-by-menu {
+    white-space: nowrap;
+}
+.pod .dropdown-menu li.share-by-menu > a {
+    display: inline-block;
+    background-image: none;
+    background-color: transparent;
+    color: inherit;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.pod .dropdown-menu li.share-by-menu > a.share-by {
+    background-image: url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_pod_2.png");
+    background-color: transparent;
+}
+.pod .dropdown-menu li.share-by-menu > a.share-by:hover,
+.pod .dropdown-menu li.share-by-menu > a.share-by:focus,
+.pod .dropdown-menu li.share-by-menu:hover > a.share-by,
+.pod .dropdown-menu li.share-by-menu:focus > a.share-by {
+    background-image: url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_pod_2.png");
+    background-color: transparent;
+}
+.pod .share-by {
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    text-indent: -9999px;
+}
+.pod .share-by-facebook:hover {background-position: 0 -798px;}
+.pod .share-by-facebook       {background-position: 0 -852px;}
+.pod .share-by-twitter:hover  {background-position: 0 -907px;}
+.pod .share-by-twitter        {background-position: 0 -961px;}
+.pod .share-by-email:hover    {background-position: 0 -1016px;}
+.pod .share-by-email          {background-position: 0 -1070px;}
+
+
+.shortstack .pod {
+    margin-top: 0;
+}
+
+
+@media screen and (min-width: 992px) {
+    .pod {
+        margin: 4% 0;
+    }
+}
+
