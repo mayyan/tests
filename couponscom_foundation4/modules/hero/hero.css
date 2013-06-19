@@ -1,0 +1,23 @@
+.mod-hero .orbit-bullets {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 1%;
+    position: absolute;
+    top: inherit;
+    left: 50%;
+}
+
+.mod-hero .orbit-bullets li {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    height: 10px;
+    width: 10px;
+}
+.mod-hero .orbit-bullets li.active {
+    background-color: #FFF;
+}

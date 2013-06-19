@@ -1,0 +1,16 @@
+.mod-bottomnav {
+	bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+}
+.mod-bottomnav .button-bar {
+	float: right;
+}
+
+@media screen and (min-width: 768px) {
+	/*#modal-printprogress {
+		max-width: 768px;
+	}*/
+}
+

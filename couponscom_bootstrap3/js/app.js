@@ -9,7 +9,7 @@ requirejs.config({
     paths: {
         bootstrap: '../../bootstrap/js/bootstrap',
         topnav:    '../../modules/topnav/topnav',
-        hero:      '../../modules/hero/hero',
+        heroBase:  '../../modules/hero/hero.base',
         heroTouch: '../../modules/hero/hero.touch',
         pod:       '../../modules/pod/pod',
         gallery:   '../../modules/gallery/gallery',
@@ -25,4 +25,8 @@ requirejs.config({
 });
 
 // Start the main app logic.
-requirejs(['topnav', 'hero', 'pod', 'gallery', 'bottomnav']);
+if (Modernizr.touch) {
+    requirejs(['topnav', 'heroTouch', 'pod', 'gallery', 'bottomnav']);
+} else {
+    requirejs(['topnav', 'heroBase', 'pod', 'gallery', 'bottomnav']);
+}

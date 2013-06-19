@@ -1,0 +1,36 @@
+.mod-footer .sitemap {
+  background-color: #e5e4e4;
+  text-align: center;
+}
+.mod-footer .sitemap ul {
+  display: inline-block;
+}
+.mod-footer .sitemap ul,
+.mod-footer .footnote ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.mod-footer .sitemap li {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #444444;
+  margin-left: 0;
+}
+.mod-footer .sitemap li:last-child {
+  border-right: none;
+}
+.mod-footer .sitemap li a {
+  color: #444444;
+  font-size: 14px;
+}
+.mod-footer .footnote li:nth-child(2) {
+  	border-right: 1px solid #AAAAAA;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.mod-footer .footnote li,
+.mod-footer .footnote li a {
+  color: #aaaaaa;
+  font-size: 12px;
+}

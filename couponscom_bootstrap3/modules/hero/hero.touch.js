@@ -1,4 +1,4 @@
-define(["jquery", "jquery.event.swipe"], function($, swipe) {
+define(["jquery", "jquery.event.swipe", "heroBase"], function($, swipe, parent) {
 	var carousel = $('.mod-hero .carousel');
 
     $(document).ready(function () {

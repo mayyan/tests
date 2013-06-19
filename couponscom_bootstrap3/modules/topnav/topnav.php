@@ -23,7 +23,7 @@
                                     <a href="#food">Food</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Cereal</a></li>
-                                        <li><a href="#">Diary</a></li>
+                                        <li><a href="#">Dairy</a></li>
                                         <li><a href="#">Health Care</a></li>
                                     </ul>
                                 </li>
