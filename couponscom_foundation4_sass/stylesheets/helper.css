@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "RockSaltRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.eot");
+    src: url("//www.coupons.com/layouts/urban/fonts/RockSalt-webfont.eot?#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.woff") format("woff"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.ttf") format("truetype"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.svg#RockSaltRegular") format("svg");
+}
+@font-face {
+    font-family: "SpriteFont";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.eot");
+    src: url("//www.coupons.com/layouts/urban/fonts/icomoon.eot#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.woff") format("woff"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.ttf") format("truetype"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon.svg#RockSaltRegular") format("svg");
+}
+
+/* */
+/* The multiple magic */
+/* */
+/* General Icons */
+[class*="foundicon-"]:before { font-family: "GeneralFoundicons"; font-weight: normal; font-style: normal; text-decoration: inherit; }
+ 
+/* Social Icons */
+.social[class*="foundicon-"]:before { font-family: "SocialFoundicons"; font-weight: normal; font-style: normal; text-decoration: inherit; }
+ 
+/* Accessibility Icons */
+.accessibility[class*="foundicon-"]:before { font-family: "AccessibilityFoundicons"; font-weight: normal; font-style: normal; text-decoration: inherit; }
+ 
+
+.media,
+.media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.media,
+.media .media {
+    margin-top: 15px;
+}
+
+.media:first-child {
+    margin-top: 0;
+}
+
+.media-object {
+    display: block;
+}
+
+.media-heading {
+    margin: 0 0 5px;
+}
+
+.media > .left {
+    margin-right: 10px;
+}
+
+.media > .right {
+    margin-left: 10px;
+}
+
+.media-list {
+    margin-left: 0;
+    list-style: none;
+}

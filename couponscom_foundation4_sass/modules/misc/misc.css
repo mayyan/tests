@@ -1,0 +1,54 @@
+.mod-misc .promos li {
+  margin: 4% 0 0 0;
+}
+.mod-misc h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #444444;
+}
+.mod-misc img {
+  margin-right: 3%;
+}
+.mod-misc p {
+  font-size: 12px;
+  color: #777777;
+}
+.mod-misc .promos {
+  margin-bottom: 1%;
+}
+
+.mod-misc .sitemap {
+  background-color: #e5e4e4;
+}
+.mod-misc .sitemap .container {
+  text-align: center;
+}
+.mod-misc .sitemap ul,
+.mod-misc .footnote ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.mod-misc .sitemap li {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #444444;
+  margin-left: 0;
+}
+.mod-misc .sitemap li:last-child {
+  border-right: none;
+}
+.mod-misc .sitemap li a {
+  color: #444444;
+  font-size: 14px;
+}
+.mod-misc .footnote li:nth-child(2) {
+  	border-right: 1px solid #AAAAAA;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.mod-misc .footnote li,
+.mod-misc .footnote li a {
+  color: #aaaaaa;
+  font-size: 12px;
+}
