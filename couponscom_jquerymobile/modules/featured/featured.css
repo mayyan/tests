@@ -1,0 +1,8 @@
+#featured .item{
+  margin: 3px;
+}
+#featured .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
