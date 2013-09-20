@@ -1,0 +1,26 @@
+<div data-role="header" data-position="fixed">
+    <h1>Coupons</h1>
+    <a href="#home" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+</div>
+    
+<div data-role="content">   
+   <div class="ui-grid-b ui-responsive">
+          <!-- data is passed from template engine, 
+              and templat engine will execute the scripts inside <% %>
+          -->
+    <% for (var i = 0; i < data.length; i++) { %>
+        <% var item = data[i]; %>
+        <% var blockCss = "ui-block-" + String.fromCharCode("a".charCodeAt(0) + i % 3); %>
+
+        <div class="<%= blockCss %>">
+            <div class="ui-body ui-body-d">
+                <img src="<%= item.imgUrl %>">
+                <%= item["podId"]%>. <%= item.summary %>
+                <%= item.brand%>
+                <%= item.details %>
+            </div>
+        </div>
+
+    <% } %>
+    </div>
+</div>
