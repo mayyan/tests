@@ -1,6 +1,9 @@
 'use strict';
 
-/* Count occurrences of a number in a sorted array with duplicates using Binary Search*/
+/* 
+    https://www.youtube.com/watch?v=pLT_9jwaPLs&index=2&list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A
+    Count occurrences of a number in a sorted array with duplicates using Binary Search
+*/
 function binarySearch(arr, n, searchFirst) {
     let size = arr.length;
 
@@ -10,7 +13,7 @@ function binarySearch(arr, n, searchFirst) {
     let res = -1;
 
     while(low <= high) {
-        mid = Math.floor(low + (high - low) / 2);
+        mid = Math.floor((low + high) / 2);
 
         if (arr[mid] === n) {
             res = mid;

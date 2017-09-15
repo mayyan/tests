@@ -1,6 +1,9 @@
 'use strict';
 
-/* Binary search - finding first or last occurrence of a number in a SORTED array */
+/* 
+    https://www.youtube.com/watch?v=OE7wUUpJw6I&list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A&index=1
+   Binary search - finding first or last occurrence of a number in a SORTED array 
+*/
 function binarySearch_first(arr, n) {
     let size = arr.length;
 
