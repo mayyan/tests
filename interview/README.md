@@ -135,3 +135,27 @@ PASS: 'hello', reversed to 'olleh'.
 []
 []
 ```
+
+## balanced_parentheses
+Check for balanced parentheses using stack
+```
+$ node index.js
+PASS: 'is () balanced?: true.
+PASS: 'is {( ) () } balanced?: true.
+PASS: 'is ((((({}))))) balanced?: true.
+PASS: 'is {() () balanced?: false.
+PASS: 'is [ ] ( )] balanced?: false.
+PASS: 'is {) balanced?: false.
+PASS: 'is )}} balanced?: false.
+PASS: 'is {ab[[c+d](5*6)+(...)]} balanced?: true.
+```
+## check_is_binary_search_tree
+Check if a binary tree is binary search tree or not
+```
+$ node index.js
+{ arr: [ 4, 6, 8 ], min: 4, max: 8, isBST: true }
+{ arr: [ 8 ], min: 8, max: 8, isBST: true }
+{ arr: [ 1, 4, 5, 7, 11, 10, 16 ], min: 1, max: 16, isBST: false }
+{ arr: [ 1, 4, 6, 7, 9 ], min: 1, max: 9, isBST: true }
+{ arr: [ 1, 5, 9, 8, 12 ], min: 1, max: 12, isBST: false }
+```
