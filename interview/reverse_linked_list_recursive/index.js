@@ -1,10 +1,9 @@
-'user strict';
+'use strict';
 
 /* 
-    https://www.youtube.com/watch?v=sYcOK51hl-A&list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A&index=6
-    Reverse a linked list - Iterative method 
+    https://www.youtube.com/watch?v=KYH83T4q6Vs&list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A&index=8
+    Reverse a linked list using recursion
 */
-
 
 class Node {
     constructor(value, next) {
@@ -26,39 +25,35 @@ class Node {
     }
 }
 
+function print(head) {
+    let f = [];
+    function print1(head) {
+        if (head) {
+            f.push(head.value);
+            print1(head.next);
+        }
+    }
+    print1(head);
+    console.log(f);
+}
+
 function reverse(head) {
     if (head) {
-        let prev = null;
-        let curr = head;
-        let next = head.next;
+        let newHead = null;
 
-        while(next != null) {
-            prev = curr;
-            curr = next;
-            next = curr.next;
+        if (head.next) {
+            newHead = reverse(head.next);
 
-            curr.next = prev;
+            head.next.next = head;
+            head.next = null;
+        } else {
+            newHead = head;
         }
-
-        head.next = null;
-        return curr;
+    
+        return newHead;
     } else {
         return head;
     }
-}
-
-function print(head) {
-    let res = [];
-
-    if (head) {
-        let p = head;
-
-        while(p != null) {
-            res.push(p.value);
-            p = p.next;
-        }
-    }
-    console.log(res);
 }
 
 let head1 = new Node(2, null);
@@ -68,7 +63,6 @@ head1.append(8);
 print(head1);
 let list1 = reverse(head1);
 print(list1);
-
 
 let head2 = new Node(2, null);
 print(head2);

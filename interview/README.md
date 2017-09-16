@@ -52,7 +52,8 @@ Time complexity is O(log(n)).
 
 ## find_in_circular_sorted_array
 Search element in a circular sorted array
-```$ node index.js
+```
+$ node index.js
 PASS: [12,14,18,21,3,6,8,9], found 18 at 2.
 PASS: [12,14,18,21,3,6,8,9], found 12 at 0.
 PASS: [12,14,18,21,3,6,8,9], found 21 at 3.
@@ -64,11 +65,73 @@ PASS: [12,14,18,21,3,6,8,9], found 5 at -1.
 ## spiral_print_array
 Print 2-D array in spiral order
 ```
-node index.js
+$ node index.js
 PASS: [2,4,6,8,5,9,12,16,2,11,5,9,3,2,1,8] spiral [2,4,6,8,16,9,8,1,2,3,2,5,9,12,5,11].
 PASS: [2,4,6,8,7,5,9,12,16,4,2,11,5,9,6,3,2,1,8,1] spiral [2,4,6,8,7,4,6,1,8,1,2,3,2,5,9,12,16,9,5,11].
 ```
 
 ## reverse_linked_list
 Reverse a linked list - Iterative method
+```
+$ node index.js
+[ 2, 4, 6, 8 ]
+[ 8, 6, 4, 2 ]
+[ 2 ]
+[ 2 ]
+[ 2, 4 ]
+[ 4, 2 ]
+[ 2, 4, 6 ]
+[ 6, 4, 2 ]
+[]
+[]
+```
 
+## print_linked_list_recursive
+Print elements of a linked list in forward and reverse order using recursion
+```
+$ node index.js
+[ 2, 4, 6, 8 ]
+[ 8, 6, 4, 2 ]
+[ 2 ]
+[ 2 ]
+[ 2, 4 ]
+[ 4, 2 ]
+[ 2, 4, 6 ]
+[ 6, 4, 2 ]
+[]
+[]
+```
+
+## reverse_linked_list_recursive
+Reverse a linked list using recursion
+```
+$ node index.js
+[ 2, 4, 6, 8 ]
+[ 8, 6, 4, 2 ]
+[ 2 ]
+[ 2 ]
+[ 2, 4 ]
+[ 4, 2 ]
+[ 2, 4, 6 ]
+[ 6, 4, 2 ]
+[]
+[]
+```
+
+## reverse_using_stack
+```
+$ node index.js
+PASS: '', reversed to ''.
+PASS: 'A', reversed to 'A'.
+PASS: 'hello', reversed to 'olleh'.
+[ 2, 4, 6, 8 ]
+[ 8, 6, 4, 2 ]
+[ 2 ]
+[ 2 ]
+[ 2, 4 ]
+[ 4, 2 ]
+[ 2, 4, 6 ]
+[ 6, 4, 2 ]
+[]
+[]
+```
