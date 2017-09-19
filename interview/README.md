@@ -159,3 +159,6 @@ $ node index.js
 { arr: [ 1, 4, 6, 7, 9 ], min: 1, max: 9, isBST: true }
 { arr: [ 1, 5, 9, 8, 12 ], min: 1, max: 12, isBST: false }
 ```
+
+## print_multi_logs
+multiple logs, each log is sorted by time, print out overall sorted log entries

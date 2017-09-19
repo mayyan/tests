@@ -80,30 +80,6 @@ function traversBST(tree) {
     return res;
 }
 
-// [8,6,-1,4,-1,-1,-1]
-function buildBinaryTree(arr) {
-    let i = 0;
-    let level = 0;
-    let parents = [];
-
-    while(i < arr.length) {
-        let seatAtLevel = Math.pow(2,level);
-
-        for(let j = 0; j<seatAtLevel; j++, i++) {
-            let v = arr[i];
-            if (v > 0) {
-                node = new Node(v, null, null);
-                if (j % 2 == 0) {
-                    parents[level-1].left = node;
-                } else {
-                    parents[level-1].right = node;
-                }
-            }
-        }
-        level++;
-    }
-}
-
 {
     let n8 = new Node(8, null, null);
     let n6 = new Node(6, null, null);
