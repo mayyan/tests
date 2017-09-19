@@ -1,13 +1,16 @@
+'use strict';
 /*
     multiple logs
     each log is sorted by time
     print out overall sorted log entries
 */
 
-function printMultiLogs(F) {
+function printMultiLogs(Files) {
     const MAX = 100;
     let res = [];
     let done = 0;
+    let F = Files.map(a => ([...a])); // deep copy. spread operator requires node v8.5.0
+    // let F = [...Files]; // shallow copy
     while (done < F.length) {
 
         let min = MAX;
@@ -38,11 +41,12 @@ function printMultiLogs(F) {
 }
 
 function test(F, answer) {
+    console.log(F);
     let res = printMultiLogs(F);
     if (res == answer) {
-        console.log(`PASS: [${F}], '${res}'.`);
+        console.log(`PASS: result is '${res}'.`);
     } else {
-        console.log(`FAIL: [${F}], '${res}', EXPECT '${answer}'.`);
+        console.log(`FAIL: result is '${res}', EXPECT '${answer}'.`);
     }
 }
 
