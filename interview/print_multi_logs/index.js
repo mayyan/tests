@@ -6,7 +6,7 @@
 */
 
 function printMultiLogs(Files) {
-    const MAX = 100;
+    const MAX = Infinity;
     let res = [];
     let done = 0;
     let F = Files.map(a => ([...a])); // deep copy. spread operator requires node v8.5.0
