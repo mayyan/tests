@@ -1,0 +1,1 @@
+rsync -r -v  --delete --exclude-from=/Users/myan/myCommands/exclude_CouponsComN2.txt  myan@sjc-dev-usrv211:~myan/hg/CouponsComN2/ ~myan/hg/CouponsComN2

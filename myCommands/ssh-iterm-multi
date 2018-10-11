@@ -1,0 +1,212 @@
+#!/bin/bash
+
+VERSION="0.3"
+
+usage() {
+    less <<EOF
+
+USAGE (version $VERSION)
+
+    $0 [-n] <hostname_range_using_bash_brace_expansion>
+
+    Note: $0 Version 0.3 is not backward compatible with version 0.2. 
+          $0 Version 0.3 works with iTerm2 3.x, while version 0.2 works with iTerm2 2.x.
+
+DESCRIPTION
+
+    Bash script wrapper around AppleScript to ssh to list of hostnames specified as
+    bash-style brace expansion expression using iTerm2 on Mac.
+
+    Launches session panes in a new terminal window using iTerm2 "Default Session"
+    using standard key strokes such as:
+
+    CMD-d: split pane vertically
+    CMD-D: split pane horizontally
+    CMD-[: previous session
+    CMD-]: next session
+
+    Use of config file (~/.ssh/config) is encouraged to deal with various combinations
+    of user name, domain name, .pem files, etc.  See below for ssh config examples.
+
+    Options:
+
+    -n    number of session panes in a row before starting a new row below it
+          default: 0 (split horizontally and evenly into 2 rows)
+
+EXAMPLES ($0)
+
+    # open 1 ssh instance to dc01-mr01-dt01
+    $0 dc01-mr01-dt01
+
+    # open ssh instances to cicaptc01, cicaptc02, cicaptc03, civaptc07,
+    # awo-p04-nd01.riqp04.cidev.com, awo-p04-nd02.riqp04.cidev.com
+    # host list delimiter in brace expansion expression is space
+    # 2 rows of session panes
+    $0 cicaptc0{1..3} civaptc07 awo-p04-nd0{1..2}.riqp04.cidev.com
+
+    # open 3 ssh instances to dev vm defined as d70 in ssh config file
+    # 2 rows of session panes
+    $0 d70 d70 d70
+
+    # open 6 ssh instances to cicaptcux{1..6}
+    # 2 session panes in each row (3 rows total)
+    $0 -n 2 cicaptcux{1..6}
+
+    # open 6 ssh instances to cicaptcux{1..6}
+    # all 6 session panes in 1 row (vertical split)
+    $0 -n 6 cicaptcux{1..6}
+    # or specify a large -n value
+    $0 -n 100 cicaptcux{1..6}
+
+    # open 6 ssh instances to cicaptcux{1..6}
+    # session panes in 1 column (horizontal split)
+    $0 -n 1 cicaptcux{1..6}
+
+EXAMPLES (ssh config)
+
+host cica* civa* dc02* dc01*
+    hostname %h.receiptiq.com
+    user barry.tsai
+
+host awo-p04-*
+    hostname %h.riqp04.cidev.com
+    user barry.tsai
+
+host awo-p03-*
+    hostname %h.riqp03.cidev.com
+    user ec2-user
+    IdentityFile ~/.ssh/CI-RIQ-Dev.pem
+
+host sjc-prd-* vweb*
+    hostname %h.sc5.coupons.lan
+
+host las-prd-*
+    hostname %h.lv1.coupons.lan
+
+host d70
+    hostname vdevusvr70.corp.coupons.com
+
+EOF
+}
+
+# arg 1: iterm2 session name
+# arg 2: max num sessions in a row starting a new row
+# arg 3+: host list delimited by space
+ssh_in_split_pane_new_terminal() {
+    iterm_session="$1"
+    max_num_sessions_in_row="$2"
+    shift 2
+    spacedelimited_host_list="$*"
+
+    # convert host1 host2 to {"host1", "host2"}
+    applescript_list="`echo $spacedelimited_host_list | sed 's/ /", "/g; s/^/{"/; s/$/"}/'`"
+    echo "applescript_list = $applescript_list"
+
+    # execute applescript
+    osascript <<EOF
+set delay_secs to 0.2
+set host_list to $applescript_list
+set max_num_sessions_in_row to $max_num_sessions_in_row
+set num_hosts to count of host_list
+if max_num_sessions_in_row = 0 then
+    set max_num_sessions_in_row to round(num_hosts / 2) rounding up
+end if
+--display alert "num_hosts = " & num_hosts & ", max_num_sessions_in_row = " & max_num_sessions_in_row
+
+tell application "iTerm"
+    activate
+    set myterm to (create window with default profile)
+    tell myterm
+        -- launch session "Default Session"
+        set processed_first_session_after_launch to false
+        set visited_first_session_for_split to false
+        set i to 0
+        repeat with host in host_list
+            -- display alert "i = " & i
+
+            set row_index to (i div max_num_sessions_in_row)
+            -- display alert "i = " & i & ", max_num_sessions_in_row = " & max_num_sessions_in_row & ", row_index = " & row_index
+
+            if processed_first_session_after_launch = false then
+                set processed_first_session_after_launch to true
+            else
+                -- split vertically from left to right until max_num_sessions_in_row
+                -- then split horizontally from left to right in row below
+                if i < max_num_sessions_in_row then
+                    -- display alert "d"
+                    -- split vertically
+                    tell application "System Events" to keystroke "d" using command down
+                else
+                    if visited_first_session_for_split = false then
+                        set visited_first_session_for_split to true
+                        -- couldn't find a way to set focus by tty or session id
+                        -- instead, set focus on the very first session by walking backwards in the session pane list
+                        repeat (max_num_sessions_in_row - 1) times
+                            -- display alert "["
+                            tell application "System Events" to keystroke "[" using command down
+                            delay delay_secs
+                        end repeat
+                        -- display alert "D"
+                        -- split horizontally
+                        tell application "System Events" to keystroke "D" using command down
+                    else
+                        -- display alert "] and D"
+                        -- set focus on next session for splitting horizontally
+                        -- display alert "row_index = " & row_index
+                        -- walk forward in the session pane list
+                        repeat row_index times
+                            tell application "System Events" to keystroke "]" using command down
+                            delay delay_secs
+                        end repeat
+                        -- split horizontally
+                        tell application "System Events" to keystroke "D" using command down
+                    end if
+                end if
+            end if
+            set i to i + 1
+
+            delay delay_secs
+
+            -- ssh to host
+            tell current session
+                write text "ssh " & host
+                write text "clear; hostname"
+            end tell
+        end repeat
+    end tell
+end tell
+EOF
+}
+
+### main ###
+
+max_num_sessions_in_row="0"
+
+while getopts "n:h" opt; do
+    case $opt in
+        n)
+            max_num_sessions_in_row="$OPTARG";;
+        h)
+            usage
+            exit 1;;
+        [?])
+            usage
+            exit 0;;
+    esac
+done
+shift $((OPTIND-1))
+
+# evaluate brace expansion expression
+host_brace_expansion="`eval echo $*`"
+
+if [ "$host_brace_expansion" = "" ]; then
+    echo "error: no host(s)" >&2
+    usage
+    exit
+fi
+
+echo "host list = $host_brace_expansion"
+echo "max num sessions in row = $max_num_sessions_in_row"
+
+iterm_session="Default Session"
+ssh_in_split_pane_new_terminal "$iterm_session" $max_num_sessions_in_row $host_brace_expansion
